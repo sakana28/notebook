@@ -1,0 +1,85 @@
+{
+  "markdown-prettifier:markdown-prettifier-run": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "Enhanced-editing:internal-link": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Z"
+    }
+  ],
+  "Enhanced-editing:auto-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": ";"
+    }
+  ],
+  "Enhanced-editing:Selection-juzi": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "A"
+    }
+  ],
+  "obsidian-tabs:toggle-tabs": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "editor:insert-tag": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "Enhanced-editing:del-allSpspace": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "B"
+    }
+  ],
+  "obsidian-copy-block-link:copy-embed-to-block": [],
+  "obsidian-copy-block-link:copy-link-to-block": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ]
+}

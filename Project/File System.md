@@ -1,0 +1,3 @@
+# File System
+
+The file system used on the MMC/SDC is FAT. The MMC/SDC specifications define the FAT type as: FAT12 for 64MB and smaller, FAT16 for 128MB to 2GB, FAT32 for 4GB to 32GB and exFAT for 64GB to 2TB. Only an FAT volume can be exist on the card with FDISK partitioning and no patition table like floppy disk is not allowed. Of course the MMC/SDC with any file system and partitioning other than the MMC/SDC specifications define can be used as generic storage media for PCs. However such the card with illigal format will not be accepted by DSCs, camcorders and TVs.

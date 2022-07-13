@@ -1,0 +1,7 @@
+# License
+
+MMC specification had been provided by MMCA (Multimedia Card Association) and then it has been transferred to JEDEC. Any license is not needed to develop and sell the MMC products. However the MMC specification is not opend to the public and you need to join JEDEC to obtain the techinical documentations.
+
+SD specification is a product that has been developped and provided by SDA (SD Card Association) and SD-3C, LLC. Every organization or individual who sells any product with SD specification must be an SDA member, and also a HALA (Host and Ancillary Product License Agreement) with SD-3C LLC is needed to sell any SD host product which states support for SD card, _no matter which interface, SD mode or SPI mode, is used_. For intermediate product, such as embedded module, a license is needed for either the seller of module or final product. Only licensee can put SD logos on the products, packages and manuals. The annual fee for SDA general members is 2,500 USD and the license fee for HALA is 3,000 USD a year.
+
+Every product states support for SD card needs to be licensed. In other words, the product does not state support for SD card does not need to be licensed, even if it actually supports SD card. To avoid the license issue, some stingy device makers includes major companies state "Supports MMC", "Supports MMC and compatibles" or "Supports TF card". What a nonsense!

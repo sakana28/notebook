@@ -1,0 +1,7 @@
+# Cosideration to Bus Floating and Hot Insertion
+
+![dip](http://www.elm-chan.org/docs/mmc/m/dip.png)
+
+SPI signals that can be floated should be pulled low or high properly via a resister. This is a generic design rule on CMOS device. Because DI and DO are normally high, they should be pulled-up. According to SDC/MMC specs, from 50k to 100k ohms is recommended to the value of pull-up registers. However the clock signal is not mentioned in the SDC/MMC specs because it is always driven by host controller. When there is a possibility of floating, it should be pulled to the normal state, low.
+
+The MMC/SDC can hot insertion/removal. But some considerations to the host circuit are needed to avoid an incorrect operation. For example, if the system power supply (Vcc) is tied to the card socket directly, the Vcc will dip at the instant of the card insertion due to a charge current to the built-in capacitor of the card. 'A' in the right image is the scope view and it shows that occureing a voltage dip of about 600 mV. This is a sufficient level to trigger a brown out detector. 'B' in the right image shows that an inductor is inserted to block the surge current, the voltage dip is reduced to 200 mV. A low ESR capacitor, such as OS-CON, can eliminate the voltage dip dratiscally like shown in 'C'. However the low ESR capacitor can cause an oscillation of LDO regulator.
