@@ -1,9 +1,9 @@
 # SD2.0初始化
 #SD 
-补充资料
+## 补充资料
 [SD卡初始化细节 - 程序员大本营](https://www.pianshen.com/article/3747783139/)
 [SD卡的SPI模式的初始化顺序 - 窗外.yu.好大 - 博客园](https://www.cnblogs.com/mrightt/archive/2011/06/23/2088265.html)
-
+[SD卡命令简介 - xxxdk's blog](http://xxxdk.xyz/xxx/2021/01/SD%E5%8D%A1%E5%91%BD%E4%BB%A4%E7%AE%80%E4%BB%8B/)
 ## 方法1 
 ![[Pasted image 20220712162850.png]]
 
@@ -15,6 +15,8 @@
 ## 方法2
 from [[MMC SDC的使用]]
 ![[Pasted image 20220713144436.png]]
+
+注意 上图中检测OCR判断SD还是SDHC  SDXC后进行的CMD16作用是 
 步骤1**上电或插卡**  
   
 在供电达到2.2伏的时候，等待至少1毫秒。设置SPI时钟频率介于100 kHz到400 kHz之间。设置DI和CS高，并向SCLK施加至少74个时钟脉冲。卡片就会进入它的原生操作模式然后准备接收原生命令。  
@@ -62,3 +64,4 @@ Power-up.
 正点的适用于SD SDHC SDXC 
 ELM适用MMC
 ## SD卡上电复位及初始化命令时序
+![[Pasted image 20220713162941.png]]
