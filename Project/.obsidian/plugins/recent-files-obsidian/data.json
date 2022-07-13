@@ -5,6 +5,10 @@
       "path": "SD初始化.md"
     },
     {
+      "basename": "MMC SDC的使用",
+      "path": "MMC SDC的使用.md"
+    },
+    {
       "basename": "SD命令格式",
       "path": "SD命令格式.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "SPI Mode",
       "path": "SPI Mode.md"
-    },
-    {
-      "basename": "MMC SDC的使用",
-      "path": "MMC SDC的使用.md"
     },
     {
       "basename": "SDSPI实验记录",

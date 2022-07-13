@@ -75,7 +75,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -125,12 +126,12 @@
   "active": "6384adc50071440a",
   "lastOpenFiles": [
     "SD初始化.md",
+    "MMC SDC的使用.md",
     "SD命令格式.md",
     "翻译.md",
     "Initialization Procedure for SPI Mode.md",
     "尤老师FAT笔记.md",
     "SPI Mode.md",
-    "MMC SDC的使用.md",
     "SDSPI实验记录.md",
     "SD 速率.md",
     "Pinout of SD.md"

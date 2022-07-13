@@ -1,15 +1,20 @@
 # SD2.0初始化
 #SD 
+补充资料
+[SD卡初始化细节 - 程序员大本营](https://www.pianshen.com/article/3747783139/)
+[SD卡的SPI模式的初始化顺序 - 窗外.yu.好大 - 博客园](https://www.cnblogs.com/mrightt/archive/2011/06/23/2088265.html)
 
+## 方法1 
 ![[Pasted image 20220712162850.png]]
-![[Pasted image 20220713144436.png]]
+
 1. SD卡完成上电后，主机FPGA先对从机SD卡发送至少74个以上的[[同步时钟]]，在上电同步期间，片选CS引脚和MOSI引脚(DI信号)必须为高电平（MOSI引脚除发送命令或数据外，其余时刻都为高电平）；
 2. 拉低片选CS引脚(CS低有效)，发送命令CMD0（0x40）复位SD卡，命令发送完成后等待SD卡返回响应数据；
 3. SD卡返回响应数据后，先等待8个时钟周期再拉高片选CS信号，此时判断返回的响应数据。如果返回的数据为复位完成信号0x01，其中闲置状态位为1,其余为0。在接收返回信息期间片选CS持续为低电平，此时SD卡进入SPI模式，并开始进行下一步，如果返回的值为其它值，则重新执行第2步；
 4. 拉低片选CS引脚，发送命令CMD8（0x48）查询SD卡的版本号，只有SD2.0版本的卡才支持此命令，命令发送完成后等待SD卡返回响应数据；
 5. SD卡返回响应数据后，先等待8个时钟周期再拉高片选CS信号，此时判断返回的响应数据。如果返回的电压范围为4’b0001即2.7V~3.6V，说明此SD卡为2.0版本，进行下一步，否则重新执行第4步；拉低片选CS引脚，发送命令CMD55（0x77）告诉SD卡下一次发送的命令是应用相关命令，命令发送完成后等待SD卡返回响应数据；SD卡返回响应数据后，先等待8个时钟周期再拉高片选CS信号，此时判断返回的响应数据。如果返回的数据为空闲信号0x01，开始进行下一步，否则重新执行第6步。拉低片选CS引脚，发送命令ACMD41（0x69）查询SD卡是否初始化完成，命令发送完成后等待SD返回响应数据；SD卡返回响应数据后，先等待8个时钟周期再拉高片选CS信号，此时判断返回的响应数据。如果返回的数据为0x00，此时初始化完成，否则重新执行第6步。
-
+## 方法2
 from [[MMC SDC的使用]]
+![[Pasted image 20220713144436.png]]
 步骤1**上电或插卡**  
   
 在供电达到2.2伏的时候，等待至少1毫秒。设置SPI时钟频率介于100 kHz到400 kHz之间。设置DI和CS高，并向SCLK施加至少74个时钟脉冲。卡片就会进入它的原生操作模式然后准备接收原生命令。  
@@ -45,9 +50,15 @@ Power-up.
 	利用CRC计算器[CRC（循环冗余校验）在线计算_ip33.com](http://www.ip33.com/crc.html)
 	得到40 00 00 00 00 00 CRC为1001010, 补尾数1,得10010101,即0X95
 • Check R1 response to make sure there are no error bits set.  
-• Send command CMD1 repeatedly until the “in-idle-state” bit in R1 response is set to “0,”  
+• Send command CMD1 repeatedly until the “in-idle-state” bit in R1 response is set to “0,”  CMD1 设置SD卡到ACTIVATE模式,也就是退出IDLE模式
 • and there are no error bits set. The card is now ready for read/write operations.
 
 ![[Initialization Procedure for SPI Mode#Initialization]]
 
+## 问题
+**为何上述正点和ELM初始化差别如此大**？
+解答
+[# SD卡 初始化 到底哪一个 才是对的？](https://zhidao.baidu.com/question/552597276.html)
+正点的适用于SD SDHC SDXC 
+ELM适用MMC
 ## SD卡上电复位及初始化命令时序
