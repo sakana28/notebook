@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "SD返回响应格式",
-      "path": "SD返回响应格式.md"
-    },
-    {
       "basename": "SD初始化",
       "path": "SD初始化.md"
+    },
+    {
+      "basename": "Cosideration on Multi-slave Configuration",
+      "path": "Cosideration on Multi-slave Configuration.md"
+    },
+    {
+      "basename": "SD返回响应格式",
+      "path": "SD返回响应格式.md"
     },
     {
       "basename": "SD命令格式",
@@ -63,10 +67,6 @@
     {
       "basename": "Maximum SPI Clock Frequency",
       "path": "Maximum SPI Clock Frequency.md"
-    },
-    {
-      "basename": "Cosideration on Multi-slave Configuration",
-      "path": "Cosideration on Multi-slave Configuration.md"
     },
     {
       "basename": "FPGA读SD图片实验",

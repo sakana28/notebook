@@ -81,5 +81,13 @@
       ],
       "key": "C"
     }
+  ],
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "G"
+    }
   ]
 }

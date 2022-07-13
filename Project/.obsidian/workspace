@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ncr",
+                "query": "nwr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SD返回响应格式.md",
+                "file": "SD初始化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SD返回响应格式.md",
+                "file": "SD初始化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,8 +136,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "91e4abe8f0cb447d",
+  "active": "2964a48889a845a4",
   "lastOpenFiles": [
+    "Cosideration on Multi-slave Configuration.md",
     "SD初始化.md",
     "SD返回响应格式.md",
     "SD命令格式.md",
@@ -146,7 +147,6 @@
     "Initialization Procedure for SPI Mode.md",
     "尤老师FAT笔记.md",
     "SPI Mode.md",
-    "SDSPI实验记录.md",
-    "SD 速率.md"
+    "SDSPI实验记录.md"
   ]
 }
