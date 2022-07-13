@@ -5,20 +5,20 @@
       "path": "SD返回响应格式.md"
     },
     {
-      "basename": "SD命令格式",
-      "path": "SD命令格式.md"
-    },
-    {
       "basename": "SD初始化",
       "path": "SD初始化.md"
     },
     {
-      "basename": "MMC SDC的使用",
-      "path": "MMC SDC的使用.md"
+      "basename": "SD命令格式",
+      "path": "SD命令格式.md"
     },
     {
       "basename": "翻译",
       "path": "翻译.md"
+    },
+    {
+      "basename": "MMC SDC的使用",
+      "path": "MMC SDC的使用.md"
     },
     {
       "basename": "Initialization Procedure for SPI Mode",
