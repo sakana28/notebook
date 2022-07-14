@@ -5,6 +5,10 @@
       "path": "SDSPI实验记录.md"
     },
     {
+      "basename": "SD初始化",
+      "path": "SD初始化.md"
+    },
+    {
       "basename": "WaveDrom",
       "path": "WaveDrom.md"
     },
@@ -39,10 +43,6 @@
     {
       "basename": "SPI Mode",
       "path": "SPI Mode.md"
-    },
-    {
-      "basename": "SD初始化",
-      "path": "SD初始化.md"
     },
     {
       "basename": "SD命令格式",

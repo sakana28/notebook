@@ -112,15 +112,15 @@
   },
   "active": "87eae4e093fdf20f",
   "lastOpenFiles": [
-    "WaveDrom.md",
+    "SD初始化.md",
     "SDSPI实验记录.md",
+    "WaveDrom.md",
     "File System.md",
     "Links.md",
     "SD返回响应格式.md",
     "循环冗余校验.md",
     "尤老师FAT笔记.md",
     "STM32的SD SPI读写.md",
-    "同步时钟.md",
-    "SPI Mode.md"
+    "同步时钟.md"
   ]
 }
