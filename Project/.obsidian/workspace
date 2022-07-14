@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SDSPI实验记录.md",
-            "mode": "source",
+            "file": "Untitled.md",
+            "mode": "preview",
             "backlinks": false,
             "source": false
           }
@@ -62,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -79,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SDSPI实验记录.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SDSPI实验记录.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -112,8 +111,8 @@
   },
   "active": "87eae4e093fdf20f",
   "lastOpenFiles": [
-    "SD初始化.md",
     "SDSPI实验记录.md",
+    "SD初始化.md",
     "WaveDrom.md",
     "File System.md",
     "Links.md",
