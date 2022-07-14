@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "SD命令格式",
-      "path": "SD命令格式.md"
-    },
-    {
       "basename": "SD初始化",
       "path": "SD初始化.md"
+    },
+    {
+      "basename": "SD命令格式",
+      "path": "SD命令格式.md"
     },
     {
       "basename": "Cosideration on Multi-slave Configuration",
