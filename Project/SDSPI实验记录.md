@@ -383,7 +383,8 @@ always @(posedge div_clk_180deg or negedge rst_n) begin
         //sd_miso = 0 开始接收响应数据
         if(sd_miso == 1'b0 && res_flag == 1'b0) begin 
             res_flag <= 1'b1;
-            res_data <= {res_data[46:0],sd_miso};
+            res_data <=
+             {res_data[46:0],sd_miso};
             res_bit_cnt <= res_bit_cnt + 6'd1;
             res_en <= 1'b0;
         end    
