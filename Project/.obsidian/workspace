@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "v.md",
+            "file": "循环冗余校验 (CRC).md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nwr",
+                "query": "tag:#Dictio",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,11 +71,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "v.md",
+                "file": "循环冗余校验 (CRC).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "v.md",
+                "file": "循环冗余校验 (CRC).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,15 +126,15 @@
   },
   "active": "ea19bc211c590b93",
   "lastOpenFiles": [
+    "尤老师FAT笔记.md",
+    "STM32的SD SPI读写.md",
+    "SDSPI实验记录.md",
+    "同步时钟.md",
     "SPI Mode.md",
     "SD返回响应格式.md",
     "SD初始化.md",
     "conflict-files-obsidian-git.md",
     "SD命令格式.md",
-    "Cosideration on Multi-slave Configuration.md",
-    "翻译.md",
-    "MMC SDC的使用.md",
-    "Initialization Procedure for SPI Mode.md",
-    "尤老师FAT笔记.md"
+    "Cosideration on Multi-slave Configuration.md"
   ]
 }

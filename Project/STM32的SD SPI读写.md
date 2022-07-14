@@ -1,5 +1,5 @@
 
-
+#SD #Tutorial #MCU
 [STM32的简单的SD卡读写（不带文件系统，SPI方式）](https://blog.csdn.net/z_jinye/article/details/23276877?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-23276877-blog-122073446.pc_relevant_aa2&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-23276877-blog-122073446.pc_relevant_aa2&utm_relevant_index=1)
 
 SD卡一般支持两种读写模式，SPI和SDIO模式，SD卡的引脚排序如下图所示。

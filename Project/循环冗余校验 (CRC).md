@@ -1,0 +1,24 @@
+---
+date created: 2022-07-14 09:53
+---
+
+#Dictionary
+
+![[Pasted image 20220713112911.png]]
+一个完整的CRC参数模型应该包含以下信息：WIDTH，POLY，INIT，REFIN，REFOUT，XOROUT。
+
+- NAME：参数模型名称。
+
+- WIDTH：宽度，即生成的CRC数据位宽，如CRC-8，生成的CRC为8位
+
+- POLY：十六进制多项式，省略最高位1，如 x8 + x2 + x + 1，二进制为1 0000 0111，省略最高位1，转换为十六进制为0x07。
+
+- INIT：CRC初始值，和WIDTH位宽一致。
+
+- REFIN：true或false，在进行计算之前，原始数据是否翻转，如原始数据：0x34 = 0011 0100，如果REFIN为true，进行翻转之后为0010 1100 = 0x2c
+
+- REFOUT：true或false，运算完成之后，得到的CRC值是否进行翻转，如计算得到的CRC值：0x97 = 1001 0111，如果REFOUT为true，进行翻转之后为11101001 = 0xE9。
+
+- XOROUT：计算结果与此参数进行异或运算后得到最终的CRC值，和WIDTH位宽一致。
+
+在线计算工具 [CRC（循环冗余校验）在线计算_ip33.com](http://www.ip33.com/crc.html)

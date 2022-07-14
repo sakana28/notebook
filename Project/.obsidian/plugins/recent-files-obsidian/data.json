@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "v",
-      "path": "v.md"
+      "basename": "循环冗余校验 (CRC)",
+      "path": "循环冗余校验 (CRC).md"
+    },
+    {
+      "basename": "尤老师FAT笔记",
+      "path": "尤老师FAT笔记.md"
+    },
+    {
+      "basename": "STM32的SD SPI读写",
+      "path": "STM32的SD SPI读写.md"
+    },
+    {
+      "basename": "SDSPI实验记录",
+      "path": "SDSPI实验记录.md"
+    },
+    {
+      "basename": "同步时钟",
+      "path": "同步时钟.md"
     },
     {
       "basename": "SPI Mode",
@@ -37,14 +53,6 @@
       "path": "Initialization Procedure for SPI Mode.md"
     },
     {
-      "basename": "尤老师FAT笔记",
-      "path": "尤老师FAT笔记.md"
-    },
-    {
-      "basename": "SDSPI实验记录",
-      "path": "SDSPI实验记录.md"
-    },
-    {
       "basename": "SD 速率",
       "path": "SD 速率.md"
     },
@@ -55,14 +63,6 @@
     {
       "basename": "SPI协议",
       "path": "SPI协议.md"
-    },
-    {
-      "basename": "同步时钟",
-      "path": "同步时钟.md"
-    },
-    {
-      "basename": "循环冗余校验",
-      "path": "循环冗余校验.md"
     },
     {
       "basename": "Maximum SPI Clock Frequency",
