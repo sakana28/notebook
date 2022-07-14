@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SD初始化.md",
+            "file": "v.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -71,13 +71,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SD初始化.md",
+                "file": "v.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SD初始化.md",
+                "file": "v.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,15 +124,15 @@
   },
   "active": "ea19bc211c590b93",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "SPI Mode.md",
+    "SD返回响应格式.md",
     "SD初始化.md",
+    "conflict-files-obsidian-git.md",
     "SD命令格式.md",
     "Cosideration on Multi-slave Configuration.md",
-    "SD返回响应格式.md",
     "翻译.md",
     "MMC SDC的使用.md",
     "Initialization Procedure for SPI Mode.md",
-    "尤老师FAT笔记.md",
-    "SPI Mode.md"
+    "尤老师FAT笔记.md"
   ]
 }

@@ -24,7 +24,7 @@
  [[SD初始化|SD初始化]]
  [[SD命令格式|SD命令格式]]
  [[SD返回响应格式|SD返回响应格式]]
- [[SPI MODE SD操作|SPI MODE SD操作]]
+ [[v|SPI MODE SD操作]]
  [[SPI Mode|SPI Mode]]
  [[SPI协议|SPI协议]]
  [[同步时钟|同步时钟]]

@@ -7,7 +7,7 @@ date created: 2022-07-13 11:57
 #SD
 
 **下面的文档描述了STM32下无文件系统，用SPI控制SD的源码**
-[[ SPI MODE SD操作]]
+[[ v]]
 
 ## Minimal configuration for SPI mode  SPI模式最简配置
 
