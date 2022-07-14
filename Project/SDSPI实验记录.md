@@ -422,7 +422,7 @@ always @(*) begin
             else
                 next_state = st_idle;
         end 
-        st_send_cmd0 : begin                         //发送软件复位命令
+        st_send_cmd0 : begin                         //发送软件复位命令alw
             if(cmd_bit_cnt == 6'd47)
                 next_state = st_wait_cmd0;
             else
