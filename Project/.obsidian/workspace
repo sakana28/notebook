@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "WaveDrom.md",
+            "file": "SDSPI实验记录.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WaveDrom.md",
+                "file": "SDSPI实验记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WaveDrom.md",
+                "file": "SDSPI实验记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,6 +112,7 @@
   },
   "active": "87eae4e093fdf20f",
   "lastOpenFiles": [
+    "WaveDrom.md",
     "SDSPI实验记录.md",
     "File System.md",
     "Links.md",
@@ -119,7 +121,6 @@
     "尤老师FAT笔记.md",
     "STM32的SD SPI读写.md",
     "同步时钟.md",
-    "SPI Mode.md",
-    "SD初始化.md"
+    "SPI Mode.md"
   ]
 }
