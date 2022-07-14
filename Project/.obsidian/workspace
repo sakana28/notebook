@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "87eae4e093fdf20f",
+        "id": "943cfa589b71b91c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Untitled.md",
-            "mode": "preview",
+            "file": "SDSPI实验记录.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "SDSPI实验记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "SDSPI实验记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -109,8 +110,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "87eae4e093fdf20f",
+  "active": "943cfa589b71b91c",
   "lastOpenFiles": [
+    "Optimization of Write Performance.md",
+    "Untitled.md",
     "SDSPI实验记录.md",
     "SD初始化.md",
     "WaveDrom.md",
@@ -118,8 +121,6 @@
     "Links.md",
     "SD返回响应格式.md",
     "循环冗余校验.md",
-    "尤老师FAT笔记.md",
-    "STM32的SD SPI读写.md",
-    "同步时钟.md"
+    "尤老师FAT笔记.md"
   ]
 }

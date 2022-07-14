@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Untitled",
-      "path": "Untitled.md"
-    },
-    {
       "basename": "SDSPI实验记录",
       "path": "SDSPI实验记录.md"
+    },
+    {
+      "basename": "Optimization of Write Performance",
+      "path": "Optimization of Write Performance.md"
     },
     {
       "basename": "SD初始化",
@@ -87,10 +87,6 @@
     {
       "basename": "FPGA读SD图片实验",
       "path": "FPGA读SD图片实验.md"
-    },
-    {
-      "basename": "Optimization of Write Performance",
-      "path": "Optimization of Write Performance.md"
     },
     {
       "basename": "Pasted image 20220712125109",
