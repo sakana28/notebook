@@ -4,25 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "ea19bc211c590b93",
+        "id": "87eae4e093fdf20f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "循环冗余校验 (CRC).md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "91e4abe8f0cb447d",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "SD返回响应格式.md",
+            "file": "SDSPI实验记录.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Dictio",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "循环冗余校验 (CRC).md",
+                "file": "SDSPI实验记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,9 +97,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "循环冗余校验 (CRC).md",
+                "file": "SDSPI实验记录.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           }
@@ -124,17 +111,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ea19bc211c590b93",
+  "active": "87eae4e093fdf20f",
   "lastOpenFiles": [
+    "File System.md",
+    "Links.md",
+    "SD返回响应格式.md",
+    "循环冗余校验.md",
     "尤老师FAT笔记.md",
     "STM32的SD SPI读写.md",
     "SDSPI实验记录.md",
     "同步时钟.md",
     "SPI Mode.md",
-    "SD返回响应格式.md",
-    "SD初始化.md",
-    "conflict-files-obsidian-git.md",
-    "SD命令格式.md",
-    "Cosideration on Multi-slave Configuration.md"
+    "SD初始化.md"
   ]
 }
