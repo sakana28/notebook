@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "SPI协议",
+      "path": "SPI协议.md"
+    },
+    {
       "basename": "SDSPI实验记录",
       "path": "SDSPI实验记录.md"
     },
@@ -75,10 +79,6 @@
     {
       "basename": "Pinout of SD",
       "path": "Pinout of SD.md"
-    },
-    {
-      "basename": "SPI协议",
-      "path": "SPI协议.md"
     },
     {
       "basename": "Maximum SPI Clock Frequency",
