@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "SDSPI实验记录",
+      "path": "SDSPI实验记录.md"
+    },
+    {
       "basename": "翻译",
       "path": "翻译.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "SPI协议",
       "path": "SPI协议.md"
-    },
-    {
-      "basename": "SDSPI实验记录",
-      "path": "SDSPI实验记录.md"
     },
     {
       "basename": "SD返回响应格式",

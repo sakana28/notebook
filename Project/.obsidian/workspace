@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "翻译.md",
+            "file": "SDSPI实验记录.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "翻译.md",
+                "file": "SDSPI实验记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "翻译.md",
+                "file": "SDSPI实验记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,6 +111,7 @@
   },
   "active": "943cfa589b71b91c",
   "lastOpenFiles": [
+    "翻译.md",
     "SPI Mode.md",
     "SPI协议.md",
     "SDSPI实验记录.md",
@@ -119,7 +120,6 @@
     "Untitled.md",
     "SD初始化.md",
     "WaveDrom.md",
-    "File System.md",
-    "Links.md"
+    "File System.md"
   ]
 }
