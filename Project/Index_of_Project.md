@@ -28,6 +28,7 @@
  [[SPI协议|SPI协议]]
  [[STM32的SD SPI读写|STM32的SD SPI读写]]
  [[WaveDrom|WaveDrom]]
+ [[zynq 7000 的HDMI 显示实验|zynq 7000 的HDMI 显示实验]]
  [[同步时钟|同步时钟]]
  [[尤老师FAT笔记|尤老师FAT笔记]]
  [[循环冗余校验|循环冗余校验]]
