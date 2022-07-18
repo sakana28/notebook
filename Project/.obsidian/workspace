@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "zynq 7000 的HDMI 显示实验.md",
+            "file": "zedboard教程集中.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zynq 7000 的HDMI 显示实验.md",
+                "file": "zedboard教程集中.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zynq 7000 的HDMI 显示实验.md",
+                "file": "zedboard教程集中.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
