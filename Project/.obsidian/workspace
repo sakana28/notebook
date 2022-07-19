@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SD读取图片输出HDMI.md",
+            "file": "zedboard教程集中.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SD读取图片输出HDMI.md",
+                "file": "zedboard教程集中.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SD读取图片输出HDMI.md",
+                "file": "zedboard教程集中.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,15 +111,15 @@
   },
   "active": "943cfa589b71b91c",
   "lastOpenFiles": [
+    "FPGA读SD图片实验.md",
     "zedboard教程集中.md",
+    "SD读取图片输出HDMI.md",
     "文件系统.md",
     "SDSPI实验记录.md",
     "翻译.md",
     "SPI Mode.md",
     "SPI协议.md",
     "SD返回响应格式.md",
-    "Optimization of Write Performance.md",
-    "SD初始化.md",
-    "WaveDrom.md"
+    "Optimization of Write Performance.md"
   ]
 }
