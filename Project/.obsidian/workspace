@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "zedboard教程集中.md",
+            "file": "FPGA读SD图片实验.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zedboard教程集中.md",
+                "file": "FPGA读SD图片实验.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zedboard教程集中.md",
+                "file": "FPGA读SD图片实验.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,8 +111,8 @@
   },
   "active": "943cfa589b71b91c",
   "lastOpenFiles": [
-    "FPGA读SD图片实验.md",
     "zedboard教程集中.md",
+    "FPGA读SD图片实验.md",
     "SD读取图片输出HDMI.md",
     "文件系统.md",
     "SDSPI实验记录.md",
