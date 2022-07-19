@@ -23,6 +23,7 @@
  [[SDSPI实验记录|SDSPI实验记录]]
  [[SD初始化|SD初始化]]
  [[SD命令格式|SD命令格式]]
+ [[SD读取图片输出HDMI|SD读取图片输出HDMI]]
  [[SD返回响应格式|SD返回响应格式]]
  [[SPI Mode|SPI Mode]]
  [[SPI协议|SPI协议]]
