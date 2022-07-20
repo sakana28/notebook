@@ -12,4 +12,4 @@ TIMING #1 Critical Warning Invalid clock redefinition on a clock tree. The prima
 ```
 solution: clk wiz no buffer (?)
 
-./sobel file_in.png file_out.bmp 512x512 -g file_g.bmp
+./sobel img.rgb file_out.rgb 512x512 -g file_g.rgb
