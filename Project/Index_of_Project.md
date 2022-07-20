@@ -28,6 +28,7 @@
  [[SPI Mode|SPI Mode]]
  [[SPI协议|SPI协议]]
  [[STM32的SD SPI读写|STM32的SD SPI读写]]
+ [[VITIS UG1400|VITIS UG1400]]
  [[WaveDrom|WaveDrom]]
  [[zedboard教程集中|zedboard教程集中]]
  [[同步时钟|同步时钟]]

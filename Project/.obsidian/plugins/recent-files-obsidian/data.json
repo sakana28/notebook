@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "VITIS UG1400",
+      "path": "VITIS UG1400.md"
+    },
+    {
+      "basename": "Cosideration on Multi-slave Configuration",
+      "path": "Cosideration on Multi-slave Configuration.md"
+    },
+    {
       "basename": "FPGA读SD图片实验",
       "path": "FPGA读SD图片实验.md"
     },
@@ -75,10 +83,6 @@
     {
       "basename": "SD命令格式",
       "path": "SD命令格式.md"
-    },
-    {
-      "basename": "Cosideration on Multi-slave Configuration",
-      "path": "Cosideration on Multi-slave Configuration.md"
     },
     {
       "basename": "MMC SDC的使用",

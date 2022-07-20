@@ -4,12 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "943cfa589b71b91c",
+        "id": "0d62d7468c703fa9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "FPGA读SD图片实验.md",
+            "file": "VITIS UG1400.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "b34447669c63fe5b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cosideration on Multi-slave Configuration.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "76adceda44a5ebab",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "VITIS UG1400.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -62,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -78,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FPGA读SD图片实验.md",
+                "file": "VITIS UG1400.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FPGA读SD图片实验.md",
+                "file": "VITIS UG1400.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -109,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "943cfa589b71b91c",
+  "active": "0d62d7468c703fa9",
   "lastOpenFiles": [
-    "zedboard教程集中.md",
+    "Cosideration on Multi-slave Configuration.md",
+    "VITIS UG1400.md",
     "FPGA读SD图片实验.md",
+    "zedboard教程集中.md",
     "SD读取图片输出HDMI.md",
     "文件系统.md",
     "SDSPI实验记录.md",
     "翻译.md",
     "SPI Mode.md",
-    "SPI协议.md",
-    "SD返回响应格式.md",
-    "Optimization of Write Performance.md"
+    "SPI协议.md"
   ]
 }
