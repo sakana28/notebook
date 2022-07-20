@@ -11,3 +11,5 @@ WARNING LOG
 TIMING #1 Critical Warning Invalid clock redefinition on a clock tree. The primary clock design_1_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_1 and overrides its insertion delay and/or waveform definition
 ```
 solution: clk wiz no buffer (?)
+
+./sobel file_in.png file_out.bmp 512x512 -g file_g.bmp
