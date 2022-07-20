@@ -56,4 +56,4 @@ BSP中有很多安全判断和兼容性操作，性能和程序尺寸要求不�
 z.b Xil_out32 中 *LocalAddr = Value CPU 编程本质是为特定地址读写特定数值
 xil io.h
 
-Register summary
+Register summary中的地址都是偏移地址，要加上模块的BASE ADDR
