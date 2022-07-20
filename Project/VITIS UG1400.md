@@ -58,4 +58,6 @@ xil io.h
 
 Register summary中的地址都是偏移地址，要加上模块的BASE ADDR
 
-xsdps/
+unistd.h 包含高精度延时函数的头文件 usleep以微秒为单位
+
+u32的作用 跨平台可移植 xil types
