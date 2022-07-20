@@ -39,5 +39,7 @@ hallo world 工程基于串口
 .bit 是system wrapper
 
 ### 重点问题
-BD文件中如何确定IP及配置宝哈
+BD文件中如何确定IP及配置
 如何修改配置IP的参数 
+如何确定头文件
+ 
