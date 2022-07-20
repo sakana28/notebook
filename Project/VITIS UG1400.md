@@ -29,3 +29,10 @@ XSA 是从 Vivado Design Suite 导出的。它包含各种硬件规格，例如�
 3. 基于嵌入式Linux OS的操作系统的应用和驱动开发
 ## 小梅哥 教程
 DDR 16位数据线位宽32 因为板上使用了两片,地址和控制都和zynq链接，数据线独立
+
+ps7 process system 7 
+base addr 外设的地址段
+application system
+hallo world 工程基于串口
+
+开发
