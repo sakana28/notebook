@@ -202,3 +202,6 @@ aborting, 1 pending requests...
 Failed to download /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
 Info: ARM Cortex-A9 MPCore #0 (target 2) Running (APB AP transaction error, DAP status 0xF0000021)
 xsct% 
+
+
+ [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.073 . PS DDR interfaces might fail when entering negative DQS skew values. 
