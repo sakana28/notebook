@@ -69,3 +69,136 @@ Cannot reset APU. AP transaction error, DAP status 0xF0000021
 Cannot reset APU. AP transaction error, DAP status 0xF0000021
 
 Error while launching program:  Memory write error at 0x100000. APB AP transaction error, DAP status 0xF0000021 Memory write error at 0x100000. APB AP transaction error, DAP status 0xF0000021
+
+xsct% XSDB Server URL: TCP:localhost:44353
+xsct% XSDB Server Channel: tcfchan#0
+INFO: [Hsi 55-2053] elapsed time for repository (/tools/Xilinx/Vitis/2022.1/data/embeddedsw) loading 0 seconds
+attempting to launch hw_server
+
+****** Xilinx hw_server v2022.1.0
+  **** Build date : Apr 10 2022 at 06:24:21
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
+
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x0 (Vector Catch)
+xsct% Info: ARM Cortex-A9 MPCore #1 (target 3) Stopped at 0x0 (Vector Catch)
+xsct% Info: ARM Cortex-A9 MPCore #0 (target 2) Running
+xsct% Info: ARM Cortex-A9 MPCore #1 (target 3) Running
+xsct% 
+initializing
+
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 27%    1MB   2.1MB/s  ??:?? ETA
+ 49%    1MB   1.8MB/s  ??:?? ETA
+ 75%    2MB   1.7MB/s  ??:?? ETA
+100%    3MB   1.8MB/s  00:02    
+
+Downloading Program -- /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+	section, .text: 0x00100000 - 0x001009fb
+	section, .init: 0x001009fc - 0x00100a07
+	section, .fini: 0x00100a08 - 0x00100a13
+	section, .rodata: 0x00100a14 - 0x00100a9b
+	section, .data: 0x00100aa0 - 0x00100f0f
+	section, .eh_frame: 0x00100f10 - 0x00100f13
+	section, .mmu_tbl: 0x00104000 - 0x00107fff
+	section, .init_array: 0x00108000 - 0x00108003
+	section, .fini_array: 0x00108004 - 0x00108007
+	section, .bss: 0x00108008 - 0x0010802f
+	section, .heap: 0x00108030 - 0x0010a02f
+	section, .stack: 0x0010a030 - 0x0010d82f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+aborting, 2 pending requests... 
+aborting, 1 pending requests... 
+Failed to download /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+Info: ARM Cortex-A9 MPCore #0 (target 2) Running (APB AP transaction error, DAP status 0xF0000021)
+xsct% 
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 27%    1MB   1.9MB/s  ??:?? ETA
+ 50%    1MB   1.8MB/s  ??:?? ETA
+ 73%    2MB   1.8MB/s  ??:?? ETA
+ 95%    3MB   1.7MB/s  ??:?? ETA
+100%    3MB   1.8MB/s  00:02    
+
+Downloading Program -- /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+	section, .text: 0x00100000 - 0x001009fb
+	section, .init: 0x001009fc - 0x00100a07
+	section, .fini: 0x00100a08 - 0x00100a13
+	section, .rodata: 0x00100a14 - 0x00100a9b
+	section, .data: 0x00100aa0 - 0x00100f0f
+	section, .eh_frame: 0x00100f10 - 0x00100f13
+	section, .mmu_tbl: 0x00104000 - 0x00107fff
+	section, .init_array: 0x00108000 - 0x00108003
+	section, .fini_array: 0x00108004 - 0x00108007
+	section, .bss: 0x00108008 - 0x0010802f
+	section, .heap: 0x00108030 - 0x0010a02f
+	section, .stack: 0x0010a030 - 0x0010d82f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+aborting, 2 pending requests... 
+aborting, 1 pending requests... 
+Failed to download /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+Info: ARM Cortex-A9 MPCore #0 (target 2) Running (APB AP transaction error, DAP status 0xF0000021)
+xsct% 
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 25%    1MB   1.9MB/s  ??:?? ETA
+ 50%    1MB   1.9MB/s  ??:?? ETA
+ 70%    2MB   1.7MB/s  ??:?? ETA
+ 95%    3MB   1.8MB/s  ??:?? ETA
+100%    3MB   1.8MB/s  00:02    
+
+Downloading Program -- /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+	section, .text: 0x00100000 - 0x001009fb
+	section, .init: 0x001009fc - 0x00100a07
+	section, .fini: 0x00100a08 - 0x00100a13
+	section, .rodata: 0x00100a14 - 0x00100a9b
+	section, .data: 0x00100aa0 - 0x00100f0f
+	section, .eh_frame: 0x00100f10 - 0x00100f13
+	section, .mmu_tbl: 0x00104000 - 0x00107fff
+	section, .init_array: 0x00108000 - 0x00108003
+	section, .fini_array: 0x00108004 - 0x00108007
+	section, .bss: 0x00108008 - 0x0010802f
+	section, .heap: 0x00108030 - 0x0010a02f
+	section, .stack: 0x0010a030 - 0x0010d82f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+aborting, 2 pending requests... 
+aborting, 1 pending requests... 
+Failed to download /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+Info: ARM Cortex-A9 MPCore #0 (target 2) Running (APB AP transaction error, DAP status 0xF0000021)
+xsct% 
+initializing
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 26%    1MB   2.0MB/s  ??:?? ETA
+ 50%    1MB   1.9MB/s  ??:?? ETA
+ 72%    2MB   1.8MB/s  ??:?? ETA
+ 95%    3MB   1.8MB/s  ??:?? ETA
+100%    3MB   1.8MB/s  00:02    
+
+Downloading Program -- /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+	section, .text: 0x00100000 - 0x001009fb
+	section, .init: 0x001009fc - 0x00100a07
+	section, .fini: 0x00100a08 - 0x00100a13
+	section, .rodata: 0x00100a14 - 0x00100a9b
+	section, .data: 0x00100aa0 - 0x00100f0f
+	section, .eh_frame: 0x00100f10 - 0x00100f13
+	section, .mmu_tbl: 0x00104000 - 0x00107fff
+	section, .init_array: 0x00108000 - 0x00108003
+	section, .fini_array: 0x00108004 - 0x00108007
+	section, .bss: 0x00108008 - 0x0010802f
+	section, .heap: 0x00108030 - 0x0010a02f
+	section, .stack: 0x0010a030 - 0x0010d82f
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+aborting, 2 pending requests... 
+aborting, 1 pending requests... 
+Failed to download /home/benchmarker/vivado_bsp/helloworld_sw/helloworld/Debug/helloworld.elf
+Info: ARM Cortex-A9 MPCore #0 (target 2) Running (APB AP transaction error, DAP status 0xF0000021)
+xsct% 
