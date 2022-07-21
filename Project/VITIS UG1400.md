@@ -63,3 +63,9 @@ unistd.h 包含高精度延时函数的头文件 usleep以微秒为单位
 
 跨平台可移植  stdint.h
 u32定义在xil types 跨平台后不通用 建议uint8_t等等
+
+Error while launching program: 
+Cannot reset APU. AP transaction error, DAP status 0xF0000021
+Cannot reset APU. AP transaction error, DAP status 0xF0000021
+
+Error while launching program:  Memory write error at 0x100000. APB AP transaction error, DAP status 0xF0000021 Memory write error at 0x100000. APB AP transaction error, DAP status 0xF0000021
