@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "zedboard教程集中.md",
+            "file": "SD读取图片输出HDMI.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zedboard教程集中.md",
+                "file": "SD读取图片输出HDMI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zedboard教程集中.md",
+                "file": "SD读取图片输出HDMI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -135,15 +135,15 @@
   },
   "active": "0d62d7468c703fa9",
   "lastOpenFiles": [
+    "zedboard教程集中.md",
+    "Index_of_Project.md",
     "SD读取图片输出HDMI.md",
     "FPGA读SD图片实验.md",
     "VITIS UG1400.md",
     "Cosideration on Multi-slave Configuration.md",
-    "zedboard教程集中.md",
     "文件系统.md",
     "SDSPI实验记录.md",
     "翻译.md",
-    "SPI Mode.md",
-    "SPI协议.md"
+    "SPI Mode.md"
   ]
 }
