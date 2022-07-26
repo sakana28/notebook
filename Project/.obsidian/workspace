@@ -138,6 +138,7 @@
   "active": "0d62d7468c703fa9",
   "lastOpenFiles": [
     "ADV7511 IIC.md",
+    "AVNET Demo PIN.md",
     "Cosideration on Multi-slave Configuration.md",
     "BMP row width.md",
     "zedboard教程集中.md",
@@ -145,7 +146,6 @@
     "Index_of_Project.md",
     "FPGA读SD图片实验.md",
     "VITIS UG1400.md",
-    "文件系统.md",
-    "SDSPI实验记录.md"
+    "文件系统.md"
   ]
 }
