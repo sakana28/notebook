@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ADV7511 IIC.md",
+            "file": "AVNET Demo PIN.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -104,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ADV7511 IIC.md",
+                "file": "AVNET Demo PIN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ADV7511 IIC.md",
+                "file": "AVNET Demo PIN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -131,12 +132,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "0d62d7468c703fa9",
   "lastOpenFiles": [
-    "Cosideration on Multi-slave Configuration.md",
     "ADV7511 IIC.md",
+    "Cosideration on Multi-slave Configuration.md",
     "BMP row width.md",
     "zedboard教程集中.md",
     "SD读取图片输出HDMI.md",
