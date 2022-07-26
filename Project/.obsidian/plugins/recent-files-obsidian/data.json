@@ -5,6 +5,10 @@
       "path": "ADV7511 IIC.md"
     },
     {
+      "basename": "Cosideration on Multi-slave Configuration",
+      "path": "Cosideration on Multi-slave Configuration.md"
+    },
+    {
       "basename": "BMP row width",
       "path": "BMP row width.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "VITIS UG1400",
       "path": "VITIS UG1400.md"
-    },
-    {
-      "basename": "Cosideration on Multi-slave Configuration",
-      "path": "Cosideration on Multi-slave Configuration.md"
     },
     {
       "basename": "文件系统",
