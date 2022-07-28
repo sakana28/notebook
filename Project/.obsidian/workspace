@@ -4,25 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0d62d7468c703fa9",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "AVNET Demo PIN.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
-        }
-      },
-      {
         "id": "b34447669c63fe5b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cosideration on Multi-slave Configuration.md",
+            "file": "Video Out IP核.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -105,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AVNET Demo PIN.md",
+                "file": "Video Out IP核.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AVNET Demo PIN.md",
+                "file": "Video Out IP核.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -135,11 +122,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0d62d7468c703fa9",
+  "active": "b34447669c63fe5b",
   "lastOpenFiles": [
+    "Cosideration on Multi-slave Configuration.md",
     "ADV7511 IIC.md",
     "AVNET Demo PIN.md",
-    "Cosideration on Multi-slave Configuration.md",
     "BMP row width.md",
     "zedboard教程集中.md",
     "SD读取图片输出HDMI.md",
