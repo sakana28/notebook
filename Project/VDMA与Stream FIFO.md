@@ -1,0 +1,2 @@
+FIFO上的AXI4是FULL 5通道3W2R全双工
+通道: 有自己的valid和ready

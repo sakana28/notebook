@@ -4,5 +4,7 @@ Slave Master指的是VTC是Slave 还是Master
 控制信号 vid_gen_ce,拉高前不输出时序
 内部有一个asy FIFO ，实现了Stream和视频时钟的跨时钟
 
+
+错误笔记
 fid在不interlaced的时候接0
 video out的输入match!!!
