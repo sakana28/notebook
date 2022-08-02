@@ -17,6 +17,19 @@
         }
       },
       {
+        "id": "3d2ce3f95c649dd2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "VDMA与Stream FIFO.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      },
+      {
         "id": "76adceda44a5ebab",
         "type": "leaf",
         "state": {
@@ -71,11 +84,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -91,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Address Editor.md",
+                "file": "VDMA与Stream FIFO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Address Editor.md",
+                "file": "VDMA与Stream FIFO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -121,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b34447669c63fe5b",
+  "active": "3d2ce3f95c649dd2",
   "lastOpenFiles": [
+    "Address Editor.md",
     "VDMA与Stream FIFO.md",
-    "Video Out IP核.md",
-    "VITIS UG1400.md",
-    "Cosideration on Multi-slave Configuration.md",
-    "ADV7511 IIC.md",
-    "AVNET Demo PIN.md",
-    "BMP row width.md",
-    "zedboard教程集中.md",
+    "Index_of_Project.md",
     "SD读取图片输出HDMI.md",
-    "Index_of_Project.md"
+    "zedboard教程集中.md",
+    "Cosideration on Multi-slave Configuration.md",
+    "Video Out IP核.md",
+    "FPGA读SD图片实验.md",
+    "VITIS UG1400.md",
+    "ADV7511 IIC.md"
   ]
 }
