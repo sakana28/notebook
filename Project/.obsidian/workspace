@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "VDMA与Stream FIFO.md",
+            "file": "Address Editor.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -75,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VDMA与Stream FIFO.md",
+                "file": "Address Editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "VDMA与Stream FIFO.md",
+                "file": "Address Editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -124,6 +123,7 @@
   },
   "active": "b34447669c63fe5b",
   "lastOpenFiles": [
+    "VDMA与Stream FIFO.md",
     "Video Out IP核.md",
     "VITIS UG1400.md",
     "Cosideration on Multi-slave Configuration.md",
@@ -132,7 +132,6 @@
     "BMP row width.md",
     "zedboard教程集中.md",
     "SD读取图片输出HDMI.md",
-    "Index_of_Project.md",
-    "FPGA读SD图片实验.md"
+    "Index_of_Project.md"
   ]
 }
