@@ -2,7 +2,7 @@ FIFO上的AXI4是FULL 5通道3W2R全双工
 通道: 有自己的valid和ready
 
 ## Programming Sequence Using Example Software Driver
-
+![[Pasted image 20220802141407.png]]
 ### Init Sequence  
 Call the function *XLlFifo_CfgInitialize* for the initialization that does a reset of the  
 TX/RX registers and then clear the ISR.  
