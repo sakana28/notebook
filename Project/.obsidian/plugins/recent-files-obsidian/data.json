@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Generic interrupt controlle",
+      "path": "Generic interrupt controlle.md"
+    },
+    {
+      "basename": "xintc.h xscugic.h 差别",
+      "path": "xintc.h xscugic.h 差别.md"
+    },
+    {
       "basename": "VDMA与Stream FIFO",
       "path": "VDMA与Stream FIFO.md"
     },
