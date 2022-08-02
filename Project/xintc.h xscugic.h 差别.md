@@ -7,3 +7,6 @@
 
 **A:**
 	Xilinx interrupt controller is the PL based interrupt controller IP Xilinx made. [[Generic interrupt controlle]]r is the one built into the ARM SoC side.
+
+
+举例 AXI stream FIFO 中，Intr要提交给ARM，使ARM停下目前任务开始服务程序，因此使用 xscugic.h 

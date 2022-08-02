@@ -119,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Generic interrupt controlle.md",
+                "file": "xintc.h xscugic.h 差别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Generic interrupt controlle.md",
+                "file": "xintc.h xscugic.h 差别.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -149,8 +149,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "79cfe3236895fa99",
+  "active": "3d2ce3f95c649dd2",
   "lastOpenFiles": [
+    "Generic interrupt controlle.md",
+    "VITIS UG1400.md",
     "xintc.h xscugic.h 差别.md",
     "VDMA与Stream FIFO.md",
     "Address Editor.md",
@@ -158,8 +160,6 @@
     "SD读取图片输出HDMI.md",
     "zedboard教程集中.md",
     "Cosideration on Multi-slave Configuration.md",
-    "Video Out IP核.md",
-    "FPGA读SD图片实验.md",
-    "VITIS UG1400.md"
+    "Video Out IP核.md"
   ]
 }
