@@ -18,9 +18,8 @@ handler and if it is a TX complete, then call FifoSendHandler and then clear the
 ### Receive a Packet:  
 1. On receiving the RX Interrupt, the *FifoHandler* interrupt handler is called which in  
 turn calls the *FifoRecvHandler*.
-
 2. Read RLR to find the number of bytes.  
 3. Read the number of bytes till the number of bytes read from RLR while checking the  
-occupancy by using the XLlFifo_iRxOccupancy function.  
+occupancy by using the *XLlFifo_iRxOccupancy* function.  
 4. Clear the ISR.  
 5. Check if there is an Interrupt pending for Rx and then go to step2.
