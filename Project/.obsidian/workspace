@@ -30,6 +30,155 @@
         }
       },
       {
+        "id": "d5c2a60def02668c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "VDMA与Stream FIFO.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "85e2a3ce5ade6c5a",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "d3767fb190584c31",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "af67823d7cfa2b5c",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "5cc1d9cd86dcdfad",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "41ca87033fa8efae",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "6f2810dccb3e59a3",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "2aa61f420db1d5c4",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "7ec587ab59759398",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "3a7fc7a4bd405bc8",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "eef6ea84ff2d61e1",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "44462f6634deed9b",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "588821fb2df82d30",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "534e8564bcff48a6",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "2183d4d2ac5f6004",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "111ff819fe22d488",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "178b40a58efdd867",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "4be16172e3ec3fdb",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
         "id": "79cfe3236895fa99",
         "type": "leaf",
         "state": {
@@ -80,7 +229,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#vi",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,22 +237,12 @@
                 "sortOrder": "alphabetical"
               }
             }
-          },
-          {
-            "id": "69189ab062b16644",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -119,7 +258,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "xintc.h xscugic.h 差别.md",
+                "file": "VDMA与Stream FIFO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +275,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "xintc.h xscugic.h 差别.md",
+                "file": "VDMA与Stream FIFO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -149,11 +288,38 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3d2ce3f95c649dd2",
+  "floating": {
+    "id": "1b1db12eb53b44b9",
+    "type": "floating",
+    "children": [
+      {
+        "id": "8b9ed75f0881b883",
+        "type": "window",
+        "children": [
+          {
+            "id": "69189ab062b16644",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ],
+        "direction": "vertical",
+        "x": 175,
+        "y": 79,
+        "width": 600,
+        "height": 600,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "d5c2a60def02668c",
   "lastOpenFiles": [
     "Generic interrupt controlle.md",
-    "VITIS UG1400.md",
     "xintc.h xscugic.h 差别.md",
+    "VITIS UG1400.md",
     "VDMA与Stream FIFO.md",
     "Address Editor.md",
     "Index_of_Project.md",
