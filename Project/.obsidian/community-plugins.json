@@ -11,9 +11,9 @@
   "zoottelkeeper-obsidian-plugin",
   "obsidian-notes-from-template",
   "obsidian-hover-editor",
-  "sliding-panes-obsidian",
   "note-refactor-obsidian",
   "obsidian-image-toolkit",
   "obsidian-copy-block-link",
-  "obsidian-git"
+  "obsidian-git",
+  "sliding-panes-obsidian"
 ]
