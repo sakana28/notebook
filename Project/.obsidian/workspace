@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0facf1c3fb82acfb",
+        "id": "58787584b5c2e46d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SD初始化.md",
+            "file": "数组到底存放在哪里.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SD初始化.md",
+                "file": "数组到底存放在哪里.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SD初始化.md",
+                "file": "数组到底存放在哪里.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -108,17 +108,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0facf1c3fb82acfb",
+  "active": "58787584b5c2e46d",
   "lastOpenFiles": [
-    "SD 速率.md",
     "DDR.md",
+    "SD初始化.md",
+    "SD 速率.md",
     "SPI协议.md",
     "STM32的SD SPI读写.md",
     "Optimization of Write Performance.md",
     "Maximum SPI Clock Frequency.md",
     "Links.md",
     "Initialization Procedure for SPI Mode.md",
-    "Index_of_Project.md",
-    "Generic interrupt controlle.md"
+    "Index_of_Project.md"
   ]
 }

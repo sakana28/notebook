@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "数组到底存放在哪里",
+      "path": "数组到底存放在哪里.md"
+    },
+    {
+      "basename": "DDR",
+      "path": "DDR.md"
+    },
+    {
       "basename": "SD初始化",
       "path": "SD初始化.md"
     },
     {
       "basename": "SD 速率",
       "path": "SD 速率.md"
-    },
-    {
-      "basename": "DDR",
-      "path": "DDR.md"
     },
     {
       "basename": "SPI协议",
