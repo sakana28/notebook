@@ -41,6 +41,7 @@
  [[WaveDrom|WaveDrom]]
  [[xintc.h xscugic.h 差别|xintc.h xscugic.h 差别]]
  [[zedboard教程集中|zedboard教程集中]]
+ [[句柄|句柄]]
  [[同步时钟|同步时钟]]
  [[尤老师FAT笔记|尤老师FAT笔记]]
  [[循环冗余校验|循环冗余校验]]
