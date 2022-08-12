@@ -30,3 +30,9 @@ process 上升，如果reset wrPtr 0 否则如果 valid高 写进line(wrPtr)
 读的是横向的3个像素！然后例化3个linebuffer，读一次得到全部9个像素
 
 最好把assign写在process 外，process内只计算读指针，一旦指针计算出来立刻接到下三个电路，0 latency  注意Timing， 给出rd_ready的第一个周期数据就已经可读
+
+
+### 设计MAC multiplication and summation operation
+选定kernal，假设本模块中line顺序已经排列好
+模块conv
+输入 
