@@ -38,3 +38,7 @@ process 上升，如果reset wrPtr 0 否则如果 valid高 写进line(wrPtr)
 
 
 reg kernel array (8 downto 0) of signed(3 downto 0)
+进了architecture先给kernel赋值 
+process 上升时 
+for i, i<9,i++
+kernel(i) * data (i) 注意两个都是signed (kernel本来就是signed, data补符号位0后是signed)
