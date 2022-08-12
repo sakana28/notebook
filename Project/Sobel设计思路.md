@@ -25,4 +25,6 @@ ram_array(ColsCounter) <= pdata_in;
 
 ```
 process 上升，如果reset wrPtr 0 否则如果 valid高 写进line(wrPtr)
-读 
+读 line(rdPtr),line(rdPtr+1),line(rdPtr+2)
+
+读的是横向的3个像素！然后例化3个linebuffer，读一次得到全部9个像素
