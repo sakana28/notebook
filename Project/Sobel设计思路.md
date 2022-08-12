@@ -35,4 +35,6 @@ process 上升，如果reset wrPtr 0 否则如果 valid高 写进line(wrPtr)
 ### 设计MAC multiplication and summation operation
 选定kernal，假设本模块中line顺序已经排列好
 模块conv
-输入 
+
+
+reg kernel array (8 downto 0) of signed(3 downto 0)
