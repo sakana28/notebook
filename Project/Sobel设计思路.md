@@ -24,4 +24,5 @@ ram_array(ColsCounter) <= pdata_in;
 
 
 ```
-process 上升，如果valid高
+process 上升，如果reset wrPtr 0 否则如果 valid高 写进line(wrPtr)
+读 
