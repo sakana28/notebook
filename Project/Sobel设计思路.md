@@ -7,3 +7,16 @@ line buffer存储 1920x3 =5760 bytes 约等于40000多bits 是否够用 有没�
 
 Line Buffer 是RAM不是FIFO，因为FIFO只能被读一次，但此处第一行最后一行之外的 每行都要被用三次
 
+vhdl中定义Line Buffer 
+
+
+```vhdl
+type ram_type is array (NO_OF_COLS - 1 downto 0) of std_logic_vector(DATA_WIDTH -1 downto 0);
+signal ram_array : ram_type;
+
+过程中;
+ram_array(ColsCounter) <= pdata_in;
+
+
+
+```
