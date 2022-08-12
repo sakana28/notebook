@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Static内存分配.md",
+            "file": "Sobel设计思路.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Static内存分配.md",
+                "file": "Sobel设计思路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Static内存分配.md",
+                "file": "Sobel设计思路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -110,6 +110,7 @@
   },
   "active": "58787584b5c2e46d",
   "lastOpenFiles": [
+    "Static内存分配.md",
     "Zedboard RGB.md",
     "句柄.md",
     "数组到底存放在哪里.md",
@@ -118,7 +119,6 @@
     "SD初始化.md",
     "SD 速率.md",
     "SPI协议.md",
-    "STM32的SD SPI读写.md",
-    "Optimization of Write Performance.md"
+    "STM32的SD SPI读写.md"
   ]
 }

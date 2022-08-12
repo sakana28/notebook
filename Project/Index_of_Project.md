@@ -30,6 +30,7 @@
  [[SD命令格式|SD命令格式]]
  [[SD读取图片输出HDMI|SD读取图片输出HDMI]]
  [[SD返回响应格式|SD返回响应格式]]
+ [[Sobel设计思路|Sobel设计思路]]
  [[SPI Mode|SPI Mode]]
  [[SPI协议|SPI协议]]
  [[Static内存分配|Static内存分配]]
