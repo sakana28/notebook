@@ -42,3 +42,6 @@ reg kernel array (8 downto 0) of signed(3 downto 0)
 process 上升时 
 for i, i<9,i++
 kernel(i) * data (i) 注意两个都是signed (kernel本来就是signed, data补符号位0后是signed)
+4bits+9bits=13 bits 12 downto 0, 9个multData寄存器
+
+pipelining
