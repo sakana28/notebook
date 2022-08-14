@@ -24,6 +24,7 @@
  [[Pasted image 20220712125130.png|Pasted image 20220712125130.png]]
  [[picture/Index_of_picture|Index_of_picture]]
  [[Pinout of SD|Pinout of SD]]
+ [[pipelining|pipelining]]
  [[SD 速率|SD 速率]]
  [[SDSPI实验记录|SDSPI实验记录]]
  [[SD初始化|SD初始化]]
