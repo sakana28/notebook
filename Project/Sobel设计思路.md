@@ -45,3 +45,6 @@ kernel(i) * data (i) 注意两个都是signed (kernel本来就是signed, data补
 4bits+9bits=13 bits 12 downto 0, 9个multData寄存器
 
 [[pipelining]]
+
+![[Pasted image 20220815101322.png]]
+![[Pasted image 20220815101407.png]]
