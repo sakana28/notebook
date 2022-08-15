@@ -50,3 +50,7 @@ kernel(i) * data (i) 注意两个都是signed (kernel本来就是signed, data补
 ![[Pasted image 20220815101407.png]]
 
 ![[Pasted image 20220815192553.png]]
+![[Pasted image 20220815214852.png]]
+
+Buffer时序:
+wrPtr的数字就是当前buffer里有多少个
