@@ -53,4 +53,5 @@ kernel(i) * data (i) 注意两个都是signed (kernel本来就是signed, data补
 ![[Pasted image 20220815214852.png]]
 
 Buffer时序:
-wrPtr的数字就是当前buffer里有多少个
+wrPtr的数字就是当前buffer里有多少个数据
+rdPtr : 给出rd_en的瞬间立刻读数据，不能等上升
