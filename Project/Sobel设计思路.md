@@ -48,3 +48,5 @@ kernel(i) * data (i) 注意两个都是signed (kernel本来就是signed, data补
 
 ![[Pasted image 20220815101322.png]]
 ![[Pasted image 20220815101407.png]]
+
+![[Pasted image 20220815192553.png]]
