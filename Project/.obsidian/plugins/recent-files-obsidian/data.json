@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "BMP row width",
+      "path": "BMP row width.md"
+    },
+    {
       "basename": "Sobel设计思路",
       "path": "Sobel设计思路.md"
     },
@@ -83,10 +87,6 @@
     {
       "basename": "Address Editor",
       "path": "Address Editor.md"
-    },
-    {
-      "basename": "BMP row width",
-      "path": "BMP row width.md"
     },
     {
       "basename": "MMC SDC的使用",
