@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BMP row width.md",
-            "mode": "preview",
+            "file": "SpinalHDL.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BMP row width.md",
+                "file": "SpinalHDL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BMP row width.md",
+                "file": "SpinalHDL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -124,9 +124,9 @@
   },
   "active": "58787584b5c2e46d",
   "lastOpenFiles": [
+    "BMP row width.md",
     "Sobel设计思路.md",
     "pipelining.md",
-    "BMP row width.md",
     "Static内存分配.md",
     "Zedboard RGB.md",
     "句柄.md",

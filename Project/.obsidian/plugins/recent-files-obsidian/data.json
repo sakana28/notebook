@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "SpinalHDL",
+      "path": "SpinalHDL.md"
+    },
+    {
       "basename": "BMP row width",
       "path": "BMP row width.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Pasted image 20220712125121",
       "path": "Pasted image 20220712125121.png"
-    },
-    {
-      "basename": "Pasted image 20220712125130",
-      "path": "Pasted image 20220712125130.png"
     }
   ],
   "omittedPaths": [],
