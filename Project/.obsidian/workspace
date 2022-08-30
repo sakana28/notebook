@@ -4,25 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "58787584b5c2e46d",
+        "id": "d3ea1f64aed3967a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SpinalHDL.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "d662df319a2bf1ea",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "pipelining.md",
+            "file": "xintc.h xscugic.h 差别.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -75,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4a725f7ea50a4ea",
@@ -92,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SpinalHDL.md",
+                "file": "xintc.h xscugic.h 差别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SpinalHDL.md",
+                "file": "xintc.h xscugic.h 差别.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -122,17 +108,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "58787584b5c2e46d",
+  "active": "d3ea1f64aed3967a",
   "lastOpenFiles": [
-    "BMP row width.md",
-    "Sobel设计思路.md",
-    "pipelining.md",
-    "Static内存分配.md",
-    "Zedboard RGB.md",
-    "句柄.md",
-    "数组到底存放在哪里.md",
-    "Address Editor.md",
-    "DDR.md",
-    "SD初始化.md"
+    "Generic interrupt controlle.md",
+    "xintc.h xscugic.h 差别.md",
+    "VITIS UG1400.md",
+    "Untitled 1.md",
+    "Untitled.md",
+    "STM32的SD SPI读写.md",
+    "VDMA与Stream FIFO.md",
+    "Cosideration on Multi-slave Configuration.md",
+    "Cosideration to Bus Floating and Hot Insertion.md",
+    "SpinalHDL.md"
   ]
 }

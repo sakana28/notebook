@@ -37,8 +37,6 @@
  [[SPI协议|SPI协议]]
  [[Static内存分配|Static内存分配]]
  [[STM32的SD SPI读写|STM32的SD SPI读写]]
- [[Untitled 1|Untitled 1]]
- [[Untitled|Untitled]]
  [[VDMA与Stream FIFO|VDMA与Stream FIFO]]
  [[Video Out IP核|Video Out IP核]]
  [[VITIS UG1400|VITIS UG1400]]
