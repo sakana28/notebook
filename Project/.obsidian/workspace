@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "xintc.h xscugic.h 差别.md",
+            "file": "Sobel设计思路.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -58,7 +58,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "xintc.h xscugic.h 差别.md",
+                "file": "Sobel设计思路.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "xintc.h xscugic.h 差别.md",
+                "file": "Sobel设计思路.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -110,15 +111,15 @@
   },
   "active": "d3ea1f64aed3967a",
   "lastOpenFiles": [
-    "Generic interrupt controlle.md",
+    "VDMA与Stream FIFO.md",
+    "FPGA读SD图片实验.md",
     "xintc.h xscugic.h 差别.md",
+    "Generic interrupt controlle.md",
     "VITIS UG1400.md",
     "Untitled 1.md",
     "Untitled.md",
     "STM32的SD SPI读写.md",
-    "VDMA与Stream FIFO.md",
     "Cosideration on Multi-slave Configuration.md",
-    "Cosideration to Bus Floating and Hot Insertion.md",
-    "SpinalHDL.md"
+    "Cosideration to Bus Floating and Hot Insertion.md"
   ]
 }
