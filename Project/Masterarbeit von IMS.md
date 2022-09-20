@@ -60,3 +60,22 @@ Heutige Anwendungen elektronischer Systeme setzen vermehrt auf die drahtlose Kom
 Ein Faltungsencoder fügt dem Sendesignal Redundanz hinzu um mögliche Übertragungsfehler am Empfänger zu korrigieren. Diese Korrektur geschieht mit Hilfe eines Viterbi-Decoders, welcher durch Berechnung aller möglichen gesendeten Symbolfolgen die auswählt, welche die höchste Wahrscheinlichkeit besitzt. Bei diesem Verfahren lassen sich die Länge des Gedächtnisses, die Art der Wahrscheinlichkeitsberechnung und der Anteil der Redundanz variieren.
 
 In dieser Arbeit soll ein parametrisierbarer Faltungsencoder und zugehöriger Viterbi-Decoder in VHDL implementiert werden, bei dem die oben genannten Eigenschaften zum Zeitpunkt der Synthese eingestellt werden können. Ausgangspunkt der Konzeptionierung ist eine Referenzimplementierung in Matlab, welche als Evaluationsbasis für Hardware-seitige Ergebnisse dient. Nach erfolgreicher Evaluation soll die Echtzeitperformance der Implementierung mit Hilfe einer PXI-Emulationsplattform getestet werden. In dieser lassen sich verschiedene Typen von rauschenden Kanälen modellieren. Zum Abschluss der Arbeit sollen zusätzlich die FPGA-spezifische Kennzahlen extrahiert und verglichen werden.
+
+## Implementierung und Evaluierung eines beschleunigten Backprojection-Verfahrens zur SAR-Bilddatengenerierung
+Jahr: 2016
+
+![[Pasted image 20220920122714.png]]
+
+Am Institut für Mikroelektronische Systeme (IMS) werden mehrere studentische Arbeiten angeboten, die unterschiedliche Hardwareplattformen für die Verarbeitung komplexer Signalverarbeitungsalgorithmen untersuchen.
+
+Beim „Synthetic Aperture Radar“ (SAR) können hochauflösende Luftbilder unabhängig von Tageszeit und Witterung generiert werden. Um die Verarbeitung der Sensordaten schritthaltend mit der Datenaufnahme (Echtzeit) zu gewährleisten, werden spezialisierte Hardware-Architekturen eingesetzt. Entgegen reiner Software-Implementierungen auf General-Purpose-Prozessoren müssen für diese Spezialhardware angepasste und optimierte Verfahren entwickelt werden.
+
+Es existieren verschiedene Verfahren, um SAR Sensordaten in hochauflösende Luftbilder zu überführen. Ein in der Literatur als beschleunigter Backprojection-Algorithmus bekanntes Verfahren soll in dieser Arbeit auf einer vorgegebenen Architektur (MultiCore) implementiert werden. Basierend auf vorausgegangenen algorithmischen Analysen soll eine effiziente Hardwareabbildung realisiert werden.
+
+## Konzeptionierung und Implementierung eines Hardware-Algorithmus zur bildbasierten Eigenbewegungsschätzung
+
+Jahr: 2015
+
+Ein algorithmischer Bestandteil eines Fahrerassistenzsystems ist eine zuverlässige und robuste Schätzung der Eigenbewegung des Fahrzeugs (Egomotion), welche z.B. zur Navigation benötigt wird. Eine bildbasierte Schätzung der Eigenbewegung kann direkt auf Basis von sogenannten Punktkorrespondenzen erfolgen.
+
+In dieser Arbeit soll ein Algorithmus zur Kamerabewegungsschätzung entwickelt und anhand von synthetischen und realen Daten evaluiert werden. Nach einer anschliessenden Fixed-Point Analyse sollen Möglichkeiten zur Beschleunigung auf einem FPGA untersucht und ein Ressourcenabschätzung mittels HLS Tools durchgeführt werden.
