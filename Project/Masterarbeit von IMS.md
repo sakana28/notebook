@@ -36,6 +36,14 @@ weiter, bewertet die frequenzbezogenen Eigenschaften des Übertragungskanals und
 Die Aufgabe dieser Arbeit ist es eine hybride Architektur, bestehend aus Hardwareeinheiten
 und ein oder mehreren Softcore-Prozessoren zu konzeptionieren. Die Implementierung eines MAC- Layer nach dem HomePlug V1.0.1 Standard liegt hierbei bereits als VHDL-Hardware-Beschreibung und C-Referenzimplementierung vor. Zunächst soll eine Evaluation der bestehenden Hardware-Architektur hinsichtlich der Umsetzbarkeit einzelner Komponenten auf einem Softcore untersucht werden. Anschließend werden verschiedene Architekturen von Softcore-Prozessoren verglichen und bezüglich ihrer hardwarespezifischen Parameter bewertet. Die am besten geeigneten Softcore-Prozessor-Architekturen werden schließlich in einem Gesamtkonzept als hybride Architektur mit weiteren Hardware-Komponenten auf einem FPGA realisiert und gegen die Referenzimplementierung verifiziert.
 
+## Konzeptionierung, Implementierung und Verifikation eines MAC-Layers für Paket-basierte Powerline Kommunikation
+Jahr: 2016
+
+In dieser Arbeit soll ein MAC-Layer nach dem HomePlug V1.0.1 Standard konzeptioniert und  
+implementiert werden. Die Implementierung erfolgt hierbei zunächst in einer C-  
+Referenzimplementierung, um eine Funktionale Verifikation durchzuführen. Anschließend soll der  MAC-Layer in einer VHDL-Implementierung umgesetzt werden und die Funktionsweise gegen die C- Implementierung verifiziert werden. Zusätzlich soll untersucht werden, wie sich eine hybride Lösung durch die Verwendung eines Soft-Core-Prozessors auf dem FPGA auf Fläche und Durchsatz verhält.  
+Am Schluss der Arbeit soll eine echtzeitfähige, verifizierte VHDL-Implementierung vorliegen, welche  sowohl Daten empfangen und verarbeiten als auch für das Senden vorbereiten kann.
+
 ## Implementierung und Evaluation eines parametrisierbaren Faltungsencoders und Viterbi-Decoders in VHDL
 
 Jahr: 2017
