@@ -15,6 +15,13 @@ Der für FPGAs optimierte VPRO bietet die notwendige Rechenleistung bei minimale
 
 Im Rahmen dieser Arbeit soll die generische VPRO Vektorprozessorarchitektur auf das Xilinx UltraScale+ MPSoC portiert werden. Dabei soll auf Basis des AXI4 Standard eine Infrastruktur implementiert werden, welche unter anderem einen Speichercontroller sowie Kommunikationsschnittstellen enthält. Die Kopplung des Vektorprozessors mit dem im FPGA verfügbaren ARM Prozessor soll sowohl hardwareseitig über entsprechende Schnittstellen als auch softwareseitig über Treiber und Bibliotheken implementiert werden.
 
+## Implementation and Evaluation of a Vector-Co-Processor Unit for Efficient Processing of Video-Based Advanced Driver Assistance Systems
+Jahr: 2018
+
+Der aufkommende Bereich der fortgeschrittenen Fahrerassistenzsysteme (ADAS) impliziert komplexe Berechnungen unter harten Echtzeitbedingungen. Die aktuellen Forschungstrendskonzentrieren sich auf erweiterte Szenenanalyse, wobei die sogenannten Convolutional Neural Networks (CNNs) eine State-of-the-art Bild- und Videoerkennungstechnik darstellen. Um mit der enormen Nachfrage nach Rechenleistung Schritt zu halten, stellen parallele Prozessorarchitekturen eine praktikable Lösung dar. Viele kommerzielle Plattformen basierend auf GPUs oder auf CPUs mit parallelen Datenverarbeitungserweiterungen wie SSE für die x86-Plattform. Speziell für den Einsatz im Automobilbereich sind niedrige Kosten und Energieeffizienz jedoch entscheidende Faktoren. Daher ist die Implementierung einer parallelen ASIP-Architektur (Application-Specific Instruction Set Processor) erforderlich.  
+  
+Basierend auf früheren Arbeiten soll in dieser Arbeit eine bestehende Instruction-Se-Architektur (ISA) für eine Xilinx Virtex-6 FPGA ml605 Plattform implementiert werden. Die ISA wurde allgemein für das Gebiet der fortgeschrittenen Fahrerassistenzsysteme entworfen und insbesondere für die effiziente Berechnung der Szenenklassifikation unter Verwendung von CNNs ausgelegt. Die Architektur soll für den Rechendurchsatz optimiert werden. Daher muss das Prozessor-Design mit tiefen Pipelines ausgestattet werden. Weiterhin muss eine explizite Instanziierung von dedizierten FPGA-Makros verwendet werden, um so das Timing zu optimieren. Die erreichbare Leistungsfähigkeit der implementierten Architektur soll mit dem IMS UEMU Framework evaluiert und mit einem beispielhaften 2D-Faltungsverarbeitungskern verifiziert werden.
+
 ## Konzeptionierung und Implementierung einer hybriden MAC-Layer-Architektur für Paket-basierte Powerline Kommunikation auf einem FPGA
 Jahr: 2017
 
@@ -28,3 +35,13 @@ weiter, bewertet die frequenzbezogenen Eigenschaften des Übertragungskanals und
 
 Die Aufgabe dieser Arbeit ist es eine hybride Architektur, bestehend aus Hardwareeinheiten
 und ein oder mehreren Softcore-Prozessoren zu konzeptionieren. Die Implementierung eines MAC- Layer nach dem HomePlug V1.0.1 Standard liegt hierbei bereits als VHDL-Hardware-Beschreibung und C-Referenzimplementierung vor. Zunächst soll eine Evaluation der bestehenden Hardware-Architektur hinsichtlich der Umsetzbarkeit einzelner Komponenten auf einem Softcore untersucht werden. Anschließend werden verschiedene Architekturen von Softcore-Prozessoren verglichen und bezüglich ihrer hardwarespezifischen Parameter bewertet. Die am besten geeigneten Softcore-Prozessor-Architekturen werden schließlich in einem Gesamtkonzept als hybride Architektur mit weiteren Hardware-Komponenten auf einem FPGA realisiert und gegen die Referenzimplementierung verifiziert.
+
+## Implementierung und Evaluation eines parametrisierbaren Faltungsencoders und Viterbi-Decoders in VHDL
+
+Jahr: 2017
+
+Heutige Anwendungen elektronischer Systeme setzen vermehrt auf die drahtlose Kommunikation und den Austausch von immer größer werdenden Datenmengen untereinander. Am Institut für Mikroelektronische Systeme werden unter anderem OFDM-basierte Kommunikationssysteme für diese Anforderungen konzeptioniert und evaluiert. Dabei spielt die Vorwärtsfehlerkorrektur der Sendedaten eine wichtige Rolle. Diese sorgt dafür, dass zuverlässig Daten über einen mit Störung behafteten Kanal zu übertragen werden können. Ein gängiges Verfahren für diese Art von Fehlerkorrekturmechanismus ist ein Faltungsencoder auf Senderseite und ein Viterbi-Decoder auf Empfängerseite. 
+
+Ein Faltungsencoder fügt dem Sendesignal Redundanz hinzu um mögliche Übertragungsfehler am Empfänger zu korrigieren. Diese Korrektur geschieht mit Hilfe eines Viterbi-Decoders, welcher durch Berechnung aller möglichen gesendeten Symbolfolgen die auswählt, welche die höchste Wahrscheinlichkeit besitzt. Bei diesem Verfahren lassen sich die Länge des Gedächtnisses, die Art der Wahrscheinlichkeitsberechnung und der Anteil der Redundanz variieren.
+
+In dieser Arbeit soll ein parametrisierbarer Faltungsencoder und zugehöriger Viterbi-Decoder in VHDL implementiert werden, bei dem die oben genannten Eigenschaften zum Zeitpunkt der Synthese eingestellt werden können. Ausgangspunkt der Konzeptionierung ist eine Referenzimplementierung in Matlab, welche als Evaluationsbasis für Hardware-seitige Ergebnisse dient. Nach erfolgreicher Evaluation soll die Echtzeitperformance der Implementierung mit Hilfe einer PXI-Emulationsplattform getestet werden. In dieser lassen sich verschiedene Typen von rauschenden Kanälen modellieren. Zum Abschluss der Arbeit sollen zusätzlich die FPGA-spezifische Kennzahlen extrahiert und verglichen werden.
