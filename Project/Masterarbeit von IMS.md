@@ -6,6 +6,13 @@
 Das Fachgebiet Architekturen und Systeme beschäftigt sich unter anderem  mit FPGAs in unterschiedlichen Einsatzgebieten. In dieser Arbeit soll  eine FPGA-Plattform zur automatisierten Messung und Auswertung von  Beschleunigungsdaten in einem Prüfstand entwickelt werden. Dazu gehört  die Anbindung der notwendigen Sensoren, die Implementierung der Firmware  und eine Einbettung an die bestehenden Systeme. Anschließend soll die  Funktion des Prüfstandes evaluiert und validiert werden.
 
 # Abgeschlossene Arbeiten
+## Portierung und Optimierung einer Vektorprozessorarchitektur für die dSPACE MicroAutoBox zur Szenenanalyse im Bereich der Fahrerassistenzsysteme
+Jahr: 2019
+
+ Am Institut für Mikroelektronische Systeme werden leistungsstarke Prozessor-architekturen für verschiedenste Anwendungsbereiche untersucht und entwickelt. im Automobilbereich und im Kontext der Fahrerassistenzsysteme werden Architekturen für komplexe Berechnungen eingesetzt, die unter harten Echtzeitanforderungen arbeiten müssen. Convolutional Neural Networks (CNNs) stellen hierbei eine vielversprechende Methode der Bilderkennung für komplexe Szenenanalysen dar. Um die hohen Anforderungen bezüglich der Rechenleistung gewährleisten zu können, bieten sich verschiede Plattformen an. Auf dem Markt existieren bereits Architekturen wie GPUs oder CPUs mit speziellen Erweiterungen wie MMX, die eine massiv-parallele Datenverarbeitung erlauben. Durch die hohe Verlustleistungsaufnahme sind derartige Plattformen für eingebettete Systeme in Fahrzeugen eher ungeeignet. Applikationsspezifische Prozessoren (ASPs) bieten hier einen guten Trade-Off zwischen Leistungsaufnahme, Rechenkapazität und Kosten-Effizienz.
+
+Die Aufgabe dieser Arbeit ist es, den am Institut entwickelten Vektorprozessor auf die dSPACE MicroAutoBox Rapid-Prototyping-Plattform für automotive Anwendungen zu portieren. Neben dem Aufsetzen der Toolchain soll der Prozessor für das verwendete Xilinx Kintex FPGA optimiert werden. Durch manuelle oder halb-automatische Platzierung der einzelnen Komponenten und/oder Module soll dabei eine maximale Anzahl an Rechenelementen sowie maximale Geschwindigkeit erzielt werden. Der Prozessor selbst soll in ein Framework integriert werden, das den Zugriff auf den externen DDR-Speicher und die Ethernetschnittstelle über eine auf dem AXI-Standard basierende Infrastruktur ermöglicht. Mithilfe einfacher Algorithmen soll die Funktionalität des Systems verifiziert werden.
+
 ## Portierung, Kopplung und Optimierung einer generischen Vektorprozessorarchitektur auf ein Xilinx UltraScale+ MPSoC mit eingebettetem ARM Prozessor
 Jahr: 2018
 
