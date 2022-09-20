@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sobel设计思路.md",
+            "file": "Masterarbeit von IMS.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sobel设计思路.md",
+                "file": "Masterarbeit von IMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sobel设计思路.md",
+                "file": "Masterarbeit von IMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,15 +111,15 @@
   },
   "active": "d3ea1f64aed3967a",
   "lastOpenFiles": [
+    "Sobel设计思路.md",
     "VDMA与Stream FIFO.md",
     "FPGA读SD图片实验.md",
     "xintc.h xscugic.h 差别.md",
     "Generic interrupt controlle.md",
     "VITIS UG1400.md",
     "Untitled 1.md",
-    "Untitled.md",
+    "Masterarbeit von IMS.md",
     "STM32的SD SPI读写.md",
-    "Cosideration on Multi-slave Configuration.md",
-    "Cosideration to Bus Floating and Hot Insertion.md"
+    "Cosideration on Multi-slave Configuration.md"
   ]
 }
