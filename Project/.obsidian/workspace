@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Masterarbeit von IMS.md",
+            "file": "Sobel_doku.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -80,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Masterarbeit von IMS.md",
+                "file": "Sobel_doku.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,7 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Masterarbeit von IMS.md",
+                "file": "Sobel_doku.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
