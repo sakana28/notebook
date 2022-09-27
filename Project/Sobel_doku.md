@@ -47,6 +47,14 @@ completes.
 This section shows an image before and after being processed using the Image Edge Detection IP.
 The following figure shows the input image.
 
+## Requirements  
+Software Tools:  
++ Vivado Design Suite 2015.2  
++ Xilinx Software Development Kit 2015.2  
++ Terminal program (CuteCom)  
+Hardware Tools:  
++ ZedBoard (Zynq™ Evaluation and Development
+
 ## Resource Utilization
 
 [Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
