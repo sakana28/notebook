@@ -49,8 +49,8 @@ The following figure shows the input image.
 
 ## Requirements  
 Software Tools:  
-+ Vivado Design Suite 2015.2  
-+ Xilinx Software Development Kit 2015.2  
++ Vivado ML Edition  2022.1  
++ Vitis Unified Software Platform 2022.1
 + Terminal program (CuteCom)  
 Hardware Tools:  
 + ZedBoard (Zynq™ Evaluation and Development
