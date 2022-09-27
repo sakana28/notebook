@@ -15,6 +15,20 @@ Typically an approximate magnitude is computed using:
 This is much faster to compute. The Sobel operator has the advantage of simplicity in calculation.
 
 
+
+## Requirements  
+Software Tools:  
++ Vivado ML Edition  2022.1  
++ Vitis Unified Software Platform 2022.1
++ Terminal program (CuteCom)  
+Hardware Tools:  
++ ZedBoard (Zynq™ Evaluation and Development
+
+## Resource Utilization
+
+[Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
+
+![[Pasted image 20220927211645.png]]
 ## 3 Hardware Implementation
 
 The following figure shows the Image Edge Detection block diagram.
@@ -47,14 +61,4 @@ completes.
 This section shows an image before and after being processed using the Image Edge Detection IP.
 The following figure shows the input image.
 
-## Requirements  
-Software Tools:  
-+ Vivado ML Edition  2022.1  
-+ Vitis Unified Software Platform 2022.1
-+ Terminal program (CuteCom)  
-Hardware Tools:  
-+ ZedBoard (Zynq™ Evaluation and Development
-
-## Resource Utilization
-
-[Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
+![[Pasted image 20220927211533.png]]
