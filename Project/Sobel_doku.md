@@ -48,3 +48,5 @@ This section shows an image before and after being processed using the Image Edg
 The following figure shows the input image.
 
 ## Resource Utilization
+
+[Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
