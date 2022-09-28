@@ -83,3 +83,4 @@ In the Convolution module, a five-stage pipeline is used to calculate the edge d
 The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit data. The inverting programmable full signal of this IP core, which is configured with a threshold of 16, is connected to the Sobel IP's output port axis_ready. This means that the Sobel IP stops receiving data from the upstream AXI-DMA IP when 16 data are stored in the buffer and are not output to the next module by a valid transfer, to prevent potential data corruption.
 
 ## Simulation
+A testbench and two C programs are provided to generate appropriate stimuli and to check the functionality of the image edge detection IP.

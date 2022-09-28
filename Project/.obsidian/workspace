@@ -112,6 +112,7 @@
   },
   "active": "1a14af9fbc554b7d",
   "lastOpenFiles": [
+    "Sobel_doku.md",
     "Masterarbeit von IMS.md",
     "Sobel设计思路.md",
     "VDMA与Stream FIFO.md",
@@ -120,7 +121,6 @@
     "Generic interrupt controlle.md",
     "VITIS UG1400.md",
     "Untitled 1.md",
-    "STM32的SD SPI读写.md",
-    "Cosideration on Multi-slave Configuration.md"
+    "STM32的SD SPI读写.md"
   ]
 }
