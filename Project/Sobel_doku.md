@@ -92,4 +92,7 @@ files list
 	- Arguments: rgb32_zero_gen file_in file_out
 - txttobmp.c -- A C program to convert a text file to a 100x100 BMP image file. 
 	- Arguments: txt2bmp file_in file_out
-	- 
+The following figure shows the input image
+![[Pasted image 20220928214551.png]]
+The following figure shows the output image after being processed using the Sobel test modules.
+![[Pasted image 20220928214629.png]]
