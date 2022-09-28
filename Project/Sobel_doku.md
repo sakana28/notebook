@@ -90,5 +90,6 @@ files list
 - tb_kontrolle_file.vhd -- A test bench that instantiates all modules in Sobel IP except the Output_buffer module. It can read a text file as stimulus and generate another output text file.
 - rgb32_zero_gen.c -- A C program to pad 0 and convert a 100x100 BMP image file to a text file. 
 	- Arguments: rgb32_zero_gen file_in file_out
-- txttobmp.c -- A C program to convert a. 
-	- Arguments: rgb32_zero_gen file_in file_out
+- txttobmp.c -- A C program to convert a text file to a 100x100 BMP image file. 
+	- Arguments: txt2bmp file_in file_out
+	- 
