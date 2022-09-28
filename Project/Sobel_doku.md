@@ -73,4 +73,5 @@ The following figure shows the input image.
 
 ![[Pasted image 20220927211533.png]]
 
-The data input to the Sobel IP is sequentially written into 4 line buffers. All line buffers are connected to the same data input port, and each line buffer has its own value signal, which marks whether the current input is valid or not. Each line buffer can hold 1024 bits of 8-bit data, which limits the maximum width of the image being processed to 1024 pixels.
+The 32-bit RGB data is fed into the RGB2GRAy module and is approximated to 8-bit grayscale data by shifting, fixed-point multiplication, and addition.
+The data input to the Sobel IP is sequentially written into 4 line buffers. All line buffers are connected to the same data input port, and each line buffer has its own value signal, which marks whether the current input is valid or not. Each line buffer can store up to 1024 8-bit data , which limits the maximum width of the image being processed.
