@@ -1,5 +1,6 @@
 ---
 date created: 2022-09-28 10:40
+date updated: 2022-09-29 01:06
 ---
 
 ## 2 Image Edge Detection
@@ -74,6 +75,7 @@ The following figure shows the input image.
 ![[Pasted image 20220927211533.png]]
 
 ## Hardware Implementation
+
 First, the RGB to Grayscale module receives the 32-bit RGB data from the AXI4-Stream interface and converts it approximately to 8-bit grayscale data using shifts, addition, and fixed-value multiplication. In addition, the module has two control signal input ports. The current 32-bit RGB data is considered valid only when both data_ready from the Output_buffer Module and data_valid from AXI-DMA IP are high.
 
 The data output from the RGB to Grayscale module is sequentially written into 4 line buffers. All line buffers are connected to the same data input port, and each line buffer has its own value signal, which marks whether the current input is valid or not. Each line buffer can store up to 1024 8-bit data , which limits the maximum width of the image being processed. Every line buffer can be read and written simultaneously . The control logic ensures that only one write process and only three read processes are valid. It also arranges the output data from line buffers in a specific order so that each valid output is a 3x3 window segmented from the grayscale image. Before each read, the FSM checks if there is enough data being stored in the line buffers. If there is not enough data, the FSM will remain in the Idle state and notify the PS processor by a PL-PS Interrupt signal.
@@ -85,20 +87,39 @@ In the Convolution module, a five-stage pipeline is used to calculate the edge d
 The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit data. The inverting programmable full signal of this IP core, which is configured with a threshold of 16, is connected to the Sobel IP's output port axis_ready. This means that the Sobel IP stops receiving data from the upstream AXI-DMA IP when 16 data are stored in the buffer and are not output to the next module by a valid transfer, to prevent potential data corruption.
 
 ## Simulation
+
 A test bench and two C programs are provided to generate appropriate stimuli and to check the functionality of the image edge detection IP.
 files list
+
 - tb_kontrolle_file.vhd -- A test bench that instantiates all modules in Sobel IP except the Output_buffer module. It can read a text file as stimulus and generate another output text file.
-- rgb32_zero_gen.c -- A C program to pad 0 and convert a 100x100 BMP image file to a text file. 
-	- Arguments: rgb32_zero_gen file_in file_out
-- txttobmp.c -- A C program to convert a text file to a 100x100 BMP image file. 
-	- Arguments: txt2bmp file_in file_out
+- rgb32_zero_gen.c -- A C program to pad 0 and convert a 100x100 BMP image file to a text file.
+  - Arguments: rgb32_zero_gen file_in file_out
+- txttobmp.c -- A C program to convert a text file to a 100x100 BMP image file.
+  - Arguments: txt2bmp file_in file_out
+
 The following figure shows the input image
 ![[Pasted image 20220928214551.png]]
 The following figure shows the output image after being processed using the Sobel test modules.
 ![[Pasted image 20220928214629.png]]
 
 ## Software
+
 files list:
+
+- main.c
+- platform.c
+- platform.h
+- platform_config.h
+- rgbtoyuv422.c
+- rgbtoyuv422.h
+- SDoperation.h
+- SDoperation.c
+- sobel_dma.h
+- sobel_dma.c
+- sobel.h
+
+Driver from Avnet example design:
+
 - video_frame_buffer.h
 - video_generator.h
 - video_generator.c
@@ -107,17 +128,19 @@ files list:
 - zed_iic.h
 - zed_iic_axi.c
 - video_frame_buffer.c
-- zed_hdmi_display.h
-- main.c
-- platform.c
-- platform.h
-- platform_config.h
-- SDoperation.h
-- SDoperation.c
-- sobel_dma.h
-- sobel_dma.c
-- sobel.h
-- rgbtoyuv422.c
-- rgbtoyuv422.h
 - zed_hdmi_display.c
-
+- zed_hdmi_display.h
+5.7 Xilinx SDK for Sobel Filter  
+Here in this part the hardware will be tested to see whether it is giving the correct output  
+or not. These steps has been followed.  
+● Initialise the DMA.  
+● Initialise the IP core.  
+● Store the value of the noise free image pixels in the header file. Take the value  
+from the header file and send it to the hardware.  
+● Initialize the AXI timer.  
+● Write the two Sobel Kernel values(X-Horizontal side, Y-Vertical side) and start  
+the IP core.  
+● Flush the cache.  
+● Specify the transfer function from Device to Dma and also from Dma to Device.  
+● Invalidate the cache.  
+● Stop the timer
