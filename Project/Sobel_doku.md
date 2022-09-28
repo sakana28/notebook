@@ -99,3 +99,25 @@ The following figure shows the output image after being processed using the Sobe
 
 ## Software
 files list:
+- video_frame_buffer.h
+- video_generator.h
+- video_generator.c
+- video_resolution.c
+- video_resolution.h
+- zed_iic.h
+- zed_iic_axi.c
+- video_frame_buffer.c
+- zed_hdmi_display.h
+- main.c
+- platform.c
+- platform.h
+- platform_config.h
+- SDoperation.h
+- SDoperation.c
+- sobel_dma.h
+- sobel_dma.c
+- sobel.h
+- rgbtoyuv422.c
+- rgbtoyuv422.h
+- zed_hdmi_display.c
+
