@@ -85,4 +85,5 @@ The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit 
 ## Simulation
 A test bench and two C programs are provided to generate appropriate stimuli and to check the functionality of the image edge detection IP.
 files list
-- tb_kontrolle_file.vhd -- 
+- tb_kontrolle_file.vhd -- A test bench that instantiates all modules in Sobel IP except the Output_buffer module.
+- rgb32_zero_gen.c -- A C program
