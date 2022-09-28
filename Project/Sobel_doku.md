@@ -1,9 +1,13 @@
+---
+date created: 2022-09-28 10:40
+---
 
 ## 2 Image Edge Detection
-Sobel Edge Detection is used to identify points in a digital image where the brightness changes sharply and discontinues. The  edge detection method reduces the amount of data in an image and preserves the structural properties  for further processing. In a gray level image, the edge is a local feature with in a neighborhood separate regions.The gray level is more or less uniform with in different values on the two sides of the edge. For a  noisy image, it is difficult to detect edges as both edge and noise contains high frequency contents, which  
-results in blurred and distorted images.  
+
+Sobel Edge Detection is used to identify points in a digital image where the brightness changes sharply and discontinues. The  edge detection method reduces the amount of data in an image and preserves the structural properties  for further processing. In a gray level image, the edge is a local feature with in a neighborhood separate regions.The gray level is more or less uniform with in different values on the two sides of the edge. For a  noisy image, it is difficult to detect edges as both edge and noise contains high frequency contents, which\
+results in blurred and distorted images.\
 Microsemi offers the Image Edge Detection IP that enables designers to use the edge detection for image processing.
-The Image Edge Detection IP implements Sobel filter, which is a classical algorithm in the field of image  and video processing for the extraction of object edges. Sobel filter works on the premise of computing  an estimate of the first derivative of an image to extract the edge information. By computing the x and y  direction derivatives of a specific pixel against a neighborhood of surrounding pixels, it is possible to  extract the boundary between two distinct elements in an image. Due to the computational load of calculating derivatives using the squaring and square root operators, fixed coefficient masks are adopted  as a suitable approximation in computing the derivative at a specific point. In the case of Sobel, the  masks used are shown in the following figure.  
+The Image Edge Detection IP implements Sobel filter, which is a classical algorithm in the field of image  and video processing for the extraction of object edges. Sobel filter works on the premise of computing  an estimate of the first derivative of an image to extract the edge information. By computing the x and y  direction derivatives of a specific pixel against a neighborhood of surrounding pixels, it is possible to  extract the boundary between two distinct elements in an image. Due to the computational load of calculating derivatives using the squaring and square root operators, fixed coefficient masks are adopted  as a suitable approximation in computing the derivative at a specific point. In the case of Sobel, the  masks used are shown in the following figure.
 
 Figure 1 • Sobel Operator Horizontal and Vertical Kernels
 
@@ -14,33 +18,34 @@ Typically an approximate magnitude is computed using:
 
 This is much faster to compute. The Sobel operator has the advantage of simplicity in calculation.
 
+## Requirements
 
+Software Tools:
 
-## Requirements  
-Software Tools:  
-+ Vivado ML Edition  2022.1  
-+ Vitis Unified Software Platform 2022.1
-+ Terminal program (CuteCom)  
-Hardware Tools:  
-+ ZedBoard (Zynq™ Evaluation and Development
+- Vivado ML Edition  2022.1
+- Vitis Unified Software Platform 2022.1
+- Terminal program (CuteCom)
+
+Hardware Tools:
+
+- ZedBoard (Zynq™ Evaluation and Development
 
 ## Resource Utilization
 
 [Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
 
 ![[Pasted image 20220927211645.png]]
+
 ## 3 Hardware Implementation
 
 The following figure shows the Image Edge Detection block diagram.
 
-The data input to the Sobel IP is sequentially written into 4 line buffers.  All of the line buffers are connected to 
-
-The data is collected from the Line buffer and it is stored in the window[3]. Only 9 values  
-are stored in a 3*3 window. It requires 9 clock cycles and one extra cycle to perform the  
-computation. Pipelining is used to reduce the clock cycles. When pipelining is used the  
-storing of the data in the window can be done in 1 clock cycle. There is a reason for the  
-window having matrix size 3*3. Always the middle value of the window is considered to  
-perform any computation because the position (1,1) can be compared with any other  
+The data is collected from the Line buffer and it is stored in the window[3]. Only 9 values\
+are stored in a 3_3 window. It requires 9 clock cycles and one extra cycle to perform the\
+computation. Pipelining is used to reduce the clock cycles. When pipelining is used the\
+storing of the data in the window can be done in 1 clock cycle. There is a reason for the\
+window having matrix size 3_3. Always the middle value of the window is considered to\
+perform any computation because the position (1,1) can be compared with any other\
 position in the window.
 
 The read submodule generates the read enable signals and the addresses to read from LSRAM. It also
@@ -67,3 +72,5 @@ This section shows an image before and after being processed using the Image Edg
 The following figure shows the input image.
 
 ![[Pasted image 20220927211533.png]]
+
+The data input to the Sobel IP is sequentially written into 4 line buffers. All line buffers are connected to the same data input port, and each line buffer has its own value signal, which marks whether the current input is valid or not. Each line buffer can hold 1024 bits of 8-bit data, which limits the maximum width of the image being processed to 1024 pixels.
