@@ -78,6 +78,8 @@ First, the RGB to Grayscale module receives the 32-bit RGB data from the AXI4-St
 
 The data output from the RGB to Grayscale module is sequentially written into 4 line buffers. All line buffers are connected to the same data input port, and each line buffer has its own value signal, which marks whether the current input is valid or not. Each line buffer can store up to 1024 8-bit data , which limits the maximum width of the image being processed. Every line buffer can be read and written simultaneously . The control logic ensures that only one write process and only three read processes are valid. It also arranges the output data from line buffers in a specific order so that each valid output is a 3x3 window segmented from the grayscale image. Before each read, the FSM checks if there is enough data being stored in the line buffers. If there is not enough data, the FSM will remain in the Idle state and notify the PS processor by a PL-PS Interrupt signal.
 
+The IP also contains a register that can be configured through AXI4-Lite interface. Before image processing, the user should configure it to the width of the image to be processed + 2 (i.e. the width of the image with zero-padding)
+
 In the Convolution module, a five-stage pipeline is used to calculate the edge detection value and determine whether the value is greater than the threshold value. If it is greater than the threshold value, 8-bit data 0XFF is output, otherwise 8-bit data 0X00 is output, i.e. the edge is white and the rest is black.
 
 The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit data. The inverting programmable full signal of this IP core, which is configured with a threshold of 16, is connected to the Sobel IP's output port axis_ready. This means that the Sobel IP stops receiving data from the upstream AXI-DMA IP when 16 data are stored in the buffer and are not output to the next module by a valid transfer, to prevent potential data corruption.
@@ -85,5 +87,5 @@ The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit 
 ## Simulation
 A test bench and two C programs are provided to generate appropriate stimuli and to check the functionality of the image edge detection IP.
 files list
-- tb_kontrolle_file.vhd -- A test bench that instantiates all modules in Sobel IP except the Output_buffer module.
-- rgb32_zero_gen.c -- A C program to convert a 100x100 Bmp
+- tb_kontrolle_file.vhd -- A test bench that instantiates all modules in Sobel IP except the Output_buffer module. Stimulus of the test bench is a
+- rgb32_zero_gen.c -- A C program to pad 0 and convert a 100x100 BMP image file to a text file
