@@ -96,3 +96,6 @@ The following figure shows the input image
 ![[Pasted image 20220928214551.png]]
 The following figure shows the output image after being processed using the Sobel test modules.
 ![[Pasted image 20220928214629.png]]
+
+## Software
+files list:
