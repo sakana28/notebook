@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-28 10:40
-date updated: 2022-09-29 15:34
+date updated: 2022-09-29 17:08
 ---
 
 ## 2 Image Edge Detection
@@ -29,7 +29,7 @@ Software Tools:
 
 Hardware Tools:
 
-- ZedBoard (Zynq™ Evaluation and Development
+- ZedBoard
 
 ## Resource Utilization
 
