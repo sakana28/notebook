@@ -8,9 +8,9 @@ date updated: 2022-09-29 21:09
 Sobel edge detection is a classical algorithm in the field of image and video processing for extracting the edges of objects. A common approach for edge detection is to compute the first-order derivative of an image to extract edge information. By computing the x and y direction derivatives of a specific pixel against a neighborhood of surrounding pixels, it is possible to extract the boundary between two distinct elements in an image. However, due to the intensive computationally load  of using squaring and square root operators to calculate the derivatives,  fixed coefficient masks, i.e., the Sobel operator, have been used as a suitable approximation to calculate the derivatives at a specific point.
 In general, the Sobel filter uses two 3 x 3 kernels. One for horizontal variation, one for calculating horizontal variation and the other for vertical variation. These two kernels are convolved with the original image to calculate an approximation of the derivative.
 ![[Pasted image 20220929210921.png]]
-
-
-
+The approximate gradient at a specific point is
+![[Pasted image 20220929211548.png]]
+In this project, to avoid the square root operation, the square of G will be compared with a threshold to to determine whether a point is part of the edges or not.
 ## Requirements
 
 Software Tools:
