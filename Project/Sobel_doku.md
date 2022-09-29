@@ -34,43 +34,11 @@ Hardware Tools:
 ## Resource Utilization
 
 [Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
+## System Structure
 
 ![[Pasted image 20220927211645.png]]
 
-## 3 Hardware Implementation
 
-The following figure shows the Image Edge Detection block diagram.
-
-The data is collected from the Line buffer and it is stored in the window[3]. Only 9 values\
-are stored in a 3_3 window. It requires 9 clock cycles and one extra cycle to perform the\
-computation. Pipelining is used to reduce the clock cycles. When pipelining is used the\
-storing of the data in the window can be done in 1 clock cycle. There is a reason for the\
-window having matrix size 3_3. Always the middle value of the window is considered to\
-perform any computation because the position (1,1) can be compared with any other\
-position in the window.
-
-The read submodule generates the read enable signals and the addresses to read from LSRAM. It also
-has the 3x3 window logic which reads the 3x3 window from LSRAMs and feeds to the Sobel filter
-interpolation block. The pixel at which the edge must be computed is placed at the center of the 3x3
-window. Then the window slides right to compute the value of the next pixel in the line.
-For the first line of the frame, the first row of the 3x3 window is all zeros, the second row is LSRAM1 data
-and third row is LSRAM2 data. For the second line, the first row is LSRAM1 data, second row is LSRAM2
-data and third row is LSRAM3 data. For the third line, the first row is LSRAM2 data, second row is
-LSRAM3 data and third row is LSRAM1 data and so on.
-
-The Sobel filter performs the Sobel operation (as described in section 2) on the 3x3 window data coming
-from Read LSRAM block to produce the edge detected image.
-
-Configuration Parameters
-
-The following figures show the timing diagram of the Image Edge Detection IP.
-
-Simulation
-The testbench output image file appears in the Files/simulation folder after the simulation
-completes.
-
-This section shows an image before and after being processed using the Image Edge Detection IP.
-The following figure shows the input image.
 
 ![[Pasted image 20220927211533.png]]
 
