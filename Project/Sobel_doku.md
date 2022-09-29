@@ -63,6 +63,9 @@ The following figure shows the input image
 ![[Pasted image 20220928214551.png]]
 The following figure shows the output image after being processed using the Sobel test modules.
 ![[Pasted image 20220928214629.png]]
+By comparing the waveforms resulting from the simulation with the designed waveforms, we conclude that the tested module implements the designed functions without errors.
+![[Pasted image 20220929191705.png]]
+![[Pasted image 20220929191937.png]]
 
 ## Software
 
