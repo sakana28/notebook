@@ -25,7 +25,9 @@ grayscale = ( (0.3 * R) + (0.59 * G) + (0.11 * B) )
 The number of bytes in a row of BMP images is calculated by the following formula:
 ![[Pasted image 20220726102502.png]]
 After all the data bytes, the rest of the position will be filled with 0. It ensures that a row of BMP images can be stored aligned in computer. 
-![[Pasted image 20220929214224.png]]
+BMP file header contains metadata about the image. By reading specific bytes in the header,  it is possible to get the length and width of any BMP image.
+![[Pasted image 20220929214255.png]]
+
 ## Requirements
 
 Software Tools:
