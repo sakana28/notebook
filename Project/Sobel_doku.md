@@ -40,6 +40,7 @@ Hardware Tools:
 The communication between Zynq PS and PL is based on the AXI4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General Propose port of the PS by the AXI Lite bus. And the image data is sent to AXI DMA IP through the AXI4 bus through the High performance port. This IP moves the data direct from the memory and streams it to other peripherals with the AXI4-Stream protocol.
 
 ![[Pasted image 20220927211645.png]]
+In this system, the original image is read from the SD card by the processor and pre-processed (Zero-Padding and data rearrangement). The pre-processed data is then stored in the DDR and transferred to the Sobel IP by the AXI DMA IP. the processed edge images are written back to the DDR again by the AXI DMA. After transferring a specific amount of edge image information, the AXI DMA notifies the PS with an interrupt signal.
 
 ![[Pasted image 20220927211533.png]]
 
