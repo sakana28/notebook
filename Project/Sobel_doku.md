@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-28 10:40
-date updated: 2022-09-29 01:06
+date updated: 2022-09-29 15:34
 ---
 
 ## 2 Image Edge Detection
@@ -34,11 +34,12 @@ Hardware Tools:
 ## Resource Utilization
 
 [Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
+
 ## System Structure
 
+The communication between Zynq PS and PL is based on the axi4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General Propose port of the PS by the AXI Lite bus. And the image data is sent to AXI DMA IP through the AXI4 bus through the High performance port.The communication between Zynq PS and PL is based on the axi4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General propose port of the PS, via the AXI LIte bus. The picture data is transferred to the AXI DMA IP via the AXI4 bus via the Hign proformence port. 
+
 ![[Pasted image 20220927211645.png]]
-
-
 
 ![[Pasted image 20220927211533.png]]
 
@@ -100,9 +101,10 @@ Standalone drivers from Avnet example design:
 - zed_hdmi_display.h
 
 In file sobel_dma.c, the software design to finish a complete image filtering process consists of the following steps:
-- Initialize the DMA.  
+
+- Initialize the DMA.
 - configurate the Sobel IP width register
-- Setup interrupt system 
+- Setup interrupt system
 - enable S2MM interrupt
 - flush the cache
 - Start DMA simple transfer DMA to device
