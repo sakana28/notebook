@@ -42,6 +42,8 @@ The communication between Zynq PS and PL is based on the AXI4 protocol. As shown
 ![[Pasted image 20220927211645.png]]
 In this system, the original image is read from the SD card by the processor and pre-processed (Zero-Padding and data rearrangement). The pre-processed data is then stored in the DDR and transferred to the Sobel IP by the AXI DMA IP. the processed edge images are written back to the DDR again by the AXI DMA. After transferring a specific amount of edge image information, the AXI DMA notifies the PS with an interrupt signal.
 
+The original and the processed edge image are then moved from the DDR by AXI VDMA IP and buffered. Then the data is transferred to Xilinx VPSS IP for processing and later synchronized with the timing signal in AXIS to video out IP.
+
 ![[Pasted image 20220927211533.png]]
 
 ## Hardware Implementation
