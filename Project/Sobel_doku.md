@@ -4,7 +4,17 @@ date updated: 2022-09-29 20:43
 ---
 
 ## Sobel Edge Detection
+sobel edge detection is a classical algorithm in the field of image and video processing for the extraction of object edges. Edge detection using Sobel operators works on the premise of computing an estimate of the first derivative of an image to extract edge information . By computing the x and y direction derivatives of a specific pixel against a neighborhood of surrounding pixels, it is possible to extract the boundary between two distinct elements in an image. Due to the computational load of calculating derivatives using squaring and square root operators, fixed coefficient masks have been adopted as a suitable approximation in computing
+the derivative at a specific point. In the case of Sobel, the masks used are shown in Table 1.
 
+the sobel filter uses two 3 x 3 kernels. One for changes in the
+horizontal direction, and one for changes in the vertical direction.
+The two kernels are convolved with the original image to calculate the
+approximations of the derivatives.
+
+Sobel edge detection is a classical algorithm in the field of image and video processing for extracting the edges of objects. The premise of edge detection using the Sobel operator is to compute an estimate of the first-order derivative of an image to extract edge information. The boundary between two different elements in an image can be extracted by computing the derivatives of a particular pixel in the x and y directions compared to the neighborhood of the surrounding pixels. Due to the computational effort of using square operation and square root operation to calculate the derivatives, fixed coefficient masks have been used as a suitable approximation to calculate the derivatives at a specific point.
+In general, the Sobel filter uses two 3 x 3 kernels. One for the horizontal variation, one for the horizontal variation and the other for the vertical variation.
+These two kernels are convolved with the original image to calculate an approximation of the derivative.
 ## Requirements
 
 Software Tools:
