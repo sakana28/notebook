@@ -130,6 +130,7 @@ Driver from Avnet example design:
 - video_frame_buffer.c
 - zed_hdmi_display.c
 - zed_hdmi_display.h
+- 
 5.7 Xilinx SDK for Sobel Filter  
 Here in this part the hardware will be tested to see whether it is giving the correct output  
 or not. These steps has been followed.  
