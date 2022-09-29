@@ -118,7 +118,7 @@ files list:
 - sobel_dma.c
 - sobel.h
 
-Driver from Avnet example design:
+Standalone drivers from Avnet example design:
 
 - video_frame_buffer.h
 - video_generator.h
@@ -134,7 +134,10 @@ Driver from Avnet example design:
 In file sobel_dma.c, the software design to finish a complete image filtering process consists of the following steps:
 - Initialize the DMA.  
 - configurate the Sobel IP width register
-- Setup interrupt system
-- enable S2MM Interrupt
-- Invalidate the cache.  
-- Stop the timer
+- Setup interrupt system 
+- enable S2MM interrupt
+- flush the cache
+- Start DMA simple transfer DMA to device
+- enbale Sobel INTR interrupt (Optional)
+- receive S2MM interrupt, set Done_flag to 1 and disable Sobel INTR interrupt in the S2MM interrupt service routine
+- flush the cache
