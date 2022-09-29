@@ -1,9 +1,9 @@
 ---
 date created: 2022-09-28 10:40
-date updated: 2022-09-29 17:08
+date updated: 2022-09-29 19:11
 ---
 
-##  Image Edge Detection
+## Sobel Edge Detection
 
 ## Requirements
 
@@ -16,10 +16,6 @@ Software Tools:
 Hardware Tools:
 
 - ZedBoard
-
-## Resource Utilization
-
-[Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
 
 ## System Structure
 
@@ -45,9 +41,13 @@ In the Convolution module, a five-stage pipeline is used to calculate the edge d
 The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit data. The inverting programmable full signal of this IP core, which is configured with a threshold of 16, is connected to the Sobel IP's output port axis_ready. This means that the Sobel IP stops receiving data from the upstream AXI-DMA IP when 16 data are stored in the buffer and are not output to the next module by a valid transfer, to prevent potential data corruption.
 
 ## Generate the hardware design with Vivado Design Suite
+
 file list:
+
 - sobel_system.tcl -- script to generate the system block design
-- 
+- sobel_v1_0 -- packaged Sobel custom IP
+- zedboard_hdmi_display.xdc -- constraints file for Zedboard HDMI output
+
 ## Simulation
 
 A test bench and two C programs are provided to generate appropriate stimuli and to check the functionality of the image edge detection IP.
@@ -104,6 +104,10 @@ In file sobel_dma.c, the software design to finish a complete image filtering pr
 - enbale Sobel INTR interrupt (Optional)
 - receive S2MM interrupt, set Done_flag to 1 and disable Sobel INTR interrupt in the S2MM interrupt service routine
 - flush the cache
+
+## Resource Utilization
+
+[Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
 
 ## Test Results
 
