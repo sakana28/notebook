@@ -120,3 +120,7 @@ resources utilization of Sobel custom IP is given by:
 ![[Pasted image 20220929184849.png]]
 The above figure shows the original and processed edge images.
 It takes 837299 ns from the DMA started moving the original image data until all the processed data were written back to the DDR . In comparison, a Sobel operation software implementation without hardware acceleration takes 201225057 ns.
+## potential improvement points
+The Xilinx VPSS IP is configured to full fledged mode, but actually only the color space conversion function is required. However, in color space conversion only mode, the AXI Lite interface has no clock of its own. This causes a lot of unnecessary resource consumption and latency.
+![[Pasted image 20220929203550.png]]
+![[Pasted image 20220929203609.png]]
