@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-28 10:40
-date updated: 2022-09-29 19:11
+date updated: 2022-09-29 19:32
 ---
 
 ## Sobel Edge Detection
@@ -110,7 +110,10 @@ In file sobel_dma.c, the software design to finish a complete image filtering pr
 
 ## Resource Utilization
 
-[Documentation Portal](https://docs.xilinx.com/v/u/en-US/xapp890-zynq-sobel-vivado-hls)
+The following table shows the resource utilization of all modules of PL:
+![[Pasted image 20220929192510.png]]
+resources utilization of Sobel custom IP is given by:
+![[Pasted image 20220929192736.png]]
 
 ## Test Results
 
