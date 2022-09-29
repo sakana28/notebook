@@ -22,11 +22,10 @@ It is an approximate form of the following formula:
 grayscale = ( (0.3 * R) + (0.59 * G) + (0.11 * B) )
 
 ### BMP File
-
+The number of bytes in a row of BMP images is calculated by the following formula:
 ![[Pasted image 20220726102502.png]]
-`floor((BitsPerPixel * ImageWidth + 31) / 32) * 4`
-`ceil(BitsPerPixel * ImageWidth / 32) * 4`
-
+After all the data bytes, the rest of the position will be filled with 0. It ensures that a row of BMP images can be stored aligned in computer. 
+![[Pasted image 20220929214224.png]]
 ## Requirements
 
 Software Tools:
