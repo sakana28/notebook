@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-28 10:40
-date updated: 2022-09-29 19:32
+date updated: 2022-09-29 20:43
 ---
 
 ## Sobel Edge Detection
@@ -22,9 +22,9 @@ Hardware Tools:
 The communication between Zynq PS and PL is based on the AXI4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General Propose port of the PS by the AXI Lite bus. And the image data is sent to AXI DMA IP through the AXI4 bus through the High performance port. This IP moves the data direct from the memory and streams it to other peripherals with the AXI4-Stream protocol.
 
 ![[Pasted image 20220927211645.png]]
-In this system, the original image is read from the SD card by the processor and pre-processed (Zero-Padding and data rearrangement). The pre-processed data is then stored in the DDR and transferred to the Sobel IP by the AXI DMA IP. the processed edge images are written back to the DDR again by the AXI DMA. After transferring a specific amount of edge image information, the AXI DMA notifies the PS with an interrupt signal.
+In this system, the original image is read from the SD card by the processor and pre-processed (Zero-Padding and data rearrangement). The pre-processed data is then stored in the DDR and transferred to the Sobel IP by the AXI DMA IP. The processed binary images are written back to the DDR again by the AXI DMA. After sending a specific amount of data, the AXI DMA notifies the PS with an interrupt signal.
 
-The original and the processed edge image are then moved from the DDR by AXI VDMA IP and buffered. Then the data is transferred to Xilinx VPSS IP for processing and later synchronized with the timing signal in AXIS to video out IP. Finally, the 16-bit YCbCr video signal is sent to the ADV7511 HDMI Transmitter on the Zedboard and displayed on the monitor.
+The original and the processed image are then moved from the DDR by AXI VDMA IP and buffered in PL. Then the data is transferred to Xilinx VPSS IP for processing and later synchronized with the timing signals in AXIS to video out IP. Finally, the 16-bit YCbCr video signal is sent to the ADV7511 HDMI Transmitter on  Zedboard and displayed on a monitor.
 
 ![[Pasted image 20220927211533.png]]
 
@@ -120,7 +120,10 @@ resources utilization of Sobel custom IP is given by:
 ![[Pasted image 20220929184849.png]]
 The above figure shows the original and processed edge images.
 It takes 837299 ns from the DMA started moving the original image data until all the processed data were written back to the DDR . In comparison, a Sobel operation software implementation without hardware acceleration takes 201225057 ns.
+
 ## potential improvement points
-The Xilinx VPSS IP is configured to full fledged mode, but actually only the color space conversion function is required. However, in color space conversion only mode, the AXI Lite interface has no clock of its own. This causes a lot of unnecessary resource consumption and latency.
+
+The Xilinx VPSS IP is configured to full fledged mode, but actually only the color space conversion function is required. However, in color space conversion only mode, the AXI Lite interface has no clock of its own. This results in lots of unnecessary resource consumption and latency.
+Is it possible to replace it with other IPs or custom IP?
 ![[Pasted image 20220929203550.png]]
 ![[Pasted image 20220929203609.png]]
