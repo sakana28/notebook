@@ -37,7 +37,7 @@ Hardware Tools:
 
 ## System Structure
 
-The communication between Zynq PS and PL is based on the axi4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General Propose port of the PS by the AXI Lite bus. And the image data is sent to AXI DMA IP through the AXI4 bus through the High performance port.The communication between Zynq PS and PL is based on the axi4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General propose port of the PS, via the AXI LIte bus. The picture data is transferred to the AXI DMA IP via the AXI4 bus via the Hign proformence port. 
+The communication between Zynq PS and PL is based on the AXI4 protocol. As shown in the figure below, the configurable registers of the Sobel IP are connected to the General Propose port of the PS by the AXI Lite bus. And the image data is sent to AXI DMA IP through the AXI4 bus through the High performance port. This IP moves the data direct from the memory and streams it to other peripherals with the AXI4-Stream protocol.
 
 ![[Pasted image 20220927211645.png]]
 
