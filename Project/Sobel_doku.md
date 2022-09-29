@@ -130,18 +130,11 @@ Driver from Avnet example design:
 - video_frame_buffer.c
 - zed_hdmi_display.c
 - zed_hdmi_display.h
-- 
-5.7 Xilinx SDK for Sobel Filter  
-Here in this part the hardware will be tested to see whether it is giving the correct output  
-or not. These steps has been followed.  
-● Initialise the DMA.  
-● Initialise the IP core.  
-● Store the value of the noise free image pixels in the header file. Take the value  
-from the header file and send it to the hardware.  
-● Initialize the AXI timer.  
-● Write the two Sobel Kernel values(X-Horizontal side, Y-Vertical side) and start  
-the IP core.  
-● Flush the cache.  
-● Specify the transfer function from Device to Dma and also from Dma to Device.  
-● Invalidate the cache.  
-● Stop the timer
+
+In file sobel_dma.c, the software design to finish a complete image filtering process consists of the following steps:
+- Initialize the DMA.  
+- configurate the Sobel IP width register
+- Setup interrupt system
+- enable S2MM Interrupt
+- Invalidate the cache.  
+- Stop the timer
