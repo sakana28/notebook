@@ -1,16 +1,32 @@
 ---
 date created: 2022-09-28 10:40
-date updated: 2022-09-29 21:09
+date updated: 2022-09-29 21:31
 ---
 
 ## Background
+
+### Sobel Operator
 
 Sobel edge detection is a classical algorithm in the field of image and video processing for extracting the edges of objects. A common approach for edge detection is to compute the first-order derivative of an image to extract edge information. By computing the x and y direction derivatives of a specific pixel against a neighborhood of surrounding pixels, it is possible to extract the boundary between two distinct elements in an image. However, due to the intensive computationally load  of using squaring and square root operators to calculate the derivatives,  fixed coefficient masks, i.e., the Sobel operator, have been used as a suitable approximation to calculate the derivatives at a specific point.
 In general, the Sobel filter uses two 3 x 3 kernels. One for horizontal variation, one for calculating horizontal variation and the other for vertical variation. These two kernels are convolved with the original image to calculate an approximation of the derivative.
 ![[Pasted image 20220929210921.png]]
 The approximate gradient at a specific point is
 ![[Pasted image 20220929211548.png]]
-In this project, to avoid the square root operation, the square of G will be compared with a threshold to to determine whether a point is part of the edges or not.
+In this project, to avoid the square root operation, the square of G will be compared with a threshold to to determine whether a point is part of the edges.
+
+### RGB to grayscale
+
+In this project, the following formula is used to calculate the grayscale of a pixel:
+grayscale= (R << 2) + (R << 5) + (G << 1) + (G << 4) + (B << 4) + (B << 5)
+It is an approximate form of the following formula:
+grayscale = ( (0.3 * R) + (0.59 * G) + (0.11 * B) )
+
+### BMP File
+
+![[Pasted image 20220726102502.png]]
+`floor((BitsPerPixel * ImageWidth + 31) / 32) * 4`
+`ceil(BitsPerPixel * ImageWidth / 32) * 4`
+
 ## Requirements
 
 Software Tools:
@@ -36,7 +52,7 @@ The original and the processed image are then moved from the DDR by AXI VDMA IP 
 
 ## Hardware Implementation
 
-First, the RGB to Grayscale module receives the 32-bit RGB data from the AXI4-Stream interface and converts it approximately to 8-bit grayscale data using shifts, addition, and fixed-value multiplication. In addition, the module has two control signal input ports. The current 32-bit RGB data is considered valid only when both data_ready from the Output_buffer Module and data_valid from AXI-DMA IP are high.
+First, the RGB to Grayscale module receives the 32-bit RGB data from the AXI4-Stream interface and converts it approximately to 8-bit grayscale data using shifts and addition. In addition, the module has two control signal input ports. The current 32-bit RGB data is considered valid only when both data_ready from the Output_buffer Module and data_valid from AXI-DMA IP are high.
 
 The data output from the RGB to Grayscale module is sequentially written into 4 line buffers. All line buffers are connected to the same data input port, and each line buffer has its own value signal, which marks whether the current input is valid or not. Each line buffer can store up to 1024 8-bit data , which limits the maximum width of the image being processed. Every line buffer can be read and written simultaneously . The control logic ensures that only one write process and only three read processes are valid. It also arranges the output data from line buffers in a specific order so that each valid output is a 3x3 window segmented from the grayscale image. Before each read, the FSM checks if there is enough data being stored in the line buffers. If there is not enough data, the FSM will remain in the Idle state and notify the PS processor by a PL-PS Interrupt signal.
 

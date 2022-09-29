@@ -5,6 +5,10 @@
       "path": "Sobel_doku.md"
     },
     {
+      "basename": "BMP row width",
+      "path": "BMP row width.md"
+    },
+    {
       "basename": "Sobel设计思路",
       "path": "Sobel设计思路.md"
     },
@@ -47,10 +51,6 @@
     {
       "basename": "SpinalHDL",
       "path": "SpinalHDL.md"
-    },
-    {
-      "basename": "BMP row width",
-      "path": "BMP row width.md"
     },
     {
       "basename": "pipelining",
