@@ -44,10 +44,14 @@ In the Convolution module, a five-stage pipeline is used to calculate the edge d
 
 The Xilinx FIFO IP core is used as an output buffer and can hold up to 32 8-bit data. The inverting programmable full signal of this IP core, which is configured with a threshold of 16, is connected to the Sobel IP's output port axis_ready. This means that the Sobel IP stops receiving data from the upstream AXI-DMA IP when 16 data are stored in the buffer and are not output to the next module by a valid transfer, to prevent potential data corruption.
 
+## Generate the hardware design with Vivado Design Suite
+file list:
+- sobel_system.tcl -- script to generate the system block design
+- 
 ## Simulation
 
 A test bench and two C programs are provided to generate appropriate stimuli and to check the functionality of the image edge detection IP.
-files list
+files list:
 
 - tb_kontrolle_file.vhd -- A test bench that instantiates all modules in Sobel IP except the Output_buffer module. It can read a text file as stimulus and generate another output text file.
 - rgb32_zero_gen.c -- A C program to pad 0 and convert a 100x100 BMP image file to a text file.
@@ -105,4 +109,4 @@ In file sobel_dma.c, the software design to finish a complete image filtering pr
 
 ![[Pasted image 20220929184849.png]]
 The above figure shows the original and processed edge images.
-It takes 837299 ns from the DMA started carrying the original image data till all the processed images were written back to the DDR 
+It takes 837299 ns from the DMA started moving the original image data until all the processed data were written back to the DDR . In comparison, a Sobel operation software implementation without hardware acceleration takes 201225057 ns.
