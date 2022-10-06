@@ -13,6 +13,6 @@
 11 写testbench，写c程序实现预处理bmp txt bmp，封装IP
 12构建系统 写软件
 13写文档，做PPT
-14
-15
+14 学习Zynq运行Linux
+15 参与FPGA Cop，展示项目。Petalinux定制系统，实现在Zynq上SD卡读取Linux镜像并通过串口通信，实现在Zynq上挂载SD卡存储区并运行Hello World程序
 16完成收尾工作，把文件 文档存放进项目archive，归还设备
