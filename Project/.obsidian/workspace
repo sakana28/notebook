@@ -17,19 +17,6 @@
         }
       },
       {
-        "id": "6179c4f6923fdd01",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "conflict-files-obsidian-git.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
-        }
-      },
-      {
         "id": "91e4abe8f0cb447d",
         "type": "leaf",
         "state": {
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "bericht.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "bericht.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,10 +117,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6179c4f6923fdd01",
+  "active": "ea19bc211c590b93",
   "lastOpenFiles": [
-    "bericht.md",
     "conflict-files-obsidian-git.md",
+    "bericht.md",
     "File System.md",
     "SD初始化.md",
     "Sobel_doku.md",

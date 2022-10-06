@@ -10,7 +10,6 @@
  [[ADV7511 IIC|ADV7511 IIC]]
  [[bericht|bericht]]
  [[BMP row width|BMP row width]]
- [[conflict-files-obsidian-git|conflict-files-obsidian-git]]
  [[Cosideration on Multi-slave Configuration|Cosideration on Multi-slave Configuration]]
  [[Cosideration to Bus Floating and Hot Insertion|Cosideration to Bus Floating and Hot Insertion]]
  [[Data Transfer|Data Transfer]]
