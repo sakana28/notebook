@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "bericht.md",
+            "file": "Index_of_Project.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bericht.md",
+                "file": "Index_of_Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "bericht.md",
+                "file": "Index_of_Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,8 +119,8 @@
   },
   "active": "ea19bc211c590b93",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "bericht.md",
+    "conflict-files-obsidian-git.md",
     "File System.md",
     "SD初始化.md",
     "Sobel_doku.md",
