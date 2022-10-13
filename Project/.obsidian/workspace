@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Index_of_Project.md",
+            "file": "bericht.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Index_of_Project.md",
+                "file": "bericht.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Index_of_Project.md",
+                "file": "bericht.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,6 +119,7 @@
   },
   "active": "ea19bc211c590b93",
   "lastOpenFiles": [
+    "Index_of_Project.md",
     "bericht.md",
     "conflict-files-obsidian-git.md",
     "File System.md",
@@ -127,7 +128,6 @@
     "句柄.md",
     "翻译.md",
     "SD命令格式.md",
-    "SD返回响应格式.md",
-    "Cosideration on Multi-slave Configuration.md"
+    "SD返回响应格式.md"
   ]
 }
