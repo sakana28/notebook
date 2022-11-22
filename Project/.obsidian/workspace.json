@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "4a5e39568d64ce11",
+    "type": "split",
+    "children": [
+      {
+        "id": "94549c5a9ca5d2d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea19bc211c590b93",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bericht.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9bdda5e0068bfca8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.0"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "1c2e41efc3afa20d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91e4abe8f0cb447d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "195183d54d966933",
+    "type": "split",
+    "children": [
+      {
+        "id": "4abf3cee6248c43e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28f332193ab4ef8f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2964a48889a845a4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "69189ab062b16644",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e4a725f7ea50a4ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6ffb6aa39c856c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cd0d4e33d94e8df",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "bericht.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d914acafc5f64554",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "bericht.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "9bdda5e0068bfca8",
+  "lastOpenFiles": [
+    "Index_of_Project.md",
+    "bericht.md",
+    "conflict-files-obsidian-git.md",
+    "File System.md",
+    "SD初始化.md",
+    "Sobel_doku.md",
+    "句柄.md",
+    "翻译.md",
+    "SD命令格式.md",
+    "SD返回响应格式.md"
+  ]
+}
