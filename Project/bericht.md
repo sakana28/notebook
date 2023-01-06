@@ -16,3 +16,6 @@
 14 学习Zynq运行Linux
 15 参与FPGA Cop，展示项目。Petalinux定制系统，实现在Zynq上SD卡读取Linux镜像并通过串口通信，实现在Zynq上挂载SD卡存储区并运行Hello World程序
 16完成收尾工作，把文件 文档存放进项目archive，归还设备
+
+
+Am ersten Tag meines Praktikums kam ich um neun Uhr morgens im Büro in Braunschweig an. Während ich meine Kollegen kennenlernte und die ITK-Regeln las, wurde mir auch ein Computer mit dem Linux-Betriebssystem Ubuntu für das Projekt zur Verfügung gestellt.
