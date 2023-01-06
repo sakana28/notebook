@@ -8,6 +8,7 @@
  [[尤老师FAT笔记|尤老师FAT笔记]]
  [[Address Editor|Address Editor]]
  [[ADV7511 IIC|ADV7511 IIC]]
+ [[Begründung über Nichtbestehen|Begründung über Nichtbestehen]]
  [[bericht|bericht]]
  [[BMP row width|BMP row width]]
  [[Cosideration on Multi-slave Configuration|Cosideration on Multi-slave Configuration]]
