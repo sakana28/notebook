@@ -5,6 +5,10 @@
       "path": "bericht.md"
     },
     {
+      "basename": "Sobel_doku",
+      "path": "Sobel_doku.md"
+    },
+    {
       "basename": "Begründung über Nichtbestehen",
       "path": "Begründung über Nichtbestehen.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "SD初始化",
       "path": "SD初始化.md"
-    },
-    {
-      "basename": "Sobel_doku",
-      "path": "Sobel_doku.md"
     },
     {
       "basename": "句柄",

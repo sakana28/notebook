@@ -19,3 +19,44 @@
 
 
 Am ersten Tag meines Praktikums kam ich um neun Uhr morgens im Büro in Braunschweig an. Während ich meine Kollegen kennenlernte und die ITK-Regeln las, wurde mir auch ein Computer mit dem Linux-Betriebssystem Ubuntu für das Projekt zur Verfügung gestellt.
+
+Die Sobel-Kantenerkennung ist ein klassischer Algorithmus im Bereich der Bild- und 
+Videoverarbeitung zur Extraktion der Kanten von Objekten. Ein gängiger Ansatz für die Kantenerkennung besteht darin, die Ableitung erster Ordnung eines Bildes zu berechnen, um Kanteninformationen zu extrahieren. Durch die Berechnung der x- und y-Ableitungen eines bestimmten Pixels gegen eine Nachbarschaft von umgebenden Pixeln ist es möglich, die Grenze zwischen zwei unterschiedlichen Elementen in einem Bild zu extrahieren. Da die Berechnung der Ableitungen mit Hilfe von Quadrierungs- und Quadratwurzeloperatoren jedoch sehr rechenintensiv ist, wurden Masken mit festen Koeffizienten, d. h. der Sobel-Operator, als geeignete Näherung für die Berechnung der Ableitungen an einem bestimmten Punkt verwendet.
+
+Im Allgemeinen verwendet der Sobel-Filter zwei 3 x 3-Kerne. Einen für die horizontale Variation, einen für die Berechnung der horizontalen Variation und den anderen für die vertikale Variation. Diese beiden Kerne werden mit dem Originalbild gefaltet, um eine Annäherung an die Ableitung zu berechnen.
+
+### RGB to grayscale
+
+In diesem Projekt wird die folgende Formel verwendet, um die Grauskala eines Pixels zu berechnen:
+Graustufe= (R << 2) + (R << 5) + (G << 1) + (G << 4) + (B << 4) + (B << 5)
+Dies ist eine annähernde Form der folgenden Gleichung:
+Graustufen = ( (0,3 * R) + (0,59 * G) + (0,11 * B) )
+
+### BMP File
+Die Anzahl der Bytes in einer Reihe von BMP-Bildern wird nach der folgenden Formel berechnet:
+![[Pasted image 20220726102502.png]]
+Nach allen Datenbytes wird der Rest der Position mit 0 aufgefüllt, um sicherzustellen, dass eine Reihe von BMP-Bildern ausgerichtet im Computer gespeichert werden kann. 
+Der Header einer BMP-Datei enthält Metadaten über das Bild. Durch Auslesen bestimmter Bytes im Header ist es möglich, die Länge und Breite eines BMP-Bildes zu ermitteln.
+![[Pasted image 20220929214255.png]]
+
+## System Structure
+
+Die Kommunikation zwischen Zynq PS und PL basiert auf dem AXI4-Protokoll. Wie in der Abbildung unten dargestellt, sind die konfigurierbaren Register der Sobel-IP über den AXI-Lite-Bus mit dem General-Propose-Port des PS verbunden. Und die Bilddaten werden über den AXI4-Bus durch den Hochleistungsport an die AXI DMA IP gesendet. Diese IP überträgt die Daten direkt aus dem Speicher und streamt sie mit dem AXI4-Stream-Protokoll an andere Peripheriegeräte.
+![[Pasted image 20220927211645.png]]
+In diesem System wird das Originalbild vom Prozessor von der SD-Karte gelesen und vorverarbeitet (Zero-Padding und Umordnung der Daten). Die vorverarbeiteten Daten werden dann im DDR gespeichert und über die AXI-DMA-IP an die Sobel-IP übertragen. Die verarbeiteten Binärbilder werden von AXI DMA wieder in den DDR zurückgeschrieben. Nach dem Senden einer bestimmten Datenmenge benachrichtigt der AXI-DMA den PS mit einem Interrupt-Signal.
+
+Das Original und das verarbeitete Bild werden dann von AXI VDMA IP aus dem DDR verschoben und im PL gepuffert. Dann werden die Daten zur Verarbeitung an Xilinx VPSS IP übertragen und später mit den Timing-Signalen in AXIS to video out IP synchronisiert. Schließlich wird das 16-Bit-YCbCr-Videosignal an den ADV7511 HDMI-Transmitter auf dem Zedboard gesendet und auf einem Monitor angezeigt.
+
+![[Pasted image 20220927211533.png]]
+
+## Hardware Implementation
+
+Zunächst empfängt das RGB to Grayscale-Modul die 32-Bit-RGB-Daten von der AXI4-Stream-Schnittstelle und wandelt sie mithilfe von Verschiebungen und Additionen ungefähr in 8-Bit-Graustufendaten um. Darüber hinaus verfügt das Modul über zwei Steuersignaleingänge. Die aktuellen 32-Bit-RGB-Daten werden nur dann als gültig angesehen, wenn sowohl data_ready vom Output_buffer-Modul als auch data_valid von AXI-DMA IP High sind.
+
+Die vom RGB-zu-Graustufen-Modul ausgegebenen Daten werden sequentiell in 4 Zeilenpuffer geschrieben. Alle Zeilenspeicher sind mit demselben Dateneingangsport verbunden, und jeder Zeilenspeicher hat sein eigenes Wertesignal, das angibt, ob die aktuelle Eingabe gültig ist oder nicht. Jeder Zeilenspeicher kann bis zu 1024 8-Bit-Daten speichern, was die maximale Breite des zu verarbeitenden Bildes begrenzt. Jeder Zeilenspeicher kann gleichzeitig gelesen und beschrieben werden. Die Steuerlogik sorgt dafür, dass nur ein Schreibvorgang und nur drei Lesevorgänge gültig sind. Außerdem ordnet sie die Ausgabedaten aus den Zeilenpuffern in einer bestimmten Reihenfolge an, so dass jede gültige Ausgabe ein aus dem Graustufenbild segmentiertes 3x3-Fenster ist. Vor jedem Lesevorgang prüft der FSM, ob genügend Daten in den Zeilenspeichern vorhanden sind. Wenn nicht genügend Daten vorhanden sind, verbleibt der FSM im Idle-Zustand und benachrichtigt den PS-Prozessor durch ein PL-PS-Interrupt-Signal.
+
+Die IP enthält auch ein Register, das über die AXI4-Lite-Schnittstelle konfiguriert werden kann. Vor der Bildverarbeitung sollte der Benutzer es auf die Breite des zu verarbeitenden Bildes + 2 konfigurieren (d.h. die Breite des Bildes mit Null-Padding)
+
+Im Faltungsmodul wird eine fünfstufige Pipeline verwendet, um den Kantenerkennungswert zu berechnen und festzustellen, ob der Wert größer als der Schwellenwert ist. Ist er größer als der Schwellenwert, werden 8-Bit-Daten 0XFF ausgegeben, andernfalls werden 8-Bit-Daten 0X00 ausgegeben, d. h. die Kante ist weiß und der Rest ist schwarz.
+
+Der Xilinx FIFO IP-Core wird als Ausgangspuffer verwendet und kann bis zu 32 8-Bit-Daten aufnehmen. Das invertierende programmierbare Full-Signal dieses IP-Cores, das mit einem Schwellenwert von 16 konfiguriert ist, wird mit dem Ausgangsport axis_ready des Sobel-IP verbunden. Das bedeutet, dass der Sobel-IP den Empfang von Daten vom vorgeschalteten AXI-DMA-IP stoppt, wenn 16 Daten im Puffer gespeichert sind und nicht durch eine gültige Übertragung an das nächste Modul ausgegeben werden, um eine mögliche Datenverfälschung zu verhindern.
