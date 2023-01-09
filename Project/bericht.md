@@ -18,7 +18,7 @@
 16完成收尾工作，把文件 文档存放进项目archive，归还设备
 
 
-Am ersten Tag meines Praktikums kam ich um neun Uhr morgens im Büro in Braunschweig an. Während ich meine Kollegen kennenlernte und die ITK-Regeln las, wurde mir auch ein Computer mit dem Linux-Betriebssystem Ubuntu für das Projekt zur Verfügung gestellt.
+An meinem ersten Arbeitstag verbrachte ich hauptsächlich die Zeit damit, meinen Arbeitslaptop gemeinsam mit meinem Betreuer einzurichten und mich mit den verwendeten Programmen vertraut zu machen, wie zum Beispiel Outlook als E-Mail-Programm und Kalender und Microsoft Teams als internes Kommunikationstool.
 
 Die Sobel-Kantenerkennung ist ein klassischer Algorithmus in der Bild- und Videoverarbeitung, der dazu dient, Kanten von Objekten zu extrahieren. Eine gängige Methode zur Kantenerkennung besteht darin, die erste Ableitung eines Bildes zu berechnen, um Kanteninformationen zu extrahieren. Durch die Berechnung der x- und y-Ableitungen eines bestimmten Pixels im Vergleich zu den Pixeln in dessen Umgebung können die Grenzen zwischen zwei verschiedenen Elementen in einem Bild extrahiert werden. Da die Berechnung der Ableitungen jedoch sehr rechenintensiv ist, da sie Quadrierungs- und Quadratwurzeloperationen beinhaltet, werden Masken mit festen Koeffizienten, also der Sobel-Operator, als geeignete Annäherung für die Berechnung der Ableitungen an einem bestimmten Punkt verwendet.
 
