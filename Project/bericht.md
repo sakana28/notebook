@@ -59,3 +59,6 @@ Die IP enthält auch ein Register, das über die AXI4-Lite-Schnittstelle konfigu
 Im Faltungsmodul wird eine fünfstufige Pipeline verwendet, um den Kantenerkennungswert zu berechnen und festzustellen, ob der Wert größer als der Schwellenwert ist. Ist er größer als der Schwellenwert, werden 8-Bit-Daten 0XFF ausgegeben, andernfalls werden 8-Bit-Daten 0X00 ausgegeben, d. h. die Kante ist weiß und der Rest ist schwarz.
 
 Der Xilinx FIFO IP-Core wird als Ausgangspuffer verwendet und kann bis zu 32 8-Bit-Daten aufnehmen. Das invertierende programmierbare Full-Signal dieses IP-Cores, das mit einem Schwellenwert von 16 konfiguriert ist, wird mit dem Ausgangsport axis_ready des Sobel-IP verbunden. Das bedeutet, dass der Sobel-IP den Empfang von Daten vom vorgeschalteten AXI-DMA-IP stoppt, wenn 16 Daten im Puffer gespeichert sind und nicht durch eine gültige Übertragung an das nächste Modul ausgegeben werden, um eine mögliche Datenverfälschung zu verhindern.
+
+## Vivado und Vitis
+Softwareentwicklungsplatform
