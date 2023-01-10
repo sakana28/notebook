@@ -73,15 +73,7 @@
     }
   ],
   "obsidian-copy-block-link:copy-embed-to-block": [],
-  "obsidian-copy-block-link:copy-link-to-block": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "C"
-    }
-  ],
+  "obsidian-copy-block-link:copy-link-to-block": [],
   "obsidian-git:push": [
     {
       "modifiers": [
@@ -105,5 +97,12 @@
       ],
       "key": "C"
     }
-  ]
+  ],
+  "workspace:goto-tab-1": [],
+  "workspace:goto-tab-2": [],
+  "workspace:goto-tab-3": [],
+  "workspace:goto-tab-4": [],
+  "workspace:goto-tab-5": [],
+  "workspace:goto-tab-6": [],
+  "workspace:new-tab": []
 }
