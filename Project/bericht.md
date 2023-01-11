@@ -28,7 +28,8 @@ Meine Hauptaufgabe während des Praktikums ist es, ein komplettes Projekt zur Bi
 ### Versuch1 LED-Steuerung via EMIO-GPIO
 
 
-In den vergangenen 16 Wochen habe ich während meines Praktikums eine Bildverarbeitungsanwendung auf Basis von Zynq implementiert. Sie ermöglicht den Austausch von Informationen zwischen SD-Karte und Prozessor, Prozessor und FPGAs sowie FPGAs und Display. Parallel werden hierbei Bild-Faltungsberechnungen durchgeführt, was die Ausführungsgeschwindigkeit des Sobel-Kanten-Erkennungs-Algorithmus erhöht.
+## Schluss
+Während des 16-wöchigen Praktikums habe ich eine Anwendung zur Bildverarbeitung auf Basis von Zynq implementiert. Die Anwendung ermöglichte den Austausch von Informationen zwischen der SD-Karte und dem Prozessor, dem Prozessor und den FPGAs sowie den FPGAs und dem Display. Darüber hinaus führte sie Bild-Faltungsoperationen parallel aus und verbesserte dadurch die Leistung des Sobel-Kantendetektionsalgorithmus.
 
 Die Sobel-Kantenerkennung ist ein klassischer Algorithmus in der Bild- und Videoverarbeitung, der dazu dient, Kanten von Objekten zu extrahieren. Eine gängige Methode zur Kantenerkennung besteht darin, die erste Ableitung eines Bildes zu berechnen, um Kanteninformationen zu extrahieren. Durch die Berechnung der x- und y-Ableitungen eines bestimmten Pixels im Vergleich zu den Pixeln in dessen Umgebung können die Grenzen zwischen zwei verschiedenen Elementen in einem Bild extrahiert werden. Da die Berechnung der Ableitungen jedoch sehr rechenintensiv ist, da sie Quadrierungs- und Quadratwurzeloperationen beinhaltet, werden Masken mit festen Koeffizienten, also der Sobel-Operator, als geeignete Annäherung für die Berechnung der Ableitungen an einem bestimmten Punkt verwendet.
 
