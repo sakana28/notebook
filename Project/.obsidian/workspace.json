@@ -32,6 +32,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fa6cb6f91565b5c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bericht梗概.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -144,15 +157,15 @@
   },
   "active": "318875ca16c9e046",
   "lastOpenFiles": [
-    "Sobel_doku.md",
+    "bericht梗概.md",
     "bericht.md",
+    "Sobel_doku.md",
     "picture/Pasted image 20220927211533.png",
     "Begründung über Nichtbestehen.md",
     "Index_of_Project.md",
     "conflict-files-obsidian-git.md",
     "File System.md",
     "SD初始化.md",
-    "句柄.md",
-    "翻译.md"
+    "句柄.md"
   ]
 }

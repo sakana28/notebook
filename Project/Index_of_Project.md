@@ -10,6 +10,7 @@
  [[ADV7511 IIC|ADV7511 IIC]]
  [[Begründung über Nichtbestehen|Begründung über Nichtbestehen]]
  [[bericht|bericht]]
+ [[bericht梗概|bericht梗概]]
  [[BMP row width|BMP row width]]
  [[Cosideration on Multi-slave Configuration|Cosideration on Multi-slave Configuration]]
  [[Cosideration to Bus Floating and Hot Insertion|Cosideration to Bus Floating and Hot Insertion]]
