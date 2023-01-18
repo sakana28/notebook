@@ -19,7 +19,7 @@ Während des 16-wöchigen Praktikums habe ich eine Bildverarbeitungsanwendung au
 ## Sobel
 Die Sobel-Kantenerkennung ist ein klassischer Algorithmus in der Bild- und Videoverarbeitung, der dazu dient, Kanten von Objekten zu extrahieren. Eine gängige Methode zur Kantenerkennung besteht darin, die erste Ableitung eines Bildes zu berechnen, um Kanteninformationen zu extrahieren. Durch die Berechnung der x- und y-Ableitungen eines bestimmten Pixels im Vergleich zu den Pixeln in dessen Umgebung können die Grenzen zwischen zwei verschiedenen Elementen in einem Bild extrahiert werden. Da die Berechnung der Ableitungen jedoch sehr rechenintensiv ist, da sie Quadrierungs- und Quadratwurzeloperationen beinhaltet, werden Masken mit festen Koeffizienten, also der Sobel-Operator, als geeignete Annäherung für die Berechnung der Ableitungen an einem bestimmten Punkt verwendet.
 
-Der Sobel-Filter verwendet im Allgemeinen zwei 3 x 3-Kerne. Einen für die Berechnung der horizontalen Variation und einen anderen für die Berechnung der vertikalen Variation. Diese beiden Kerne werden mit dem Originalbild gefaltet, um eine Annäherung an die Ableitung zu berechnen.
+Beim Sobel-Filter werden in der Regel zwei 3 x 3-Kerne verwendet. Einer für die Berechnung der horizontalen Variation und einer für die Berechnung der vertikalen Variation. Diese beiden Kerne werden mit dem Originalbild gefaltet, um eine Approximation der Ableitung zu berechnen.
 
 ### RGB to grayscale
 
