@@ -1,6 +1,6 @@
 #文档草稿
 
-
+## Vorbereitung
 An meinem ersten Arbeitstag verbrachte ich die meiste Zeit damit, gemeinsam mit meinem Betreuer meinen Arbeitslaptop einzurichten und mich mit den verwendeten Programmen wie Outlook als E-Mail- und Kalenderprogramm und Microsoft Teams als internes Kommunikationstool vertraut zu machen. Durch die Anleitung meines Betreuers lernte ich viele wichtige Regeln für das Informationsmanagement im Unternehmensalltag kennen. Zum Beispiel müssen die Mitarbeiter regelmäßig ihre Passwörter auf den Arbeitscomputern ändern und eine spezielle Software zur Passwortverwaltung nutzen. Außerdem müssen die Mitarbeiter bei der Installation neuer Software auf den Arbeitsrechnern prüfen, ob diese Software auf der Whitelist steht usw.
 
 In Confluence, einer Wiki-Software, die als Unternehmenswiki dient, stehen den Mitarbeitern zahlreiche Materialien und Projektdokumentationen zur Verfügung. Nachdem ich das Handbuch für neue Mitarbeiter gelesen hatte, fand ich im Wiki-Bereich der RTA-Gruppe Schulungspläne und Materialien zum Thema FPGA. In meiner ersten Arbeitswoche habe ich die offiziellen Tutorials von Xilinx und The Zynq Book, ein Einführungsbuch, das man unbedingt lesen sollte, wenn man sich mit Zynq vertraut machen will, grob durchgelesen.
