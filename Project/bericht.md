@@ -12,7 +12,7 @@ Zynq ist ein All Programmable System-on-Chip (APSoC) von Xilinx, das die Softwar
 Zynq besteht aus zwei Hauptkomponenten: der programmierbaren Logik (PL) und dem Verarbeitungssystem (PS). Der Bootvorgang des Zynq beginnt immer mit dem PS, gefolgt von der Konfiguration des PL. Das PS kann als eingebetteter Prozessor betrachtet werden, der Betriebssysteme wie Linux ausführen kann, während das PL, ein FPGA, als Peripherie des eingebetteten Systems dient.
 ![[Pasted image 20230119015205.png]]
 
-### Versuch1 LED-Steuerung via EMIO-GPIO
+### Versuch1 LED-Steuerung via AXI-GPIO
 
 
 ## Schluss
