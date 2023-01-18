@@ -10,6 +10,7 @@ Meine Hauptaufgabe während des Praktikums besteht darin, ein komplettes Bildver
 ## Xilinx Zynq SoC-Architectur
 Zynq ist ein All Programmable System-on-Chip (APSoC) von Xilinx, das die Software-Programmierbarkeit eines Prozessors mit der Hardware-Programmierbarkeit eines FPGA kombiniert und somit eine hohe Systemleistung, Flexibilität und Skalierbarkeit bietet.Es vereint einen Dual-Core ARM Cortex-A9 Prozessor und traditionellen FPGA-Logikkomponenten.Während des Praktikums habe ich ein Entwicklungsboard verwendet, das auf einem Zynq-7000 Chip basiert. Der FPGA-Teil des Chips basiert auf der Xilinx 28nm 7 Serie FPGA, daher wird „7000 “ dem Produktnamen dieser Serie hinzugefügt, was mit der 7-Serie übereinstimmt.
 Zynq besteht aus zwei Hauptkomponenten: der programmierbaren Logik (PL) und dem Verarbeitungssystem (PS). Der Bootvorgang des Zynq beginnt immer mit dem PS, gefolgt von der Konfiguration des PL. Das PS kann als eingebetteter Prozessor betrachtet werden, der Betriebssysteme wie Linux ausführen kann, während das PL, ein FPGA, als Peripherie des eingebetteten Systems dient.
+![[Pasted image 20230119015205.png]]
 
 ### Versuch1 LED-Steuerung via EMIO-GPIO
 
