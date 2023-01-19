@@ -20,9 +20,9 @@ Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 3. Hinzufügen des ZYNQ7 Processing System IP-Cores in das Diagramm und Konfigurieren (auch möglich durch Laden einer Konfigurationsdatei, die vom Hersteller des Entwicklungsboards zur Verfügung gestellt wird).
 4. Weitere benötigte IP Cores hinzufügen und konfigurieren.
 5. Konfigurieren und Markieren der I/O-Schnittstellen für die externe Verbindung.
-6. "Run Connection Automation" klicken, wodurch Vivado automatisch die Verbindungen zwischen PS und IP Cores herstellt und die benötigten Interconnection IPs hinzufügt.
-7. "Validate Design" klicken, um das Design und die Verbindungen zu überprüfen.
-8. "Create HDL Wrapper" klicken, um entsprechende HDL Code Wrapper für das Blockdesign zu erzeugen.
+6. „Run Connection Automation“ klicken, wodurch Vivado automatisch die Verbindungen zwischen PS und IP Cores herstellt und die benötigten Interconnection IPs hinzufügt.
+7. „Validate Design“ klicken, um das Design und die Verbindungen zu überprüfen.
+8. „Create HDL Wrapper“ klicken, um entsprechende HDL Code Wrapper für das Blockdesign zu erzeugen.
 7. Schreiben der Pin-Zuweisungen der I/O-Schnittstellen des PL-Teils in die Constraints-Datei.
 9. Durchführung der Synthese, Implementierung und Generierung des Bitstreams wie bei normalen FPGA-Designs.
 10. Erstellen und Exportieren einer Datei, die das Hardware-Design enthält, d.h. die Konfiguration des PS-Teils und den Bitstream des PL-Teils, die in eine Plattform wie Vitis importiert werden kann, um das Embedded-Software-Design weiter durchzuführen.
