@@ -27,13 +27,15 @@ Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 9. Durchführung der Synthese, Implementierung und Generierung des Bitstreams wie bei normalen FPGA-Designs.
 10. Erstellen und Exportieren einer Datei, die das Hardware-Design enthält, d.h. die Konfiguration des PS-Teils und den Bitstream des PL-Teils, die in eine Plattform wie Vitis importiert werden kann, um das Embedded-Software-Design weiter durchzuführen.
 ## Versuch
-Obwohl ich zu diesem Zeitpunkt noch kein Zynq-Entwicklungsboard hatte, konnte ich zuerst am Hardware- und Software-Design arbeiten und dann mein Design debuggen und korrigieren, sobald ich das Entwicklungsboard bekommen hatte.
+Obwohl ich in den ersten Wochen noch kein Zynq-Entwicklungsboard hatte, konnte ich zuerst am Hardware- und Software-Design arbeiten und dann mein Design debuggen und korrigieren, sobald ich das Entwicklungsboard bekommen hatte.
 ### Versuch1 LED-Steuerung via AXI-GPIO
 AXI-GPIO ist ein offizielles Xilinx IP Core. Er bietet eine General Purpose Input/Output Schnittstelle zu einem AXI4-Lite Schnittstelle und kann als ein- oder zweikanaliges Gerät konfiguriert werden. Die Breite jedes Kanals ist unabhängig konfigurierbar.
 Die Ports werden dynamisch als Ein- oder Ausgang konfiguriert, indem der Tri-State aktiviert oder deaktiviert wird. Die Kanäle können so konfiguriert werden, dass sie einen Interrupt erzeugen, wenn ein Datenübergang an einem ihrer Eingänge auftritt. Kurz gesagt, mit diesem IP-Core ist der PS-Teil in der Lage, den Zustand der IO-Schnittstellen, die mit dem PL-Teil verbunden sind, zu überwachen und zu kontrollieren.
 ### Systemblockdiagramm
 TBD
 Wie im Blockschaltbild des Systems dargestellt, gibt der PS die Steuersignale für die LED aus und leitet sie über das AXI-Interconnect-Interconnect-Modul an das AXI-GPIO-Modul weiter. Das AXI-GPIO-Modul empfängt die Steuersignale über das AXI4-Lite-Protokoll, generiert die entsprechenden Signale und gibt sie an die LED-Pins des FPGAs aus, um die LED anzusteuern.
+#### Konfigurieren
+In meinem Design wird nur eine LED verwendet. Deshalb habe ich die GPIO Width auf 1 konfiguriert. Es gibt auch die Möglichkeit, die Richtung aller GPIOs als Input oder Output Interface im Hardware Design festzulegen. In diesem Fall werde ich die Richtung der GPIOs nicht vorab im Hardwaredesign festlegen, da ich versuchen möchte, dies dynamisch per Software zu konfigurieren.
 
 
 
