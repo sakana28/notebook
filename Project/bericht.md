@@ -12,6 +12,21 @@ Zynq ist ein All Programmable System-on-Chip (APSoC) von Xilinx, das die Softwar
 Zynq besteht aus zwei Hauptkomponenten: der programmierbaren Logik (PL) und dem Verarbeitungssystem (PS). Der Bootvorgang des Zynq beginnt immer mit dem PS, gefolgt von der Konfiguration des PL. Das PS kann als eingebetteter Prozessor betrachtet werden, der Betriebssysteme wie Linux ausführen kann, während das PL, ein FPGA, als Peripherie des eingebetteten Systems dient.
 ![[Pasted image 20230119015205.png]]
 
+## Design Prozess
+Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
+
+1. Erstellen einer neuen Projektdatei in Vivado.
+2. Hinzufügen eines neuen Blockdesigns zum Projekt.
+3. Hinzufügen des ZYNQ7 Processing System IP-Cores in das Diagramm und Konfigurieren (auch möglich durch Laden einer Konfigurationsdatei, die vom Hersteller des Entwicklungsboards zur Verfügung gestellt wird).
+4. Weitere benötigte IP Cores hinzufügen und konfigurieren.
+5. Konfigurieren und Markieren der I/O-Schnittstellen für die externe Verbindung.
+6. "Run Connection Automation" klicken, wodurch Vivado automatisch die Verbindungen zwischen PS und IP Cores herstellt und die benötigten Interconnection IPs hinzufügt.
+7. "Validate Design" klicken, um das Design und die Verbindungen zu überprüfen.
+8. "Create HDL Wrapper" klicken, um entsprechende HDL Code Wrapper für das Blockdesign zu erzeugen.
+7. Schreiben der Pin-Zuweisungen der I/O-Schnittstellen des PL-Teils in die Constraints-Datei.
+9. Durchführung der Synthese, Implementierung und Generierung des Bitstreams wie bei normalen FPGA-Designs.
+10. Erstellen und Exportieren einer Datei, die das Hardware-Design enthält, d.h. die Konfiguration des PS-Teils und den Bitstream des PL-Teils, die in eine Plattform wie Vitis importiert werden kann, um das Embedded-Software-Design weiter durchzuführen.
+
 ### Versuch1 LED-Steuerung via AXI-GPIO
 AXI-GPIO ist ein offizielles Xilinx IP Core. Er bietet eine General Purpose Input/Output Schnittstelle zu einem AXI4-Lite Schnittstelle und kann als ein- oder zweikanaliges Gerät konfiguriert werden. Die Breite jedes Kanals ist unabhängig konfigurierbar.
 Die Ports werden dynamisch als Ein- oder Ausgang konfiguriert, indem der Tri-State aktiviert oder deaktiviert wird. Die Kanäle können so konfiguriert werden, dass sie einen Interrupt erzeugen, wenn ein Datenübergang an einem ihrer Eingänge auftritt. Kurz gesagt, mit diesem IP-Core ist der PS-Teil in der Lage, den Zustand der IO-Schnittstellen, die mit dem PL-Teil verbunden sind, zu überwachen und zu kontrollieren.
