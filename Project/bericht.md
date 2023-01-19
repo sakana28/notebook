@@ -12,7 +12,7 @@ Zynq ist ein All Programmable System-on-Chip (APSoC) von Xilinx, das die Softwar
 Zynq besteht aus zwei Hauptkomponenten: der programmierbaren Logik (PL) und dem Verarbeitungssystem (PS). Der Bootvorgang des Zynq beginnt immer mit dem PS, gefolgt von der Konfiguration des PL. Das PS kann als eingebetteter Prozessor betrachtet werden, der Betriebssysteme wie Linux ausführen kann, während das PL, ein FPGA, als Peripherie des eingebetteten Systems dient.
 ![[Pasted image 20230119015205.png]]
 
-## Design Prozess
+## Designprozess
 Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 
 1. Erstellen einer neuen Projektdatei in Vivado.
