@@ -26,12 +26,16 @@ Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 7. Schreiben der Pin-Zuweisungen der I/O-Schnittstellen des PL-Teils in die Constraints-Datei.
 9. Durchführung der Synthese, Implementierung und Generierung des Bitstreams wie bei normalen FPGA-Designs.
 10. Erstellen und Exportieren einer Datei, die das Hardware-Design enthält, d.h. die Konfiguration des PS-Teils und den Bitstream des PL-Teils, die in eine Plattform wie Vitis importiert werden kann, um das Embedded-Software-Design weiter durchzuführen.
-
+## Versuch
+Obwohl ich zu diesem Zeitpunkt noch kein Zynq-Entwicklungsboard hatte, konnte ich zuerst am Hardware- und Software-Design arbeiten und dann mein Design debuggen und korrigieren, sobald ich das Entwicklungsboard bekommen hatte.
 ### Versuch1 LED-Steuerung via AXI-GPIO
 AXI-GPIO ist ein offizielles Xilinx IP Core. Er bietet eine General Purpose Input/Output Schnittstelle zu einem AXI4-Lite Schnittstelle und kann als ein- oder zweikanaliges Gerät konfiguriert werden. Die Breite jedes Kanals ist unabhängig konfigurierbar.
 Die Ports werden dynamisch als Ein- oder Ausgang konfiguriert, indem der Tri-State aktiviert oder deaktiviert wird. Die Kanäle können so konfiguriert werden, dass sie einen Interrupt erzeugen, wenn ein Datenübergang an einem ihrer Eingänge auftritt. Kurz gesagt, mit diesem IP-Core ist der PS-Teil in der Lage, den Zustand der IO-Schnittstellen, die mit dem PL-Teil verbunden sind, zu überwachen und zu kontrollieren.
 ### Systemblockdiagramm
 TBD
+Wie im Blockschaltbild des Systems dargestellt, gibt der PS die Steuersignale für die LED aus und leitet sie über das AXI-Interconnect-Interconnect-Modul an das AXI-GPIO-Modul weiter. Das AXI-GPIO-Modul empfängt die Steuersignale über das AXI4-Lite-Protokoll, generiert die entsprechenden Signale und gibt sie an die LED-Pins des FPGAs aus, um die LED anzusteuern.
+
+
 
 ## Schluss
 Während des 16-wöchigen Praktikums habe ich eine Bildverarbeitungsanwendung auf der Basis von Zynq implementiert. Die Anwendung ermöglichte den Austausch von Informationen zwischen der SD-Karte und dem Prozessor, dem Prozessor und den FPGAs sowie den FPGAs und dem Display. Darüber hinaus führte sie Bildfaltungsoperationen parallel aus und verbesserte so die Leistung des Algorithmus zur Sobel-Kantenerkennung. Während dieser Zeit habe ich den Programmable Logic (PL) Teil des Zynq entworfen und VHDL Code geschrieben, wobei ich das theoretische Wissen aus der Vorlesung FPGA-Entwurfstechnik und die praktische Erfahrung aus den Laboren FPGA-Entwurfstechnik und Mikroelektronik - Chipdesign verwendet habe. Mit Hilfe der offiziellen Beispiele und Tutorials von Xilinx und Avnet habe ich mir die Grundkenntnisse in Embedded C selbst angeeignet und den Softwareteil mit Hilfe des von Xilinx bereitgestellten Treibercodes implementiert.
