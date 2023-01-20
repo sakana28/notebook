@@ -53,7 +53,8 @@ Die Implementierung eines Zählers in VHDL ist relativ einfach, aber die größt
 ### Systemblockdiagramm
 TBD
 ### Softwareentwurf
-
+Weil dieses System mit benutzerdefinierten IPs in Beziehung steht, ist der erste Schritt bei der Softwareentwicklung, die Datei "xparameters.h" im BSP zu finden. Diese Datei enthält die Basisregisteradressen für die Custom IPs. Es gibt auch eine von Vitis generierte Custom-IP-Header-Datei (.h) im Projektverzeichnis der Applikation, die die Makrodefinitionen zum Lesen und Schreiben der Custom-IP-Register umfasst. Mit dem Schreibmakro kann ich eine beliebige
+Nummer in das Register des Custom Zählers schreiben und den Zähler ab dieser Nummer zählen lassen.
 
 
 ## Theoretischer Hintergrund
