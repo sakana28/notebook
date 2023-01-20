@@ -44,6 +44,7 @@ Das Design ist sehr einfach, da ich nur zwei IPs, PS und AXI-GPIO, manuell hinzu
 ### Softwareentwurf
 Der Softwareentwurf erfolgt in Vitis, der Softwareentwicklungsumgebung von Xilinx. Nach dem Import der von Vivado generierten Hardware-Design-Dateien wird in Vitis eine neue Hardware-Plattform erstellt. Auf einer Hardwareplattform können mehrere Softwareapplikationsprojekte erstellt werden. Unter dem Verzeichnis der Hardware-Plattform befindet sich eine Liste von Board Support Packages (BSP), die die Dokumentationen und Beispiele von Treibern für die im Hardware-Design verwendete offizielle IP enthalten. Diese Materialien sind für Anfänger sehr hilfreich. Das Beispiel xgpio_example in der Dokumentation ist ein Beispiel für die Verwendung von GPIO zur Ansteuerung einer LED und war eine wertvolle Referenz für meine Versuche.
 Die Hauptaufgabe der Software ist es, den GPIO zu initialisieren, ihn mit der Funktion XGpio_SetDataDirection als Ausgangsschnittstelle zu konfigurieren und dann mit der Funktion XGpio_DiscreteWrite einen Wert von 1 oder 0 in den GPIO zu schreiben, um die LED zum Leuchten oder Erlöschen zu bringen. 
+
 ## Versuch2
 Nachdem ich das erste Experiment abgeschlossen hatte, konzentrierte ich mich darauf, mich weiter mit der Embedded-Programmierung vertraut zu machen. Mein zweites Versuch war die Implementierung eines Zählers, der über den AXI-Bus beschrieben werden kann. Im Gegensatz zum ersten Experiment, bei dem nur offizielle IP-Cores verwendet werden mussten, musste ich bei diesem Versuch einen Zähler mit Registern, die über eine AXI-Lite-Schnittstelle konfiguriert werden können, selbst entwerfen und in das Systemdiagramm einfügen.
 
@@ -51,6 +52,7 @@ Die Implementierung eines Zählers in VHDL ist relativ einfach, aber die größt
 
 ### Systemblockdiagramm
 TBD
+### Softwareentwurf
 
 
 
