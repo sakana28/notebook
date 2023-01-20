@@ -1,7 +1,7 @@
 #文档草稿
 
 ## ITK Engineering
-
+Die ITK Engineering GmbH (zunächst als Ingenieurbüro für technische Kybernetik) wurde 1994 gegründet und ist ein international tätiger Entwicklungsdienstleister mit Kunden aus den Branchen Automotive, Luft- und Raumfahrt sowie Medizintechnik. Seit 2017 ist sie ein Tochterunternehmen der Robert Bosch GmbH. 
 ## Vorbereitung
 An meinem ersten Arbeitstag verbrachte ich die meiste Zeit damit, gemeinsam mit meinem Betreuer meinen Arbeitslaptop einzurichten und mich mit den verwendeten Programmen wie Outlook als E-Mail- und Kalenderprogramm und Microsoft Teams als internes Kommunikationstool vertraut zu machen. Durch die Anleitung meines Betreuers lernte ich viele wichtige Regeln für das Informationsmanagement im Unternehmensalltag kennen. Zum Beispiel müssen die Mitarbeiter regelmäßig ihre Passwörter auf den Arbeitscomputern ändern und eine spezielle Software zur Passwortverwaltung nutzen. Außerdem müssen die Mitarbeiter bei der Installation neuer Software auf den Arbeitsrechnern prüfen, ob diese Software auf der Whitelist steht usw.
 
