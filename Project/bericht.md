@@ -53,8 +53,7 @@ Die Implementierung eines Zählers in VHDL ist relativ einfach, aber die größt
 ### Systemblockdiagramm
 TBD
 ### Softwareentwurf
-Weil dieses System mit benutzerdefinierten IPs in Beziehung steht, ist der erste Schritt bei der Softwareentwicklung, die Datei "xparameters.h" im BSP zu finden. Diese Datei enthält die Basisregisteradressen für die Custom IPs. Es gibt auch eine von Vitis generierte Custom-IP-Header-Datei (.h) im Projektverzeichnis der Applikation, die die Makrodefinitionen zum Lesen und Schreiben der Custom-IP-Register umfasst. Mit dem Schreibmakro kann ich eine beliebige
-Nummer in das Register des Custom Zählers schreiben und den Zähler ab dieser Nummer zählen lassen.
+Weil dieses System mit benutzerdefinierten IPs in Beziehung steht, ist der erste Schritt bei der Softwareentwicklung, die Datei "xparameters.h" im BSP zu finden. Diese Datei enthält die Basisregisteradressen für die Custom IPs. Es gibt auch eine von Vitis generierte Custom-IP-Header-Datei (.h) im Projektverzeichnis der Applikation, die die Makrodefinitionen zum Lesen und Schreiben der Custom-IP-Register umfasst. Mit dem Schreibmakro kann ich eine beliebige Nummer in das Register des Custom Zählers schreiben und den Zähler ab dieser Nummer zählen lassen.
 
 
 ## Theoretischer Hintergrund
@@ -108,6 +107,8 @@ Bei der Implementierung einer so komplexen Funktion muss jedes Submodul nach der
 Außerdem habe ich dafür gesorgt, dass meine Module parametrisiert sind, um die Menge der benötigten Eingangsdaten zu reduzieren und so den Testaufwand zu minimieren. Dadurch kann ich die Simulation schneller durchführen und die Module leichter an unterschiedliche Anforderungen anpassen.
 
 Um die Funktionalität des gesamten IP zu garantieren, habe ich neben der Überprüfung der Wellenformdiagramme auch die Bildverarbeitungsfähigkeit getestet. Hierzu schrieb ich zwei C-Programme, eines zur Konvertierung eines BMP-Bildes in eine Textdatei mit binären Informationen und eines zur Konvertierung einer Textdatei in eine BMP-Datei. Schließlich schrieb ich eine Testbench, die in der Lage war, die binären Informationen aus der Textdatei zu lesen und in einen synchronisierten Stimulus umzuwandeln. Am Ende erhielt ich das gewünschte bearbeitete Bild, was bewies, dass der Teil des Hardware-Designs die Erwartungen erfüllte. Diese Erfahrung hat mir geholfen, ein tieferes Verständnis für Bildverarbeitung und automatisierte Testbenches zu entwickeln.
+
+## Auftretende Probleme 
 ## Schluss
 Während des 16-wöchigen Praktikums habe ich eine Bildverarbeitungsanwendung auf der Basis von Zynq implementiert. Die Anwendung ermöglichte den Austausch von Informationen zwischen der SD-Karte und dem Prozessor, dem Prozessor und den FPGAs sowie den FPGAs und dem Display. Darüber hinaus führte sie Bildfaltungsoperationen parallel aus und verbesserte so die Leistung des Algorithmus zur Sobel-Kantenerkennung. Während dieser Zeit habe ich den Programmable Logic (PL) Teil des Zynq entworfen und VHDL Code geschrieben, wobei ich das theoretische Wissen aus der Vorlesung FPGA-Entwurfstechnik und die praktische Erfahrung aus den Laboren FPGA-Entwurfstechnik und Mikroelektronik - Chipdesign verwendet habe. Mit Hilfe der offiziellen Beispiele und Tutorials von Xilinx und Avnet habe ich mir die Grundkenntnisse in Embedded C selbst angeeignet und den Softwareteil mit Hilfe des von Xilinx bereitgestellten Treibercodes implementiert.
 
