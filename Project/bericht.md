@@ -61,6 +61,7 @@ Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu
 
 Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
 ## Sobel
+In diesem Abschnitt möchte ich einen kurzen Überblick über den Sobel-Algorithmus geben, der in meinem Projekt verwendet wurde. 
 Die Sobel-Kantenerkennung ist ein klassischer Algorithmus in der Bild- und Videoverarbeitung, der dazu dient, Kanten von Objekten zu extrahieren. Eine gängige Methode zur Kantenerkennung besteht darin, die erste Ableitung eines Bildes zu berechnen, um Kanteninformationen zu extrahieren. Durch die Berechnung der x- und y-Ableitungen eines bestimmten Pixels im Vergleich zu den Pixeln in dessen Umgebung können die Grenzen zwischen zwei verschiedenen Elementen in einem Bild extrahiert werden. Da die Berechnung der Ableitungen jedoch sehr rechenintensiv ist, da sie Quadrierungs- und Quadratwurzeloperationen beinhaltet, werden Masken mit festen Koeffizienten, also der Sobel-Operator, als geeignete Annäherung für die Berechnung der Ableitungen an einem bestimmten Punkt verwendet.
 
 Beim Sobel-Filter werden in der Regel zwei 3 x 3-Kerne verwendet. Einer für die Berechnung der horizontalen Variation und einer für die Berechnung der vertikalen Variation. Diese beiden Kerne werden mit dem Originalbild gefaltet, um eine Approximation der Ableitung zu berechnen.
