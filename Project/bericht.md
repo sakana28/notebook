@@ -37,7 +37,8 @@ Wie im Blockschaltbild des Systems dargestellt, gibt der PS die Steuersignale f�
 #### Konfigurieren
 In meinem Design wird nur eine LED verwendet. Deshalb habe ich die GPIO Width auf 1 konfiguriert. Es gibt auch die Möglichkeit, die Richtung aller GPIOs als Input oder Output Interface im Hardware Design festzulegen. In diesem Fall werde ich die Richtung der GPIOs nicht vorab im Hardwaredesign festlegen, da ich versuchen möchte, dies dynamisch per Software zu konfigurieren.
 Obwohl ich zu diesem Zeitpunkt keinen Zugang zu einem Entwicklungsboard hatte, entnahm ich dem Datenblatt des ZedBoard-Entwicklungsboards die Pin-Nummern für den Anschluss der LEDs und füllte die Constraints-Datei aus.
-
+Das Design ist sehr einfach, da ich nur zwei IPs, PS und AXI-GPIO, manuell hinzufügen musste, aber es beinhaltet die Kommunikation zwischen PS und PL und erfordert auch ein einfaches Softwaredesign, um die GPIO-Schnittstelle dynamisch zu konfigurieren und Steuersignale zu senden. Es ist ein geeignetes Experiment, um mit dem Co-Design von Hardware und Software zu beginnen.
+### Software
 
 
 ## Schluss
