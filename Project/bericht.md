@@ -69,10 +69,11 @@ Dies ist eine annähernde Form der folgenden Gleichung:
 Graustufen = ( (0,3 * R) + (0,59 * G) + (0,11 * B) )
 
 ### BMP File
-Die Anzahl der Bytes in einer Reihe von BMP-Bildern wird nach der folgenden Formel berechnet:
+Um sicherzustellen, dass die Pixeldaten zweier Zeilen eines Bitmap-Bildes nicht dieselbe Speicherzelle belegen, muss bei BMP-Bildern die Anzahl der Bytes in einer Zeile mit Pixeldaten ein Vielfaches von 4 sein. Wenn die Anzahl der Bytes nicht durch 4 teilbar ist, werden die nachfolgenden Bytes mit 0 aufgefüllt. Die Anzahl der Bytes in einer Reihe von BMP-Bildern wird nach der folgenden Formel berechnet:
 ![[Pasted image 20220726102502.png]]
-Nach allen Datenbytes wird der Rest der Position mit 0 aufgefüllt, um sicherzustellen, dass eine Reihe von BMP-Bildern ausgerichtet im Computer gespeichert werden kann. 
-Der Header einer BMP-Datei enthält Metadaten über das Bild. Durch das Auslesen bestimmter Bytes aus dem Header ist es möglich, die Länge und Breite eines BMP-Bildes zu bestimmen.
+Auf diese Weise wird eine Reihe von Pixeldaten ausgerichtet im Computer gespeichert.
+
+Außerdem werden die ersten 54 Bytes einer BMP-Datei als Header bezeichnet. Der Header enthält Metadaten über das Bild. Durch das Auslesen bestimmter Bytes aus dem Header ist es möglich, wichtige Informationen wie Länge und Breite eines BMP-Bildes zu bestimmen.
 ![[Pasted image 20220929214255.png]]
 
 ## System Structure
