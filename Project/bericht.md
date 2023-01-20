@@ -52,15 +52,10 @@ Die Implementierung eines Zählers in VHDL ist relativ einfach, aber die größt
 ### Systemblockdiagramm
 TBD
 
-## Schluss
-Während des 16-wöchigen Praktikums habe ich eine Bildverarbeitungsanwendung auf der Basis von Zynq implementiert. Die Anwendung ermöglichte den Austausch von Informationen zwischen der SD-Karte und dem Prozessor, dem Prozessor und den FPGAs sowie den FPGAs und dem Display. Darüber hinaus führte sie Bildfaltungsoperationen parallel aus und verbesserte so die Leistung des Algorithmus zur Sobel-Kantenerkennung. Während dieser Zeit habe ich den Programmable Logic (PL) Teil des Zynq entworfen und VHDL Code geschrieben, wobei ich das theoretische Wissen aus der Vorlesung FPGA-Entwurfstechnik und die praktische Erfahrung aus den Laboren FPGA-Entwurfstechnik und Mikroelektronik - Chipdesign verwendet habe. Mit Hilfe der offiziellen Beispiele und Tutorials von Xilinx und Avnet habe ich mir die Grundkenntnisse in Embedded C selbst angeeignet und den Softwareteil mit Hilfe des von Xilinx bereitgestellten Treibercodes implementiert.
 
-Neben der erfolgreichen Umsetzung des Projektes konnte ich auch einen Einblick in die Arbeitsabläufe und die Struktur eines Unternehmens gewinnen. Außerdem habe ich gelernt, wie wichtig es ist, sich ständig weiterzubilden und sich den Veränderungen in der Elektrotechnikbranche anzupassen.
 
-Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu helfen. Sie kümmerten sich auch um meine Anpassung an die Arbeitsumgebung und boten mir Hilfe beim Erlernen der Sprache, bei der Kommunikation mit anderen und beim Erwerb von Fachkenntnissen an. Ich habe wertvolle Erfahrungen gesammelt. Ich möchte allen Beteiligten meinen herzlichsten Dank aussprechen.
-
-Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
-## Sobel
+## Theoretischer Hintergrund
+### Sobel
 In diesem Abschnitt möchte ich einen kurzen Überblick über den Sobel-Algorithmus geben, der in meinem Projekt verwendet wurde. 
 Die Sobel-Kantenerkennung ist ein klassischer Algorithmus in der Bild- und Videoverarbeitung, der dazu dient, Kanten von Objekten zu extrahieren. Eine gängige Methode zur Kantenerkennung besteht darin, die erste Ableitung eines Bildes zu berechnen, um Kanteninformationen zu extrahieren. Durch die Berechnung der x- und y-Ableitungen eines bestimmten Pixels im Vergleich zu den Pixeln in dessen Umgebung können die Grenzen zwischen zwei verschiedenen Elementen in einem Bild extrahiert werden. Da die Berechnung der Ableitungen jedoch sehr rechenintensiv ist, da sie Quadrierungs- und Quadratwurzeloperationen beinhaltet, werden Masken mit festen Koeffizienten, also der Sobel-Operator, als geeignete Annäherung für die Berechnung der Ableitungen an einem bestimmten Punkt verwendet.
 
@@ -102,5 +97,12 @@ Im Faltungsmodul wird eine fünfstufige Pipeline verwendet, um den Kantenerkennu
 
 Der Xilinx FIFO IP-Core wird als Ausgangspuffer verwendet und kann bis zu 32 8-Bit-Daten aufnehmen. Das invertierende programmierbare Full-Signal dieses IP-Cores, das mit einem Schwellenwert von 16 konfiguriert ist, ist mit dem axis_ready-Ausgangsport des Sobel-IP verbunden. Dies bedeutet, dass der Sobel-IP den Empfang von Daten vom vorgeschalteten AXI-DMA-IP stoppt, wenn 16 Daten im Puffer gespeichert sind und nicht durch eine gültige Übertragung an das nächste Modul ausgegeben werden, um eine mögliche Datenverfälschung zu verhindern.
 
-## Vivado und Vitis
-Softwareentwicklungsplatform
+
+## Schluss
+Während des 16-wöchigen Praktikums habe ich eine Bildverarbeitungsanwendung auf der Basis von Zynq implementiert. Die Anwendung ermöglichte den Austausch von Informationen zwischen der SD-Karte und dem Prozessor, dem Prozessor und den FPGAs sowie den FPGAs und dem Display. Darüber hinaus führte sie Bildfaltungsoperationen parallel aus und verbesserte so die Leistung des Algorithmus zur Sobel-Kantenerkennung. Während dieser Zeit habe ich den Programmable Logic (PL) Teil des Zynq entworfen und VHDL Code geschrieben, wobei ich das theoretische Wissen aus der Vorlesung FPGA-Entwurfstechnik und die praktische Erfahrung aus den Laboren FPGA-Entwurfstechnik und Mikroelektronik - Chipdesign verwendet habe. Mit Hilfe der offiziellen Beispiele und Tutorials von Xilinx und Avnet habe ich mir die Grundkenntnisse in Embedded C selbst angeeignet und den Softwareteil mit Hilfe des von Xilinx bereitgestellten Treibercodes implementiert.
+
+Neben der erfolgreichen Umsetzung des Projektes konnte ich auch einen Einblick in die Arbeitsabläufe und die Struktur eines Unternehmens gewinnen. Außerdem habe ich gelernt, wie wichtig es ist, sich ständig weiterzubilden und sich den Veränderungen in der Elektrotechnikbranche anzupassen.
+
+Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu helfen. Sie kümmerten sich auch um meine Anpassung an die Arbeitsumgebung und boten mir Hilfe beim Erlernen der Sprache, bei der Kommunikation mit anderen und beim Erwerb von Fachkenntnissen an. Ich habe wertvolle Erfahrungen gesammelt. Ich möchte allen Beteiligten meinen herzlichsten Dank aussprechen.
+
+Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
