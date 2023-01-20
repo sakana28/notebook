@@ -79,15 +79,16 @@ Außerdem werden die ersten 54 Bytes einer BMP-Datei als Header bezeichnet. Der 
 ## System Structure
 
 Die Kommunikation zwischen Zynq PS und PL basiert auf dem AXI4-Protokoll. Wie in der Abbildung unten dargestellt, sind die konfigurierbaren Register des Sobel-IP über den AXI-Lite-Bus mit dem General-Purpose-Anschluss des PS verbunden. Die Bilddaten werden über den AXI4-Bus durch den High-Performance-Port an die AXI-DMA-IP gesendet. Diese IP überträgt die Daten direkt aus dem Speicher und gibt sie über das AXI4-Stream-Protokoll an andere Peripheriegeräte weiter.
+Die folgende Abbildung zeigt das Systemblockdiagramm des gesamten Hardwarebereichs:
 ![[Pasted image 20220927211645.png]]
 Bei diesem System wird das Originalbild vom Prozessor von der SD-Karte gelesen und vorverarbeitet (Zero-Padding und Neuordnung der Daten). Die vorverarbeiteten Daten werden dann im DDR gespeichert und über das AXI-DMA-IP an das Sobel-IP übertragen. Die verarbeiteten Binärdaten werden über AXI-DMA wieder in den DDR zurückgeschrieben. Nach dem Senden einer bestimmten Datenmenge benachrichtigt der AXI-DMA den PS mit einem Interrupt-Signal.
 
 Das Originalbild und das verarbeitete Bild werden dann von AXI VDMA IP aus dem DDR verschoben und im PL gepuffert. Anschließend werden die Daten zur Verarbeitung an den Xilinx VPSS IP übertragen und mit den Timingsignalen im AXIS to video out IP synchronisiert. Schließlich wird das 16-bit YCbCr Videosignal an den ADV7511 HDMI Transmitter auf dem Zedboard gesendet und auf einem Monitor angezeigt.
 
-![[Pasted image 20220927211533.png]]
-
 ## Hardware Implementation
 
+Die folgende Abbildung zeigt ein Blockdiagramm des Designs innerhalb des Sobel IP:
+![[Pasted image 20220927211533.png]]
 Zunächst empfängt das RGB to Grayscale Modul die 32-Bit-RGB-Daten von der AXI4-Stream-Schnittstelle und wandelt sie durch Verschieben und Addieren näherungsweise in 8-Bit-Graustufendaten um. Zusätzlich verfügt das Modul über zwei Steuersignaleingänge. Die aktuellen 32-Bit-RGB-Daten werden nur dann als gültig betrachtet, wenn sowohl data_ready vom Output_buffer-Modul als auch data_valid von AXI-DMA IP High sind.
 
 Die vom RGB-zu-Graustufen-Modul ausgegebenen Daten werden sequentiell in 4 Zeilenpuffer geschrieben. Alle Zeilenpuffer sind mit demselben Dateneingangsport verbunden, und jeder Zeilenpuffer verfügt über ein eigenes Wertesignal, das anzeigt, ob die aktuelle Eingabe gültig ist oder nicht. Jeder Zeilenspeicher kann bis zu 1024 8-Bit-Daten speichern, was die maximale Breite des zu verarbeitenden Bildes begrenzt. Jeder Zeilenpuffer kann gleichzeitig gelesen und beschrieben werden. Die Steuerlogik stellt sicher, dass nur ein Schreibvorgang und nur drei Lesevorgänge gültig sind. Außerdem ordnet sie die Ausgabedaten aus den Zeilenpuffern in einer bestimmten Reihenfolge an, so dass jede gültige Ausgabe ein aus dem Graustufenbild segmentiertes 3x3-Fenster ist. Vor jedem Lesevorgang prüft der FSM, ob genügend Daten in den Zeilenpuffern vorhanden sind. Wenn nicht genügend Daten vorhanden sind, bleibt der FSM im Idle-Zustand und informiert den PS-Prozessor mittels eines PL-PS-Interrupt-Signals.
@@ -98,6 +99,7 @@ Im Faltungsmodul wird eine fünfstufige Pipeline verwendet, um den Kantenerkennu
 
 Der Xilinx FIFO IP-Core wird als Ausgangspuffer verwendet und kann bis zu 32 8-Bit-Daten aufnehmen. Das invertierende programmierbare Full-Signal dieses IP-Cores, das mit einem Schwellenwert von 16 konfiguriert ist, ist mit dem axis_ready-Ausgangsport des Sobel-IP verbunden. Dies bedeutet, dass der Sobel-IP den Empfang von Daten vom vorgeschalteten AXI-DMA-IP stoppt, wenn 16 Daten im Puffer gespeichert sind und nicht durch eine gültige Übertragung an das nächste Modul ausgegeben werden, um eine mögliche Datenverfälschung zu verhindern.
 
+## Simulation
 
 ## Schluss
 Während des 16-wöchigen Praktikums habe ich eine Bildverarbeitungsanwendung auf der Basis von Zynq implementiert. Die Anwendung ermöglichte den Austausch von Informationen zwischen der SD-Karte und dem Prozessor, dem Prozessor und den FPGAs sowie den FPGAs und dem Display. Darüber hinaus führte sie Bildfaltungsoperationen parallel aus und verbesserte so die Leistung des Algorithmus zur Sobel-Kantenerkennung. Während dieser Zeit habe ich den Programmable Logic (PL) Teil des Zynq entworfen und VHDL Code geschrieben, wobei ich das theoretische Wissen aus der Vorlesung FPGA-Entwurfstechnik und die praktische Erfahrung aus den Laboren FPGA-Entwurfstechnik und Mikroelektronik - Chipdesign verwendet habe. Mit Hilfe der offiziellen Beispiele und Tutorials von Xilinx und Avnet habe ich mir die Grundkenntnisse in Embedded C selbst angeeignet und den Softwareteil mit Hilfe des von Xilinx bereitgestellten Treibercodes implementiert.
