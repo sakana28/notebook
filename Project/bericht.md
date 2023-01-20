@@ -23,7 +23,7 @@ Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 6. „Run Connection Automation“ klicken, wodurch Vivado automatisch die Verbindungen zwischen PS und IP Cores herstellt und die benötigten Interconnection IPs hinzufügt.
 7. „Validate Design“ klicken, um das Design und die Verbindungen zu überprüfen.
 8. „Create HDL Wrapper“ klicken, um entsprechende HDL Code Wrapper für das Blockdesign zu erzeugen.
-7. Schreiben der Pin-Zuweisungen der I/O-Schnittstellen des PL-Teils in die Constraints-Datei.
+7. Schreiben der Pins-Zuweisungen der I/O-Schnittstellen des PL-Teils in die Constraints-Datei.
 9. Durchführung der Synthese, Implementierung und Generierung des Bitstreams wie bei normalen FPGA-Designs.
 10. Erstellen und Exportieren einer Datei, die das Hardware-Design enthält, d.h. die Konfiguration des PS-Teils und den Bitstream des PL-Teils, die in eine Plattform wie Vitis importiert werden kann, um das Embedded-Software-Design weiter durchzuführen.
 ## Versuch
@@ -36,6 +36,7 @@ TBD
 Wie im Blockschaltbild des Systems dargestellt, gibt der PS die Steuersignale für die LED aus und leitet sie über das AXI-Interconnect-Interconnect-Modul an das AXI-GPIO-Modul weiter. Das AXI-GPIO-Modul empfängt die Steuersignale über das AXI4-Lite-Protokoll, generiert die entsprechenden Signale und gibt sie an die LED-Pins des FPGAs aus, um die LED anzusteuern.
 #### Konfigurieren
 In meinem Design wird nur eine LED verwendet. Deshalb habe ich die GPIO Width auf 1 konfiguriert. Es gibt auch die Möglichkeit, die Richtung aller GPIOs als Input oder Output Interface im Hardware Design festzulegen. In diesem Fall werde ich die Richtung der GPIOs nicht vorab im Hardwaredesign festlegen, da ich versuchen möchte, dies dynamisch per Software zu konfigurieren.
+Obwohl ich zu diesem Zeitpunkt keinen Zugang zu einem Entwicklungsboard hatte, entnahm ich dem Datenblatt des ZedBoard-Entwicklungsboards die Pin-Nummern für den Anschluss der LEDs und füllte die Constraints-Datei aus.
 
 
 
