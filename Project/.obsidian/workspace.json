@@ -46,8 +46,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bericht.md",
+                "file": "Sobel_doku.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "bericht.md",
+                "file": "Sobel_doku.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +154,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "318875ca16c9e046",
+  "active": "faf5b6432459e92a",
   "lastOpenFiles": [
     "bericht梗概.md",
     "bericht.md",
