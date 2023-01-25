@@ -131,3 +131,10 @@ Neben der erfolgreichen Umsetzung des Projektes konnte ich auch einen Einblick i
 Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu helfen. Sie kümmerten sich auch um meine Anpassung an die Arbeitsumgebung und boten mir Hilfe beim Erlernen der Sprache, bei der Kommunikation mit anderen und beim Erwerb von Fachkenntnissen an. Ich habe wertvolle Erfahrungen gesammelt. Ich möchte allen Beteiligten meinen herzlichsten Dank aussprechen.
 
 Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
+
+### Sobel-C Implementierung
+Nachdem ich das Lesen und Schreiben der Bilder von der SD-Karte erfolgreich implementiert habe, habe ich mit den Aufgaben im Zusammenhang mit der Sobel-Filtern begonnen. Zuerst verarbeitete ich die von der SD-Karte gelesenen Bildinformationen, indem ich sie vollständig durch die eingebettete C auf dem ARM-Prozessor laufen ließ und das verarbeitete Ergebnis zurück in dieselbe SD-Karte schrieb.
+
+Ein wichtiger Aspekt bei der Implementierung des Sobel-Filter-Algorithmus ist die Verwendung einer Faltungsmatrix zur Bestimmung der Gradientenrichtung und -intensität. Der Algorithmus verarbeitet das Bild Pixel für Pixel und berechnet die Richtung und Intensität des Gradienten für jedes Pixel aus den Werten der benachbarten Pixel. Es ist wichtig anzumerken, dass es mehrere Optimierungsmethoden für den Sobel-Algorithmus gibt, aber ich habe hier keine Optimierungen an der ursprünglichen Implementierung vorgenommen, da dies nicht der Schwerpunkt meines Projekts ist. In meinem Fall dauerte die Sobel-Verarbeitung 201225057 ns.
+
+Obwohl dieser Teil der Arbeit nicht in das Endergebnis einfließt, sondern nur eine Vergleichszahl liefert, hat er mir geholfen, mein Verständnis von Bildverarbeitungskonzepten und -techniken zu vertiefen und mir gezeigt, wie man sie auf einem eingebetteten System implementiert.
