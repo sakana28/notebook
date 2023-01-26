@@ -141,5 +141,6 @@ Obwohl dieser Teil der Arbeit nicht in das Endergebnis einfließt, sondern nur e
 
 ### AXI-DMA und AXI-FIFO
 Um die Übertragung von Bilddaten zwischen PS und PL zu implementieren, habe ich mich mit den IP Cores AXI-DMA und AXI-FIFO von Xilinx sowie dem AXI4-Stream-Protokoll auseinandergesetzt. Anschließend habe ich eine Bildverarbeitungsapplikation implementiert, die jeweils einen dieser beiden IP-Cores verwendet. Sie realisiert die Funktion, ein Bild von der SD-Karte zu lesen, es in PL zwischenzuspeichern, danach zurück in PS zu übertragen und schließlich wieder in die SD-Karte zu schreiben.
-
+![[Pasted image 20230126084524.png]]
+![[Pasted image 20230126084938.png]]
 Mein Hauptziel war es, die Unterschiede zwischen den beiden IP-Cores zu verstehen und zu analysieren, welcher für mein Projekt besser geeignet ist. Durch die Verwendung des AXI-DMA-IP-Cores war es möglich, die Daten direkt aus dem DDR-Speicher des PS auf die PL zu übertragen, ohne den Prozessor zu benutzen. Der Prozessor kann während des Datentransfers andere Operationen ausführen, so dass er die Peripherie nicht ständig abfragen muss.
