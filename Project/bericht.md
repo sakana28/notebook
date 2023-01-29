@@ -78,28 +78,8 @@ Auf diese Weise wird eine Reihe von Pixeldaten ausgerichtet im Computer gespeich
 Außerdem werden die ersten 54 Bytes einer BMP-Datei als Header bezeichnet. Der Header enthält Metadaten über das Bild. Durch das Auslesen bestimmter Bytes aus dem Header ist es möglich, wichtige Informationen wie Länge und Breite eines BMP-Bildes zu bestimmen.
 ![[Pasted image 20220929214255.png]]
 
-## System Structure
 
-Die Kommunikation zwischen Zynq PS und PL basiert auf dem AXI4-Protokoll. Wie in der Abbildung unten dargestellt, sind die konfigurierbaren Register des Sobel-IP über den AXI-Lite-Bus mit dem General-Purpose-Anschluss des PS verbunden. Die Bilddaten werden über den AXI4-Bus durch den High-Performance-Port an die AXI-DMA-IP gesendet. Diese IP überträgt die Daten direkt aus dem Speicher und gibt sie über das AXI4-Stream-Protokoll an andere Peripheriegeräte weiter.
-Die folgende Abbildung zeigt das Systemblockdiagramm des gesamten Hardwarebereichs:
-![[Pasted image 20220927211645.png]]
-Bei diesem System wird das Originalbild vom Prozessor von der SD-Karte gelesen und vorverarbeitet (Zero-Padding und Neuordnung der Daten). Die vorverarbeiteten Daten werden dann im DDR gespeichert und über das AXI-DMA-IP an das Sobel-IP übertragen. Die verarbeiteten Binärdaten werden über AXI-DMA wieder in den DDR zurückgeschrieben. Nach dem Senden einer bestimmten Datenmenge benachrichtigt der AXI-DMA den PS mit einem Interrupt-Signal.
 
-Das Originalbild und das verarbeitete Bild werden dann von AXI VDMA IP aus dem DDR verschoben und im PL gepuffert. Anschließend werden die Daten zur Verarbeitung an den Xilinx VPSS IP übertragen und mit den Timingsignalen im AXIS to video out IP synchronisiert. Schließlich wird das 16-bit YCbCr Videosignal an den ADV7511 HDMI Transmitter auf dem Zedboard gesendet und auf einem Monitor angezeigt.
-
-## Hardware Implementation
-
-Die folgende Abbildung zeigt ein Blockdiagramm des Designs innerhalb des Sobel IP:
-![[Pasted image 20220927211533.png]]
-Zunächst empfängt das RGB to Grayscale Modul die 32-Bit-RGB-Daten von der AXI4-Stream-Schnittstelle und wandelt sie durch Verschieben und Addieren näherungsweise in 8-Bit-Graustufendaten um. Zusätzlich verfügt das Modul über zwei Steuersignaleingänge. Die aktuellen 32-Bit-RGB-Daten werden nur dann als gültig betrachtet, wenn sowohl data_ready vom Output_buffer-Modul als auch data_valid von AXI-DMA IP High sind.
-
-Die vom RGB-zu-Graustufen-Modul ausgegebenen Daten werden sequentiell in 4 Zeilenpuffer geschrieben. Alle Zeilenpuffer sind mit demselben Dateneingangsport verbunden, und jeder Zeilenpuffer verfügt über ein eigenes Wertesignal, das anzeigt, ob die aktuelle Eingabe gültig ist oder nicht. Jeder Zeilenspeicher kann bis zu 1024 8-Bit-Daten speichern, was die maximale Breite des zu verarbeitenden Bildes begrenzt. Jeder Zeilenpuffer kann gleichzeitig gelesen und beschrieben werden. Die Steuerlogik stellt sicher, dass nur ein Schreibvorgang und nur drei Lesevorgänge gültig sind. Außerdem ordnet sie die Ausgabedaten aus den Zeilenpuffern in einer bestimmten Reihenfolge an, so dass jede gültige Ausgabe ein aus dem Graustufenbild segmentiertes 3x3-Fenster ist. Vor jedem Lesevorgang prüft der FSM, ob genügend Daten in den Zeilenpuffern vorhanden sind. Wenn nicht genügend Daten vorhanden sind, bleibt der FSM im Idle-Zustand und informiert den PS-Prozessor mittels eines PL-PS-Interrupt-Signals.
-
-Das IP enthält auch ein Register, das über die AXI4-Lite-Schnittstelle konfiguriert werden kann. Vor der Bildverarbeitung muss es vom Anwender auf die Breite des zu verarbeitenden Bildes + 2 (d.h. die Breite des Bildes mit Zero-Padding) konfiguriert werden.
-
-Im Faltungsmodul wird eine fünfstufige Pipeline verwendet, um den Kantenerkennungswert zu berechnen und festzustellen, ob der Wert größer als der Schwellenwert ist. Ist der Wert größer als der Schwellenwert, werden 8-Bit-Daten 0XFF ausgegeben, andernfalls werden 8-Bit-Daten 0X00 ausgegeben, d. h. die Kante ist weiß und der Rest ist schwarz.
-
-Der Xilinx FIFO IP-Core wird als Ausgangspuffer verwendet und kann bis zu 32 8-Bit-Daten aufnehmen. Das invertierende programmierbare Full-Signal dieses IP-Cores, das mit einem Schwellenwert von 16 konfiguriert ist, ist mit dem axis_ready-Ausgangsport des Sobel-IP verbunden. Dies bedeutet, dass der Sobel-IP den Empfang von Daten vom vorgeschalteten AXI-DMA-IP stoppt, wenn 16 Daten im Puffer gespeichert sind und nicht durch eine gültige Übertragung an das nächste Modul ausgegeben werden, um eine mögliche Datenverfälschung zu verhindern.
 
 ## Simulation
 Bei der Implementierung einer so komplexen Funktion muss jedes Submodul nach der Fertigstellung getestet werden. Dazu habe ich für jedes Submodul eine einfache Testbench geschrieben und die Ausgangswellenform des Moduls mit den erwarteten Werten verglichen. Ich habe auch darauf geachtet, dass das Modul mit Grenzwerten getestet wurde, um die Robustheit des Designs zu gewährleisten.
@@ -132,21 +112,21 @@ Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu
 
 Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
 
-## Sobel-C Implementierung
+## Schritt 2: Sobel-C Implementierung
 Nachdem ich das Lesen und Schreiben der Bilder von der SD-Karte erfolgreich implementiert habe, habe ich mit den Aufgaben im Zusammenhang mit der Sobel-Filtern begonnen. Zuerst verarbeitete ich die von der SD-Karte gelesenen Bildinformationen, indem ich sie vollständig durch die eingebettete C auf dem ARM-Prozessor laufen ließ und das verarbeitete Ergebnis zurück in dieselbe SD-Karte schrieb.
 
 Ein wichtiger Aspekt bei der Implementierung des Sobel-Filter-Algorithmus ist die Verwendung einer Faltungsmatrix zur Bestimmung der Gradientenrichtung und -intensität. Der Algorithmus verarbeitet das Bild Pixel für Pixel und berechnet die Richtung und Intensität des Gradienten für jedes Pixel aus den Werten der benachbarten Pixel. Es ist wichtig anzumerken, dass es mehrere Optimierungsmethoden für den Sobel-Algorithmus gibt, aber ich habe hier keine Optimierungen an der ursprünglichen Implementierung vorgenommen, da dies nicht der Schwerpunkt meines Projekts ist. In meinem Fall dauerte die Sobel-Verarbeitung 201225057 ns.
 
 Obwohl dieser Teil der Arbeit nicht in das Endergebnis einfließt, sondern nur eine Vergleichszahl liefert, hat er mir geholfen, mein Verständnis von Bildverarbeitungskonzepten und -techniken zu vertiefen und mir gezeigt, wie man sie auf einem eingebetteten System implementiert.
 
-## AXI-DMA und AXI-FIFO
+## Schritt 3: AXI-DMA und AXI-FIFO
 Um die Übertragung von Bilddaten zwischen PS und PL zu implementieren, habe ich mich mit den IP-Cores AXI-DMA und AXI-FIFO von Xilinx sowie dem AXI4-Stream-Protokoll auseinandergesetzt. Anschließend habe ich eine Bildverarbeitungsapplikation implementiert, die jeweils einen dieser beiden IP-Cores verwendet. Sie realisiert die Funktion, ein Bild von der SD-Karte zu lesen, es in PL zwischenzuspeichern, danach zurück in PS zu übertragen und schließlich wieder in die SD-Karte zu schreiben.
 ![[Pasted image 20230126084524.png]]
 ![[Pasted image 20230126084938.png]]
 Im Folgenden werden die Unterschiede und Gemeinsamkeiten zwischen dem AXI-DMA IP-Core und dem AXI-Stream FIFO IP-Core erklärt. Beide IP-Cores können über die AXI4-Schnittstelle adressierte Daten empfangen, eine bestimmte Datenmenge im IP-Core zwischenspeichern, die Daten dann in unadressierte Daten umwandeln und diese über das AXI4-Streamsignal aus dem IP ausgeben. Der Unterschied zwischen AXI-DMA IP und FIFO besteht jedoch darin, dass bei Verwendung von AXI-DMA IP keine manuelle Datenübertragung vom Prozessor zum IP-Core erforderlich ist. Stattdessen muss der Anwender lediglich ein DMA-Steuersignal in das IP schreiben und damit den DMA-Controller im IP-Core konfigurieren. Der DMA-Controller kann dann Daten direkt aus dem DDR-Speicher des PS über die High-Performance Ports (HP) zwischen PS und PL abrufen.
 Mein Hauptziel war es, die Unterschiede zwischen den beiden IP-Cores zu verstehen und zu analysieren, welcher für mein Projekt besser geeignet ist. Durch die Verwendung des AXI-DMA-IP-Cores war es möglich, die Daten direkt aus dem DDR-Speicher des PS auf die PL zu übertragen, ohne den Prozessor zu benutzen. Der Prozessor kann während des Datentransfers andere Operationen ausführen, so dass er die Peripherie nicht ständig abfragen muss.
 
-## HDMI
+## Schritt 3: HDMI
 Nachdem ich die Übertragung und Zwischenspeicherung der Bilddaten auf der PS- und PL-Seite erfolgreich implementiert habe, bestand meine nächste Aufgabe darin, den HDMI-Ausgangspfad zu konfigurieren, um die Bilder auf einem externen Display anzuzeigen. Der HDMI-Ausgang wurde mit einem externen Codec, dem ADV7511 von ADI, auf dem Zedboard Entwicklungsboard implementiert. Der Codec verfügt über eine I2C-Schnittstelle, so dass der Benutzer den Codec konfigurieren kann. Daher muss ich einen I2C Interface IP-Core auf der PL-Seite erstellen und ihn mit der PS-Seite verbinden.
 
 Der HDMI-Ausgangspfad besteht aus folgenden IP-Kernen: dem VDMA-Kern, dem Video Timing Controller IP-Core (VTC), dem AXI-VDMA IP-Core und dem Video Output IP-Core (Vid_Out). Der AXI-VDMA-IP-Core hat ähnliche Funktionen wie der AXI-DMA-Core, bietet aber zusätzlich eine Schnittstelle zu videorelevanten Synchronisationssignalen und eine Bildpufferfunktion. Der VTC-IP-Core kann als Timing-Generator betrachtet werden, der die für den Monitorausgang notwendigen Zeitimpulse erzeugt. Der Vid_Out-Core wandelt den als AXI4-Stream-Protokoll übertragenen Datenstrom in Videodaten um und synchronisiert diese Daten mit den vom VTC bereitgestellten Timing-Signalen, so dass sie für externe Videoempfänger (z.B. Monitore) verfügbar sind.
@@ -158,3 +138,25 @@ Nachdem ich die Unstimmigkeit in der Datenbreite und den Underflow im internen F
 Laut Datenblatt unterstützt der HDMI-Ausgang des Zedboards 16-Bit-Daten im YCbCr4:2:2-Modus. Also musste ich die 24-bit RGB-Bilddaten in 16-Bit YCbCr4:2:2-Bilddaten umwandeln. Dazu verwendete ich das Video Processing Subsystem IP-Core von Xilinx. Nach der Konfiguration und dem Anschluss dieser IP an das System und dem Hinzufügen des Treibercodes zur Software wurden die Bilder angezeigt. Die Farben der Bilder waren jedoch nicht korrekt. Bei der Überprüfung wurde entdeckt, dass die RGB-Daten über PS mit den drei Kanälen in der falschen Reihenfolge an den PL übertragen wurden, was zu Farbabweichungen im Video führte. Nach der Fehlerbehebung wurde das Bild korrekt dargestellt.
 
 Bei diesem Projekt musste der HDMI-Ausgangspfad nicht an ein anderes Display angepasst werden. Die Video-Ausgangsauflösung wurde auf 1080p60 festgelegt. Ein dynamisch konfigurierbarer IP-Core zur Taktgenerierung war auch im Videoausgangspfad erforderlich, wenn eine andere Videoauflösung ausgegeben werden sollte.
+
+## Schritt 4: Sobel Hardware Implementation
+
+Die folgende Abbildung zeigt ein Blockdiagramm des Designs innerhalb des Sobel IP:
+![[Pasted image 20220927211533.png]]
+Zunächst empfängt das RGB to Grayscale Modul die 32-Bit-RGB-Daten von der AXI4-Stream-Schnittstelle und wandelt sie durch Verschieben und Addieren näherungsweise in 8-Bit-Graustufendaten um. Zusätzlich verfügt das Modul über zwei Steuersignaleingänge. Die aktuellen 32-Bit-RGB-Daten werden nur dann als gültig betrachtet, wenn sowohl data_ready vom Output_buffer-Modul als auch data_valid von AXI-DMA IP High sind.
+
+Die vom RGB-zu-Graustufen-Modul ausgegebenen Daten werden sequentiell in 4 Zeilenpuffer geschrieben. Alle Zeilenpuffer sind mit demselben Dateneingangsport verbunden, und jeder Zeilenpuffer verfügt über ein eigenes Wertesignal, das anzeigt, ob die aktuelle Eingabe gültig ist oder nicht. Jeder Zeilenspeicher kann bis zu 1024 8-Bit-Daten speichern, was die maximale Breite des zu verarbeitenden Bildes begrenzt. Jeder Zeilenpuffer kann gleichzeitig gelesen und beschrieben werden. Die Steuerlogik stellt sicher, dass nur ein Schreibvorgang und nur drei Lesevorgänge gültig sind. Außerdem ordnet sie die Ausgabedaten aus den Zeilenpuffern in einer bestimmten Reihenfolge an, so dass jede gültige Ausgabe ein aus dem Graustufenbild segmentiertes 3x3-Fenster ist. Vor jedem Lesevorgang prüft der FSM, ob genügend Daten in den Zeilenpuffern vorhanden sind. Wenn nicht genügend Daten vorhanden sind, bleibt der FSM im Idle-Zustand und informiert den PS-Prozessor mittels eines PL-PS-Interrupt-Signals.
+
+Das IP enthält auch ein Register, das über die AXI4-Lite-Schnittstelle konfiguriert werden kann. Vor der Bildverarbeitung muss es vom Anwender auf die Breite des zu verarbeitenden Bildes + 2 (d.h. die Breite des Bildes mit Zero-Padding) konfiguriert werden.
+
+Im Faltungsmodul wird eine fünfstufige Pipeline verwendet, um den Kantenerkennungswert zu berechnen und festzustellen, ob der Wert größer als der Schwellenwert ist. Ist der Wert größer als der Schwellenwert, werden 8-Bit-Daten 0XFF ausgegeben, andernfalls werden 8-Bit-Daten 0X00 ausgegeben, d. h. die Kante ist weiß und der Rest ist schwarz.
+
+Der Xilinx FIFO IP-Core wird als Ausgangspuffer verwendet und kann bis zu 32 8-Bit-Daten aufnehmen. Das invertierende programmierbare Full-Signal dieses IP-Cores, das mit einem Schwellenwert von 16 konfiguriert ist, ist mit dem axis_ready-Ausgangsport des Sobel-IP verbunden. Dies bedeutet, dass der Sobel-IP den Empfang von Daten vom vorgeschalteten AXI-DMA-IP stoppt, wenn 16 Daten im Puffer gespeichert sind und nicht durch eine gültige Übertragung an das nächste Modul ausgegeben werden, um eine mögliche Datenverfälschung zu verhindern.
+## System Structure
+
+Die Kommunikation zwischen Zynq PS und PL basiert auf dem AXI4-Protokoll. Wie in der Abbildung unten dargestellt, sind die konfigurierbaren Register des Sobel-IP über den AXI-Lite-Bus mit dem General-Purpose-Anschluss des PS verbunden. Die Bilddaten werden über den AXI4-Bus durch den High-Performance-Port an die AXI-DMA-IP gesendet. Diese IP überträgt die Daten direkt aus dem Speicher und gibt sie über das AXI4-Stream-Protokoll an andere Peripheriegeräte weiter.
+Die folgende Abbildung zeigt das Systemblockdiagramm des gesamten Hardwarebereichs:
+![[Pasted image 20220927211645.png]]
+Bei diesem System wird das Originalbild vom Prozessor von der SD-Karte gelesen und vorverarbeitet (Zero-Padding und Neuordnung der Daten). Die vorverarbeiteten Daten werden dann im DDR gespeichert und über das AXI-DMA-IP an das Sobel-IP übertragen. Die verarbeiteten Binärdaten werden über AXI-DMA wieder in den DDR zurückgeschrieben. Nach dem Senden einer bestimmten Datenmenge benachrichtigt der AXI-DMA den PS mit einem Interrupt-Signal.
+
+Das Originalbild und das verarbeitete Bild werden dann von AXI VDMA IP aus dem DDR verschoben und im PL gepuffert. Anschließend werden die Daten zur Verarbeitung an den Xilinx VPSS IP übertragen und mit den Timingsignalen im AXIS to video out IP synchronisiert. Schließlich wird das 16-bit YCbCr Videosignal an den ADV7511 HDMI Transmitter auf dem Zedboard gesendet und auf einem Monitor angezeigt.
