@@ -21,9 +21,9 @@ Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 1. Erstellen einer neuen Projektdatei in Vivado.
 2. Hinzufügen eines neuen Blockdesigns zum Projekt.
 3. Hinzufügen des ZYNQ7 Processing System IP-Cores in das Diagramm und Konfigurieren (auch möglich durch Laden einer Konfigurationsdatei, die vom Hersteller des Entwicklungsboards zur Verfügung gestellt wird).
-4. Weitere benötigte IP Cores hinzufügen und konfigurieren.
+4. Weitere benötigte IP-Cores hinzufügen und konfigurieren.
 5. Konfigurieren und Markieren der I/O-Schnittstellen für die externe Verbindung.
-6. „Run Connection Automation“ klicken, wodurch Vivado automatisch die Verbindungen zwischen PS und IP Cores herstellt und die benötigten Interconnection IPs hinzufügt.
+6. „Run Connection Automation“ klicken, wodurch Vivado automatisch die Verbindungen zwischen PS und IP-Cores herstellt und die benötigten Interconnection IPs hinzufügt.
 7. „Validate Design“ klicken, um das Design und die Verbindungen zu überprüfen.
 8. „Create HDL Wrapper“ klicken, um entsprechende HDL Code Wrapper für das Blockdesign zu erzeugen.
 7. Schreiben der Pins-Zuweisungen der I/O-Schnittstellen des PL-Teils in die Constraints-Datei.
@@ -32,7 +32,7 @@ Der vereinfachte Hardware-Entwurfsprozess umfasst die folgenden Schritte:
 ## Versuch
 Obwohl ich in den ersten Wochen noch kein Zynq-Entwicklungsboard hatte, konnte ich zuerst am Hardware- und Software-Design arbeiten und dann mein Design debuggen und korrigieren, sobald ich das Entwicklungsboard bekommen hatte.
 ### Versuch1 LED-Steuerung via AXI-GPIO
-AXI-GPIO ist ein offizielles Xilinx IP Core. Er bietet eine General Purpose Input/Output Schnittstelle zu einem AXI4-Lite Schnittstelle und kann als ein- oder zweikanaliges Gerät konfiguriert werden. Die Breite jedes Kanals ist unabhängig konfigurierbar.
+AXI-GPIO ist ein offizielles Xilinx IP-Core. Er bietet eine General Purpose Input/Output Schnittstelle zu einem AXI4-Lite Schnittstelle und kann als ein- oder zweikanaliges Gerät konfiguriert werden. Die Breite jedes Kanals ist unabhängig konfigurierbar.
 Die Ports werden dynamisch als Ein- oder Ausgang konfiguriert, indem der Tri-State aktiviert oder deaktiviert wird. Die Kanäle können so konfiguriert werden, dass sie einen Interrupt erzeugen, wenn ein Datenübergang an einem ihrer Eingänge auftritt. Kurz gesagt, mit diesem IP-Core ist der PS-Teil in der Lage, den Zustand der IO-Schnittstellen, die mit dem PL-Teil verbunden sind, zu überwachen und zu kontrollieren.
 ### Systemblockdiagramm
 TBD
@@ -140,7 +140,7 @@ Ein wichtiger Aspekt bei der Implementierung des Sobel-Filter-Algorithmus ist di
 Obwohl dieser Teil der Arbeit nicht in das Endergebnis einfließt, sondern nur eine Vergleichszahl liefert, hat er mir geholfen, mein Verständnis von Bildverarbeitungskonzepten und -techniken zu vertiefen und mir gezeigt, wie man sie auf einem eingebetteten System implementiert.
 
 ### AXI-DMA und AXI-FIFO
-Um die Übertragung von Bilddaten zwischen PS und PL zu implementieren, habe ich mich mit den IP Cores AXI-DMA und AXI-FIFO von Xilinx sowie dem AXI4-Stream-Protokoll auseinandergesetzt. Anschließend habe ich eine Bildverarbeitungsapplikation implementiert, die jeweils einen dieser beiden IP-Cores verwendet. Sie realisiert die Funktion, ein Bild von der SD-Karte zu lesen, es in PL zwischenzuspeichern, danach zurück in PS zu übertragen und schließlich wieder in die SD-Karte zu schreiben.
+Um die Übertragung von Bilddaten zwischen PS und PL zu implementieren, habe ich mich mit den IP-Cores AXI-DMA und AXI-FIFO von Xilinx sowie dem AXI4-Stream-Protokoll auseinandergesetzt. Anschließend habe ich eine Bildverarbeitungsapplikation implementiert, die jeweils einen dieser beiden IP-Cores verwendet. Sie realisiert die Funktion, ein Bild von der SD-Karte zu lesen, es in PL zwischenzuspeichern, danach zurück in PS zu übertragen und schließlich wieder in die SD-Karte zu schreiben.
 ![[Pasted image 20230126084524.png]]
 ![[Pasted image 20230126084938.png]]
 Im Folgenden werden die Unterschiede und Gemeinsamkeiten zwischen dem AXI-DMA IP-Core und dem AXI-Stream FIFO IP-Core erklärt. Beide IP-Cores können über die AXI4-Schnittstelle adressierte Daten empfangen, eine bestimmte Datenmenge im IP-Core zwischenspeichern, die Daten dann in unadressierte Daten umwandeln und diese über das AXI4-Streamsignal aus dem IP ausgeben. Der Unterschied zwischen AXI-DMA IP und FIFO besteht jedoch darin, dass bei Verwendung von AXI-DMA IP keine manuelle Datenübertragung vom Prozessor zum IP-Core erforderlich ist. Stattdessen muss der Anwender lediglich ein DMA-Steuersignal in das IP schreiben und damit den DMA-Controller im IP-Core konfigurieren. Der DMA-Controller kann dann Daten direkt aus dem DDR-Speicher des PS über die High-Performance Ports (HP) zwischen PS und PL abrufen.
@@ -153,7 +153,7 @@ Der HDMI-Ausgangspfad besteht aus folgenden IP-Kernen: dem VDMA-Kern, dem Video 
 Meine Aufgabe besteht nun darin, die verschiedenen IP-Cores des HDMI-Ausgangspfades zu implementieren und zu konfigurieren, um eine erfolgreiche Übertragung der Videodaten zu ermöglichen. Dabei stieß ich auf Probleme, wie z.B. dass Vid_Out IP kein Videosignal ausgibt oder die Bilder auf dem Monitor mit Farbabweichungen dargestellt werden.
 Um diese Herausforderungen zu meistern, musste ich die technische Dokumentation sorgfältig studieren und mir ein umfassendes Verständnis der Funktionsweise der verschiedenen IP-Cores aneignen. Außerdem musste ich die Konfigurationsdateien der IP-Cores überprüfen und gegebenenfalls Anpassungen vornehmen, um sicherzustellen, dass alle Parameter korrekt eingestellt waren.
 
-Nachdem ich die Unstimmigkeit in der Datenbreite und den Underflow im internen FIFO von Vid_Out behoben habe, konnte ich die vom Vid_Out IP Core erzeugte Wellenform erfolgreich über den Integrated Logic Analyzer (ILA) IP Core auslesen. Dies war jedoch erst der Anfang einer Reihe von Herausforderungen. Die generierten Daten wurden auf dem Bildschirm nicht korrekt als Bild dargestellt. Als nächstes musste ich sicherstellen, dass das Bildsignal auch in hoher Qualität angezeigt wird, das heißt, dass das Bild klar und in der richtigen Farbe ist.
+Nachdem ich die Unstimmigkeit in der Datenbreite und den Underflow im internen FIFO von Vid_Out behoben habe, konnte ich die vom Vid_Out IP-Core erzeugte Wellenform erfolgreich über den Integrated Logic Analyzer (ILA) IP-Core auslesen. Dies war jedoch erst der Anfang einer Reihe von Herausforderungen. Die generierten Daten wurden auf dem Bildschirm nicht korrekt als Bild dargestellt. Als nächstes musste ich sicherstellen, dass das Bildsignal auch in hoher Qualität angezeigt wird, das heißt, dass das Bild klar und in der richtigen Farbe ist.
 
 Laut Datenblatt unterstützt der HDMI-Ausgang des Zedboards 16-Bit-Daten im YCbCr4:2:2-Modus. Also musste ich die 24-bit RGB-Bilddaten in 16-Bit YCbCr4:2:2-Bilddaten umwandeln. Dazu verwendete ich das Video Processing Subsystem IP-Core von Xilinx. Nach der Konfiguration und dem Anschluss dieser IP an das System und dem Hinzufügen des Treibercodes zur Software wurden die Bilder angezeigt. Die Farben der Bilder waren jedoch nicht korrekt. Bei der Überprüfung wurde entdeckt, dass die RGB-Daten über PS mit den drei Kanälen in der falschen Reihenfolge an den PL übertragen wurden, was zu Farbabweichungen im Video führte. Nach der Fehlerbehebung wurde das Bild korrekt dargestellt.
 
