@@ -132,14 +132,14 @@ Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu
 
 Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
 
-### Sobel-C Implementierung
+## Sobel-C Implementierung
 Nachdem ich das Lesen und Schreiben der Bilder von der SD-Karte erfolgreich implementiert habe, habe ich mit den Aufgaben im Zusammenhang mit der Sobel-Filtern begonnen. Zuerst verarbeitete ich die von der SD-Karte gelesenen Bildinformationen, indem ich sie vollständig durch die eingebettete C auf dem ARM-Prozessor laufen ließ und das verarbeitete Ergebnis zurück in dieselbe SD-Karte schrieb.
 
 Ein wichtiger Aspekt bei der Implementierung des Sobel-Filter-Algorithmus ist die Verwendung einer Faltungsmatrix zur Bestimmung der Gradientenrichtung und -intensität. Der Algorithmus verarbeitet das Bild Pixel für Pixel und berechnet die Richtung und Intensität des Gradienten für jedes Pixel aus den Werten der benachbarten Pixel. Es ist wichtig anzumerken, dass es mehrere Optimierungsmethoden für den Sobel-Algorithmus gibt, aber ich habe hier keine Optimierungen an der ursprünglichen Implementierung vorgenommen, da dies nicht der Schwerpunkt meines Projekts ist. In meinem Fall dauerte die Sobel-Verarbeitung 201225057 ns.
 
 Obwohl dieser Teil der Arbeit nicht in das Endergebnis einfließt, sondern nur eine Vergleichszahl liefert, hat er mir geholfen, mein Verständnis von Bildverarbeitungskonzepten und -techniken zu vertiefen und mir gezeigt, wie man sie auf einem eingebetteten System implementiert.
 
-### AXI-DMA und AXI-FIFO
+## AXI-DMA und AXI-FIFO
 Um die Übertragung von Bilddaten zwischen PS und PL zu implementieren, habe ich mich mit den IP-Cores AXI-DMA und AXI-FIFO von Xilinx sowie dem AXI4-Stream-Protokoll auseinandergesetzt. Anschließend habe ich eine Bildverarbeitungsapplikation implementiert, die jeweils einen dieser beiden IP-Cores verwendet. Sie realisiert die Funktion, ein Bild von der SD-Karte zu lesen, es in PL zwischenzuspeichern, danach zurück in PS zu übertragen und schließlich wieder in die SD-Karte zu schreiben.
 ![[Pasted image 20230126084524.png]]
 ![[Pasted image 20230126084938.png]]
