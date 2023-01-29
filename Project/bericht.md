@@ -141,6 +141,7 @@ Bei diesem Projekt musste der HDMI-Ausgangspfad nicht an ein anderes Display ang
 
 ## Schritt 4: Sobel Hardware Implementation
 
+Der nächste Schritt war die Kernaufgabe des gesamten Projekts, nämlich die Implementierung einer benutzerdefinierten IP mit Sobel-Kantenerkennung in VHDL-Code auf der Zynq-Plattform. 
 Die folgende Abbildung zeigt ein Blockdiagramm des Designs innerhalb des Sobel IP:
 ![[Pasted image 20220927211533.png]]
 Zunächst empfängt das RGB to Grayscale Modul die 32-Bit-RGB-Daten von der AXI4-Stream-Schnittstelle und wandelt sie durch Verschieben und Addieren näherungsweise in 8-Bit-Graustufendaten um. Zusätzlich verfügt das Modul über zwei Steuersignaleingänge. Die aktuellen 32-Bit-RGB-Daten werden nur dann als gültig betrachtet, wenn sowohl data_ready vom Output_buffer-Modul als auch data_valid von AXI-DMA IP High sind.
