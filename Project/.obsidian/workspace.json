@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -101,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bericht.md",
+                "file": "Sobel_doku.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "bericht.md",
+                "file": "Sobel_doku.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,11 +141,11 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "fa6cb6f91565b5c0",
+  "active": "faf5b6432459e92a",
   "lastOpenFiles": [
+    "bericht.md",
     "bericht梗概.md",
     "Sobel_doku.md",
-    "bericht.md",
     "picture/Pasted image 20220927211533.png",
     "Begründung über Nichtbestehen.md",
     "Index_of_Project.md",
