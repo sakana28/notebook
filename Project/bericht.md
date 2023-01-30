@@ -97,7 +97,7 @@ Neben der erfolgreichen Umsetzung des Projektes konnte ich auch einen Einblick i
 Die Mitarbeiter von ITK waren sehr freundlich und immer bereit, bei Problemen zu helfen. Sie kümmerten sich auch um meine Anpassung an die Arbeitsumgebung und boten mir Hilfe beim Erlernen der Sprache, bei der Kommunikation mit anderen und beim Erwerb von Fachkenntnissen an. Ich habe wertvolle Erfahrungen gesammelt. Ich möchte allen Beteiligten meinen herzlichsten Dank aussprechen.
 
 Insgesamt war dieses Praktikum für mich eine sehr lehr- und erfahrungsreiche Zeit. Ich bin dankbar für die Möglichkeit, bei ITK zu arbeiten und bin mir sicher, dass ich die erworbenen Fähigkeiten und Kenntnisse für meine Abschlussarbeit und meine zukünftige Karriere nutzen werde.
-## Schritt 1: Sobel-C Implementierung
+## Schritt 1: SD-Karte Lesen und Schreiben
 ## Auftretende Probleme 
 ### Fall 1
 Nachdem ich die Entwicklungsplatine erhalten hatte, bestand mein erstes Ziel darin, die Bitströme aus meinen frühen Versuchen auf die Platine zu übertragen und sie zu testen. Ich habe einen JTAG-USB-Programmierer verwendet. Leider schlug der Download immer wieder fehl. Nach einer gründlichen Fehleranalyse fand ich heraus, dass das Problem durch Inkonsistenzen zwischen dem verwendeten Board und der verwendeten Konfigurationsdatei verursacht wurde. Es gibt zwei verschiedene Versione des Zedboards  im lauf der zeit, die unterschiedliche DDR-Speichermodule verwenden und daher unterschiedliche Konfigurationsdateien benötigen. Ich konnte den Download erfolgreich durchführen, nachdem ich die richtige Konfigurationsdatei verwendet hatte.
