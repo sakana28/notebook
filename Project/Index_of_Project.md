@@ -22,6 +22,7 @@
  [[Initialization Procedure for SPI Mode|Initialization Procedure for SPI Mode]]
  [[License|License]]
  [[Links|Links]]
+ [[Master|Master]]
  [[Masterarbeit von IMS|Masterarbeit von IMS]]
  [[Maximum SPI Clock Frequency|Maximum SPI Clock Frequency]]
  [[MMC SDC的使用|MMC SDC的使用]]
