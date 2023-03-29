@@ -1,4 +1,6 @@
 import numpy as np
+import numpy as np
+import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 from scipy.signal import fftconvolve
 
@@ -85,3 +87,45 @@ def bearing_signal_model_local(d, D, contact_angle, n, fault_type, fr, fc, fd, f
     x_noise = x + nt
 
     return (t, x, x_noise, fr_time, mean_delta_t, var_delta_t, mean_delta_t_imp_over, var_delta_t_imp_over, error_delta_t_imp)
+
+
+def main():
+
+    # Bearing geometry
+    d = 21.4  # bearing roller diameter [mm]
+    D = 203  # pitch circle diameter [mm]
+    n = 23  # number of rolling elements
+    contact_angle = 9 * np.pi / 180  # contact angle
+    fault_type = 'inner'
+
+    # Speed profile
+    N = 2048  # number of points per revolution
+    Ltheta = 10000 * N  # signal length
+    theta = np.arange(0, Ltheta) * 2 * np.pi / N
+    fc = 10
+    fd = 0.08 * fc
+    fm = 0.1 * fc
+    fr = fc + 2 * np.pi * fd * np.cumsum(np.cos(fm * theta) / N)
+
+    # Localized fault
+    variance_factor = 0.04
+    fs = 20000  # sample frequency [Hz]
+    k = 2e13
+    zita = 5 / 100
+    fn = 6e3  # natural frequency [Hz]
+    Lsdof = 2**8
+    SNR_dB = 0
+    qAmpMod = 0.3
+
+    (t_local, x_local, x_noise_local, fr_time_local, mean_delta_t_local, var_delta_t_local, mean_delta_t_imp_over_local,
+     var_delta_t_imp_over_local, error_delta_t_imp_local) = bearing_signal_model_local(
+        d, D, contact_angle, n, fault_type, fr, fc, fd, fm, N, variance_factor, fs, k, zita, fn, Lsdof, SNR_dB, qAmpMod)
+
+    # Plot the results
+    plt.figure(figsize=(10, 6))
+    plt.plot(t_local, x_noise_local)
+    plt.xlabel('Time [s]')
+    plt.ylabel('Amplitude')
+    plt.title('Simulated Bearing Signal with Localized Fault')
+    plt.grid()
+    plt.show()
