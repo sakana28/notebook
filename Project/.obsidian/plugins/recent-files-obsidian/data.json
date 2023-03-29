@@ -5,12 +5,12 @@
       "path": "FPGA读SD图片实验.md"
     },
     {
-      "basename": "octave",
-      "path": "octave.md"
-    },
-    {
       "basename": "Master",
       "path": "Master.md"
+    },
+    {
+      "basename": "octave",
+      "path": "octave.md"
     },
     {
       "basename": "Sobel_doku",
